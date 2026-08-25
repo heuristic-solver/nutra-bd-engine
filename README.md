@@ -4,7 +4,7 @@ A proactive, multi-signal Business Development intelligence engine built specifi
 
 ---
 
-## 🚀 System Overview
+## System Overview
 
 The platform identifies, scores, and ranks nutraceutical companies with the highest propensity to hire external recruitment agencies by aggregating live signals across:
 
@@ -16,7 +16,7 @@ The platform identifies, scores, and ranks nutraceutical companies with the high
 
 ---
 
-## 🏗️ Repository Architecture
+## Repository Architecture
 
 ```
 bd-engine/
@@ -39,7 +39,7 @@ bd-engine/
 
 ---
 
-## ⚡ Setup & Quick Start
+## Setup and Quick Start
 
 ### 1. Prerequisites
 - Python 3.10+
@@ -89,7 +89,7 @@ The server will start on `http://127.0.0.1:8000`:
 
 ---
 
-## 📊 Signal Formulas & Dimensions
+## Signal Formulas and Dimensions
 
 | Signal Dimension | Data Source | Math & Logic |
 | :--- | :--- | :--- |
