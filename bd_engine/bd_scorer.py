@@ -2,13 +2,13 @@
 bd_scorer.py — Nutraceutical Multi-Signal Propensity Scoring Engine
 
 Merges signals across:
-  1. Apify LinkedIn Headcount & Growth Trajectory (Weight: 30%)
-  2. Serper 6-Month Facility Expansions & M&A (Weight: 25%)
+  1. Growjo YoY Headcount Growth % + Apify Snapshot fallback (Weight: 30%)
+  2. Serper 6-Month Facility Expansions + Owler Funding/Acquisitions (Weight: 25%)
   3. Serper 6-Month Executive Leadership Turnover (Weight: 20%)
   4. openFDA Regulatory Recalls & Compliance Pressure (Weight: 15%)
   5. Nutraceutical KB Domain Alignment & Segment Fit (Weight: 10%)
 
-Outputs a normalized 0–100 Propensity Score ranking companies by their statistical
+Outputs a normalized 0-100 Propensity Score ranking companies by their statistical
 urgency and willingness to engage external executive search & recruitment agencies.
 """
 
@@ -37,15 +37,29 @@ class PropensityScorer:
         serper_data: Optional[Dict[str, Any]] = None,
         openfda_data: Optional[Dict[str, Any]] = None,
         kb_data: Optional[Dict[str, Any]] = None,
+        growjo_data: Optional[Dict[str, Any]] = None,
+        owler_data: Optional[Dict[str, Any]] = None,
+        career_data: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """
         Aggregates multi-source data and produces a comprehensive BD scorecard.
+
+        Priority for headcount growth:
+          Growjo YoY % (verified) > Career Velocity / ATS Model (real-time) > Apify snapshot delta
+        Priority for funding/expansion:
+          Owler acquisition count + Serper signals
         """
         # 1. Score Headcount Growth Trajectory (Max: 30 pts)
-        growth_score, growth_breakdown = self._score_headcount_growth(apify_data)
+        growth_score, growth_breakdown = self._score_headcount_growth(
+            apify_data=apify_data,
+            growjo_data=growjo_data,
+            career_data=career_data,
+        )
 
         # 2. Score Facility & Operational Expansions (Max: 25 pts)
-        expansion_score, expansion_breakdown = self._score_expansions(serper_data)
+        expansion_score, expansion_breakdown = self._score_expansions(
+            serper_data, owler_data
+        )
 
         # 3. Score Executive Leadership Turnover (Max: 20 pts)
         turnover_score, turnover_breakdown = self._score_exec_turnover(serper_data)
@@ -124,70 +138,179 @@ class PropensityScorer:
         }
 
     # ------------------------------------------------------------------
-    # DIMENSION 1: Headcount Growth (Max 30 pts)
+    # DIMENSION 1: Headcount Growth & Hiring Velocity (Max 30 pts)
     # ------------------------------------------------------------------
     @staticmethod
-    def _score_headcount_growth(apify_data: Optional[Dict[str, Any]]) -> (float, Dict[str, Any]):
+    def _score_headcount_growth(
+        apify_data: Optional[Dict[str, Any]],
+        growjo_data: Optional[Dict[str, Any]] = None,
+        career_data: Optional[Dict[str, Any]] = None,
+    ) -> (float, Dict[str, Any]):
+        """
+        Calculates headcount growth and hiring velocity score:
+        1. Uses Growjo YoY % if available.
+        2. If Growjo is unindexed, uses Career Page & ATS Hiring Velocity % from CareerTrafficCollector.
+        3. Falls back to Apify snapshot delta.
+        """
+        # ── Path A: Growjo YoY % (verified) ───────────────────────────
+        if growjo_data and growjo_data.get("employee_growth_pct") is not None:
+            growth_pct   = float(growjo_data["employee_growth_pct"])
+            trajectory   = growjo_data.get("trajectory", "STABLE")
+            current_emp  = growjo_data.get("current_employees") or 0
+            job_openings = growjo_data.get("job_openings") or (career_data.get("active_job_openings_30d") if career_data else 0)
+            traffic_act  = (career_data.get("career_page_traffic_activity") if career_data else "MODERATE")
+            data_source  = "Growjo YoY Verified"
+
+            if trajectory == "HYPER_GROWTH":
+                score = 30.0
+                detail = f"Hyper-growth ({growth_pct:+.1f}% YoY): internal talent acquisition capacity is overwhelmed. {job_openings} active roles."
+            elif trajectory == "STEADY_EXPANSION" or trajectory == "ACTIVE_EXPANSION":
+                score = 22.0
+                detail = f"Steady expansion ({growth_pct:+.1f}% YoY). {job_openings} active open roles."
+            elif trajectory == "SEVERE_ATTRITION":
+                score = 26.0
+                detail = f"Staffing deficit ({growth_pct:+.1f}% YoY): urgent backfill need."
+            elif trajectory == "MODERATE_CONTRACTION":
+                score = 12.0
+                detail = f"Moderate contraction ({growth_pct:+.1f}% YoY)."
+            else:
+                score = 16.0 if current_emp > 50 else 12.0
+                detail = f"Stable headcount ({current_emp} employees)."
+
+            return score, {
+                "data_source":            data_source,
+                "trajectory":             trajectory,
+                "growth_pct":             growth_pct,
+                "current_headcount":      current_emp,
+                "job_openings":           job_openings,
+                "career_traffic_activity": traffic_act,
+                "detail":                 detail,
+            }
+
+        # ── Path B: Career Page & Hiring Velocity Model ────────────────
+        if career_data and career_data.get("employee_growth_pct") is not None:
+            growth_pct   = float(career_data.get("employee_growth_pct", 0.0))
+            trajectory   = career_data.get("hiring_trajectory", "STABLE")
+            job_openings = career_data.get("active_job_openings_30d", 0)
+            traffic_act  = career_data.get("career_page_traffic_activity", "LOW_TRAFFIC")
+            current_emp  = (apify_data.get("firmographics") or {}).get("employee_count", 0) if apify_data else 0
+            data_source  = career_data.get("growth_source", "Hiring Velocity Model")
+
+            if trajectory == "HYPER_GROWTH":
+                score = 28.0
+                detail = f"Rapid hiring velocity (+{growth_pct:.1f}% modeled, {traffic_act}): {job_openings} active job openings in past 30 days."
+            elif trajectory == "ACTIVE_EXPANSION":
+                score = 22.0
+                detail = f"Active hiring expansion (+{growth_pct:.1f}% modeled, {traffic_act}): {job_openings} live open positions detected."
+            elif trajectory == "STEADY_HIRING":
+                score = 18.0
+                detail = f"Steady hiring activity (+{growth_pct:.1f}% modeled): {job_openings} open role(s) on career board."
+            else:
+                score = 14.0 if current_emp > 50 else 10.0
+                detail = f"Baseline steady state: {traffic_act.replace('_', ' ').title()}."
+
+            return score, {
+                "data_source":            data_source,
+                "trajectory":             trajectory,
+                "growth_pct":             growth_pct,
+                "current_headcount":      current_emp,
+                "job_openings":           job_openings,
+                "career_traffic_activity": traffic_act,
+                "detail":                 detail,
+            }
+
+        # ── Path C: Apify snapshot delta (fallback) ─────────────────────
         if not apify_data:
-            return 10.0, {"status": "NO_DATA", "reason": "Baseline neutral score"}
+            return 10.0, {
+                "status": "NO_DATA", "reason": "Baseline neutral score",
+                "data_source": "none", "growth_pct": 0.0, "trajectory": "STABLE",
+                "career_traffic_activity": "UNINDEXED"
+            }
 
         growth_info = apify_data.get("headcount_growth") or {}
-        trajectory = growth_info.get("trajectory", "STABLE")
-        growth_pct = growth_info.get("growth_pct", 0.0)
+        trajectory  = growth_info.get("trajectory", "STABLE")
+        growth_pct  = growth_info.get("growth_pct", 0.0)
         current_emp = (apify_data.get("firmographics") or {}).get("employee_count", 0)
 
-        if trajectory == "HYPER_GROWTH":
-            score = 30.0
-            detail = f"Hyper-growth ({growth_pct:+.1f}%): internal talent acquisition capacity is overwhelmed."
-        elif trajectory == "STEADY_EXPANSION":
-            score = 22.0
-            detail = f"Steady hiring expansion ({growth_pct:+.1f}%)."
-        elif trajectory == "SEVERE_ATTRITION":
-            score = 26.0  # High score because rapid departures create emergency backfill needs
-            detail = f"Staffing deficit & attrition ({growth_pct:+.1f}%): urgent need for immediate replacements."
-        elif trajectory == "MODERATE_CONTRACTION":
-            score = 12.0
-            detail = "Moderate contraction."
-        else:
-            # Stable baseline
-            score = 15.0 if current_emp > 50 else 10.0
-            detail = f"Stable headcount ({current_emp} employees)."
+        score = 15.0 if current_emp > 50 else 10.0
+        detail = f"Stable headcount ({current_emp} employees, snapshot)."
 
         return score, {
-            "trajectory": trajectory,
-            "growth_pct": growth_pct,
-            "current_headcount": current_emp,
-            "detail": detail,
+            "data_source":            "apify_snapshot",
+            "trajectory":             trajectory,
+            "growth_pct":             growth_pct,
+            "current_headcount":      current_emp,
+            "job_openings":           0,
+            "career_traffic_activity": "LOW",
+            "detail":                 detail,
         }
 
     # ------------------------------------------------------------------
     # DIMENSION 2: Facility & Operational Expansions (Max 25 pts)
     # ------------------------------------------------------------------
     @staticmethod
-    def _score_expansions(serper_data: Optional[Dict[str, Any]]) -> (float, Dict[str, Any]):
-        if not serper_data:
-            return 0.0, {"facility_count": 0, "funding_count": 0}
-
-        summary = serper_data.get("signal_summary", {})
-        facility_count = summary.get("facility_count", 0)
-        funding_count = summary.get("funding_ma_count", 0)
-
+    def _score_expansions(
+        serper_data: Optional[Dict[str, Any]],
+        owler_data: Optional[Dict[str, Any]] = None,
+    ) -> (float, Dict[str, Any]):
+        """
+        Blends Serper 6-month facility/M&A signals with Owler's verified
+        acquisition count and total funding as additional expansion signals.
+        """
         score = 0.0
-        if facility_count >= 2:
-            score += 15.0
-        elif facility_count == 1:
-            score += 10.0
+        facility_count = 0
+        funding_count  = 0
+        owler_acquisitions = 0
+        owler_funding      = None
 
-        if funding_count >= 2:
-            score += 10.0
-        elif funding_count == 1:
-            score += 7.0
+        # Serper signals (facility opens, M&A announcements in last 6M)
+        if serper_data:
+            summary        = serper_data.get("signal_summary", {})
+            facility_count = summary.get("facility_count", 0)
+            funding_count  = summary.get("funding_ma_count", 0)
+
+            if facility_count >= 2:
+                score += 15.0
+            elif facility_count == 1:
+                score += 10.0
+
+            if funding_count >= 2:
+                score += 7.0
+            elif funding_count == 1:
+                score += 4.0
+
+        # Owler signals (verified historical acquisitions + total funding)
+        if owler_data:
+            owler_acquisitions = owler_data.get("total_acquisitions") or 0
+            owler_funding      = owler_data.get("total_funding")  # int USD or None
+
+            # Each confirmed acquisition = operational expansion requiring talent
+            if owler_acquisitions >= 3:
+                score += 8.0
+            elif owler_acquisitions >= 1:
+                score += 4.0
+
+            # Significant external funding = growth capital, likely hiring
+            if owler_funding and owler_funding > 10_000_000:
+                score += 3.0
 
         score = min(WEIGHT_FACILITY_EXPANSION, score)
+
+        detail_parts = [
+            f"{facility_count} facility signals",
+            f"{funding_count} M&A signals (Serper)",
+        ]
+        if owler_acquisitions:
+            detail_parts.append(f"{owler_acquisitions} acquisitions (Owler)")
+        if owler_funding:
+            detail_parts.append(f"${owler_funding:,} total funding (Owler)")
+
         return score, {
-            "facility_expansions": facility_count,
-            "funding_ma_rounds": funding_count,
-            "detail": f"{facility_count} new plant/facility signals, {funding_count} M&A/investment signals in last 6M.",
+            "facility_expansions":  facility_count,
+            "funding_ma_rounds":    funding_count,
+            "owler_acquisitions":   owler_acquisitions,
+            "owler_total_funding":  owler_funding,
+            "detail":              ", ".join(detail_parts) + ".",
         }
 
     # ------------------------------------------------------------------

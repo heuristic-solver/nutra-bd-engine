@@ -21,7 +21,7 @@ from datetime import datetime, timedelta
 from datetime import datetime, timezone
 from typing import Optional
 
-SERPER_API_KEY = os.environ.get("SERPER_API_KEY", "3f5dcfab44f2388bec54e325f0df5510bf721e36")
+SERPER_API_KEY = os.environ.get("SERPER_API_KEY", "")
 SERPER_BASE_URL = "https://google.serper.dev"
 
 # Serper tbs (time-based search) values:
