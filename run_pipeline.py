@@ -15,10 +15,11 @@ warnings.filterwarnings("ignore")
 from bd_engine.collectors.theirstack_collector import TheirStackCollector
 from bd_engine.collectors.serper_collector import SerperCollector
 from bd_engine.collectors.openfda_collector import OpenFDACollector
+from bd_engine.collectors.apify_collector import ApifyCollector
 import run_theirstack
 
 
-def run_360_scan(company_name: str, domain: str = None):
+def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None):
     print("\n" + "=" * 75)
     print(f"  360° BD INTELLIGENCE SCAN: {company_name}")
     print("=" * 75)
@@ -61,6 +62,18 @@ def run_360_scan(company_name: str, domain: str = None):
             if items[0].get("url"):
                 print(f"       Link: {items[0]['url'][:80]}")
 
+    # 3. Apify LinkedIn Headcount & Growth
+    apify = ApifyCollector()
+    if apify.is_configured():
+        print("\n[3. LINKEDIN HEADCOUNT & GROWTH TRAJECTORY]")
+        apify_res = apify.analyze_company(company_name, linkedin_url=linkedin_url)
+        if apify_res.get("firmographics"):
+            fg = apify_res["firmographics"]
+            print(f"   • Exact Headcount:         {fg.get('employee_count')} employees")
+            print(f"   • Follower Count:          {fg.get('follower_count')}")
+            print(f"   • Industry:                {fg.get('industry')}")
+            print(f"   • LinkedIn URL:            {fg.get('linkedin_url')}")
+
     print("\n" + "=" * 75)
     print("  SCAN COMPLETE")
     print("=" * 75 + "\n")
@@ -70,9 +83,10 @@ def main():
     parser = argparse.ArgumentParser(description="Run 360° BD Signal Intelligence on a Target Account")
     parser.add_argument("--company", type=str, required=True, help="Target company name")
     parser.add_argument("--domain", type=str, default=None, help="Company website domain")
+    parser.add_argument("--linkedin", type=str, default=None, help="Company LinkedIn URL")
     args = parser.parse_args()
 
-    run_360_scan(args.company, args.domain)
+    run_360_scan(args.company, args.domain, args.linkedin)
 
 
 if __name__ == "__main__":

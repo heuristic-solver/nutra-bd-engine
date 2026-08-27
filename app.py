@@ -5,6 +5,7 @@ Combines:
   1. TheirStack Collector (Hiring Velocity & Talent Pain Index)
   2. Serper Collector (6-Month Market Intelligence, Expansions, M&A)
   3. openFDA Collector (Product Recalls & Enforcement Risk)
+  4. Apify Collector (LinkedIn Headcount & Growth Percentage)
 
 Run with:
     python app.py
@@ -17,6 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from bd_engine.collectors.theirstack_collector import TheirStackCollector
 from bd_engine.collectors.serper_collector import SerperCollector
 from bd_engine.collectors.openfda_collector import OpenFDACollector
+from bd_engine.collectors.apify_collector import ApifyCollector
 import run_theirstack
 
 app = FastAPI(
@@ -37,6 +39,7 @@ app.add_middleware(
 theirstack = TheirStackCollector(api_token=run_theirstack.API_TOKEN)
 serper = SerperCollector()
 openfda = OpenFDACollector()
+apify = ApifyCollector()
 
 
 @app.get("/")
@@ -44,10 +47,16 @@ def root():
     return {
         "system": "Nutraceutical BD Intelligence Engine",
         "status": "online",
-        "collectors": ["TheirStack (Jobs)", "Serper (Market)", "openFDA (Recalls)"],
+        "collectors": [
+            "TheirStack (Jobs & Velocity)",
+            "Serper (6M Market & Trade Press)",
+            "openFDA (Recalls & Risk)",
+            "Apify (LinkedIn Headcount & Growth %)",
+        ],
         "endpoints": {
             "summary_badge": "/api/v1/bd/summary?company_name=...",
             "full_dossier": "/api/v1/bd/company?company_name=...",
+            "growth_rate": "/api/v1/bd/growth?company_name=...&previous_headcount=...",
         },
     }
 
@@ -108,9 +117,10 @@ def get_company_summary(company_name: str = Query(..., description="Target compa
 def get_company_dossier(
     company_name: str = Query(..., description="Target company name"),
     company_domain: Optional[str] = Query(None, description="Company domain"),
+    linkedin_url: Optional[str] = Query(None, description="LinkedIn company page URL"),
 ):
     """
-    Full 360° company intelligence combining Job Velocity, Market Signals, and FDA Compliance.
+    Full 360° company intelligence combining Job Velocity, Market Signals, FDA Compliance, and LinkedIn Headcount.
     """
     try:
         # Pull Serper market signals (6-month window)
@@ -119,14 +129,41 @@ def get_company_dossier(
         # Pull openFDA recall signals
         fda_res = openfda.analyze_company(company_name, lookback_years=3)
 
+        # Pull Apify LinkedIn headcount data if configured
+        apify_res = apify.analyze_company(company_name, linkedin_url=linkedin_url)
+
         return {
             "company_name": company_name,
             "company_domain": company_domain,
             "regulatory_compliance": fda_res,
             "market_signals_6m": serper_res,
+            "linkedin_headcount": apify_res,
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ======================================================================
+# ENDPOINT 3: Headcount Growth Rate Calculator
+# ======================================================================
+@app.get("/api/v1/bd/growth")
+def get_headcount_growth(
+    company_name: str = Query(..., description="Company name"),
+    current_headcount: int = Query(..., description="Current employee count"),
+    previous_headcount: int = Query(..., description="Previous employee count"),
+    days_between: int = Query(30, description="Days between snapshots"),
+):
+    """
+    Computes exact hiring % growth delta and annualized trajectory.
+    """
+    return {
+        "company_name": company_name,
+        "analysis": apify.calculate_headcount_growth(
+            current_headcount=current_headcount,
+            previous_headcount=previous_headcount,
+            days_between=days_between,
+        ),
+    }
 
 
 if __name__ == "__main__":
