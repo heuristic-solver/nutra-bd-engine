@@ -40,6 +40,7 @@ class PropensityScorer:
         growjo_data: Optional[Dict[str, Any]] = None,
         owler_data: Optional[Dict[str, Any]] = None,
         career_data: Optional[Dict[str, Any]] = None,
+        traffic_data: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """
         Aggregates multi-source data and produces a comprehensive BD scorecard.
@@ -47,7 +48,7 @@ class PropensityScorer:
         Priority for headcount growth:
           Growjo YoY % (verified) > Career Velocity / ATS Model (real-time) > Apify snapshot delta
         Priority for funding/expansion:
-          Owler acquisition count + Serper signals
+          Owler acquisition count + Serper signals + Web Traffic Surges
         """
         # 1. Score Headcount Growth Trajectory (Max: 30 pts)
         growth_score, growth_breakdown = self._score_headcount_growth(
@@ -58,7 +59,9 @@ class PropensityScorer:
 
         # 2. Score Facility & Operational Expansions (Max: 25 pts)
         expansion_score, expansion_breakdown = self._score_expansions(
-            serper_data, owler_data
+            serper_data=serper_data,
+            owler_data=owler_data,
+            traffic_data=traffic_data,
         )
 
         # 3. Score Executive Leadership Turnover (Max: 20 pts)
@@ -252,16 +255,18 @@ class PropensityScorer:
     def _score_expansions(
         serper_data: Optional[Dict[str, Any]],
         owler_data: Optional[Dict[str, Any]] = None,
+        traffic_data: Optional[Dict[str, Any]] = None,
     ) -> (float, Dict[str, Any]):
         """
-        Blends Serper 6-month facility/M&A signals with Owler's verified
-        acquisition count and total funding as additional expansion signals.
+        Blends Serper 6-month facility/M&A signals, Owler's verified
+        acquisition count/funding, and Web Traffic growth surges.
         """
         score = 0.0
         facility_count = 0
         funding_count  = 0
         owler_acquisitions = 0
         owler_funding      = None
+        traffic_growth     = None
 
         # Serper signals (facility opens, M&A announcements in last 6M)
         if serper_data:
@@ -294,6 +299,15 @@ class PropensityScorer:
             if owler_funding and owler_funding > 10_000_000:
                 score += 3.0
 
+        # Web Traffic Growth Surge
+        if traffic_data:
+            traffic_growth = traffic_data.get("web_traffic_growth_pct")
+            if traffic_growth is not None:
+                if traffic_growth >= 15.0:
+                    score += 4.0  # Traffic surge driving near-term commercial hiring
+                elif traffic_growth >= 5.0:
+                    score += 2.0
+
         score = min(WEIGHT_FACILITY_EXPANSION, score)
 
         detail_parts = [
@@ -304,12 +318,15 @@ class PropensityScorer:
             detail_parts.append(f"{owler_acquisitions} acquisitions (Owler)")
         if owler_funding:
             detail_parts.append(f"${owler_funding:,} total funding (Owler)")
+        if traffic_growth is not None:
+            detail_parts.append(f"Web Traffic {traffic_growth:+.1f}%")
 
         return score, {
             "facility_expansions":  facility_count,
             "funding_ma_rounds":    funding_count,
             "owler_acquisitions":   owler_acquisitions,
             "owler_total_funding":  owler_funding,
+            "web_traffic_growth":   traffic_growth,
             "detail":              ", ".join(detail_parts) + ".",
         }
 

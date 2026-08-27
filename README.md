@@ -1,6 +1,6 @@
 # Nutraceutical Business Development (BD) Engine
 
-A proactive, multi-signal Business Development intelligence engine built specifically for **Nutraceutical, Dietary Supplement, Functional Food, and Natural Health Products** talent acquisition and executive search.
+A multi-signal Business Development intelligence engine built specifically for Nutraceutical, Dietary Supplement, Functional Food, and Natural Health Products talent acquisition and executive search.
 
 ---
 
@@ -8,11 +8,11 @@ A proactive, multi-signal Business Development intelligence engine built specifi
 
 The platform identifies, scores, and ranks nutraceutical companies with the highest propensity to hire external recruitment agencies by aggregating live signals across:
 
-1. **LinkedIn Headcount Growth Trajectory (30% Weight)**: Real-time employee headcount tracking and growth percentage deltas via Apify.
-2. **6-Month Facility Expansions & M&A (25% Weight)**: Tracks new plant openings, capacity expansions, and private equity investments via Serper.
-3. **Executive Leadership Turnover (20% Weight)**: Real-time alerts on C-Suite and VP appointments and departures via Serper.
-4. **FDA Regulatory & Compliance Pressure (15% Weight)**: Real-time product recall tracking (Class I, II, III) and cGMP risk scoring via openFDA.
-5. **Nutraceutical Domain Alignment (10% Weight)**: Pre-seeded taxonomy of **1,022 verified nutraceutical companies** across Finished Brands, CDMOs, Raw Ingredient Suppliers, and Testing CROs.
+1. **Headcount Growth & Hiring Velocity (30% Weight)**: YoY headcount growth percentage, real-time hiring velocity, and open requisition volume via Growjo and Career Traffic collectors.
+2. **Facility Expansions, M&A & Web Traffic Surges (25% Weight)**: New plant openings, capacity upgrades, verified corporate acquisitions, and domain web traffic momentum via Serper, Owler, and Web Traffic collectors.
+3. **Executive Leadership Turnover (20% Weight)**: C-Suite and VP appointments and departures tracked within a 6-month recency window via Serper.
+4. **FDA Regulatory & Compliance Pressure (15% Weight)**: Official FDA Class I/II product recall enforcement and cGMP compliance risk scoring via openFDA.
+5. **Nutraceutical Domain Alignment (10% Weight)**: Pre-seeded taxonomy of 1,022 verified nutraceutical companies across Finished Brands, Contract Manufacturers (CDMOs), Raw Ingredient Suppliers, and Testing CROs.
 
 ---
 
@@ -21,17 +21,22 @@ The platform identifies, scores, and ranks nutraceutical companies with the high
 ```
 bd-engine/
 ├── bd_engine/                           # Core Engine Package
-│   ├── __init__.py
+│   ├── __init__.py                      # Package initialization & auto-env loading
 │   ├── config.py                        # Taxonomies, seniority weights, & scoring rules
 │   ├── bd_scorer.py                     # Master 0-100 Propensity Scoring Engine
 │   └── collectors/                      # Multi-Signal Data Collectors
 │       ├── __init__.py
-│       ├── apify_collector.py           # LinkedIn Headcount & Growth Rate Scraper
+│       ├── growjo_collector.py          # YoY Headcount Growth %, Revenue, Funding, Valuation
+│       ├── owler_collector.py           # Revenue Bands, Acquisitions, Competitor Tracking
+│       ├── career_traffic_collector.py  # Career Page & ATS Discovery, Open Roles, Traffic Index
+│       ├── web_traffic_collector.py     # Monthly Web Visits, Signed 90-Day % Growth (Increments & Declines)
+│       ├── apify_collector.py           # LinkedIn Headcount & Follower Snapshots
 │       ├── serper_collector.py          # 6-Month Trade Press, Expansions, M&A, Exec Hires
 │       └── openfda_collector.py         # Official FDA Recalls & Compliance Risk
 │
 ├── app.py                               # FastAPI REST Server
-├── run_pipeline.py                       # Unified 360° BD Propensity Scanner CLI
+├── run_pipeline.py                      # Unified 360-degree BD Scanner CLI
+├── generate_bd_report.py                # Batch Intelligence Generator with Consolidated Primary Columns
 ├── nutraceutical_kb.json                # Knowledge Base (1,022 Verified Nutra Companies)
 ├── requirements.txt                     # Dependencies
 └── .env.example                         # Environment Variables Template
@@ -67,25 +72,32 @@ APIFY_API_TOKEN=your_apify_token
 OPENFDA_API_KEY=your_openfda_key_optional
 ```
 
-### 4. Running a 360° BD Intelligence Scan
+### 4. Running a 360-Degree BD Intelligence Scan
 
-Scan any company from `nutraceutical_kb.json` via CLI:
+Scan any target company via CLI:
 
 ```bash
-python run_pipeline.py --company "Herbalife"
-python run_pipeline.py --company "NOW Health Group"
-python run_pipeline.py --company "OmniActive Health Technologies" --linkedin "https://www.linkedin.com/company/omniactive-health-technologies"
+python run_pipeline.py --company "Thorne Research" --domain "thorne.com"
+python run_pipeline.py --company "Nordic Naturals" --domain "nordicnaturals.com"
 ```
 
-### 5. Starting the FastAPI REST Server
+### 5. Running Batch Intelligence Reports
+
+Run batch scanning across target companies to produce consolidated CSV reports:
+
+```bash
+python generate_bd_report.py
+```
+
+### 6. Starting the FastAPI REST Server
 
 ```bash
 python app.py
 ```
 The server will start on `http://127.0.0.1:8000`:
-- **Propensity Scorecard**: `GET http://127.0.0.1:8000/api/v1/bd/score?company_name=Herbalife`
-- **Summary Badge (for Job Cards)**: `GET http://127.0.0.1:8000/api/v1/bd/summary?company_name=Herbalife`
-- **Full 360° Dossier**: `GET http://127.0.0.1:8000/api/v1/bd/company?company_name=Herbalife`
+- **Propensity Scorecard**: `GET http://127.0.0.1:8000/api/v1/bd/score?company_name=Thorne+Research`
+- **Summary Badge**: `GET http://127.0.0.1:8000/api/v1/bd/summary?company_name=Thorne+Research`
+- **Full Dossier**: `GET http://127.0.0.1:8000/api/v1/bd/company?company_name=Thorne+Research`
 - **Interactive Swagger Docs**: `http://127.0.0.1:8000/docs`
 
 ---
@@ -94,10 +106,11 @@ The server will start on `http://127.0.0.1:8000`:
 
 $$\text{Propensity Score} = \text{Growth (30)} + \text{Expansion (25)} + \text{Turnover (20)} + \text{Compliance (15)} + \text{Fit (10)}$$
 
-| Dimension | Data Source | Max Points | What It Measures |
+| Dimension | Data Collectors | Max Points | What It Measures |
 | :--- | :--- | :---: | :--- |
-| **Headcount Growth Trajectory** | Apify | **30 pts** | Hyper-growth ($\ge 15\%$) scaling strain or severe attrition deficit |
-| **Facility Expansions & M&A** | Serper (6-Month) | **25 pts** | New manufacturing plant openings, capacity upgrades, capital rounds |
-| **Executive Leadership Moves** | Serper (6-Month) | **20 pts** | C-Suite/VP leadership turnover and team restructuring |
+| **Headcount Growth & Hiring Velocity** | Growjo, Career Traffic, Apify | **30 pts** | Hyper-growth (+15% YoY), active hiring velocity, 30-day open roles, or staffing deficit |
+| **Facility Expansions, M&A & Web Surges** | Serper (6-Month), Owler, Web Traffic | **25 pts** | New plant openings, M&A acquisitions, capital rounds, web traffic surges (+15%) |
+| **Executive Leadership Moves** | Serper (6-Month) | **20 pts** | C-Suite/VP leadership appointments and department restructuring |
 | **Compliance Pressure** | openFDA | **15 pts** | Class I/II product recalls and active FDA inspection audits |
-| **Domain & Segment Alignment** | Knowledge Base | **10 pts** | Vertical alignment (CDMO, Finished Brand, Raw Ingredient Lab) |
+| **Domain & Segment Alignment** | Knowledge Base | **10 pts** | Vertical alignment (CDMO, Finished Brand, Raw Ingredient Supplier) |
+

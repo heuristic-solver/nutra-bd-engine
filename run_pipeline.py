@@ -9,6 +9,21 @@ Usage:
 import argparse
 import warnings
 warnings.filterwarnings("ignore")
+import os
+from pathlib import Path
+
+# Load .env automatically
+_env_path = Path(__file__).resolve().parent / ".env"
+if _env_path.exists():
+    with open(_env_path, "r", encoding="utf-8") as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith("#") and "=" in _line:
+                _k, _v = _line.split("=", 1)
+                _k = _k.strip()
+                _v = _v.strip().strip("'\"")
+                if _k and not os.environ.get(_k):
+                    os.environ[_k] = _v
 
 from bd_engine.collectors.serper_collector import SerperCollector
 from bd_engine.collectors.openfda_collector import OpenFDACollector
@@ -16,9 +31,9 @@ from bd_engine.collectors.apify_collector import ApifyCollector
 from bd_engine.collectors.growjo_collector import GrowjoCollector
 from bd_engine.collectors.owler_collector import OwlerCollector
 from bd_engine.collectors.career_traffic_collector import CareerTrafficCollector
+from bd_engine.collectors.web_traffic_collector import WebTrafficCollector
 from bd_engine.bd_scorer import PropensityScorer
 
-import os
 APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "")
 
 
@@ -73,7 +88,7 @@ def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None
         print("        -> Not found on Owler.")
 
     # 6. Career Page Traffic & Hiring Velocity
-    print("  [6/6] Career page traffic & hiring velocity scan...")
+    print("  [6/7] Career page traffic & hiring velocity scan...")
     career = CareerTrafficCollector()
     hc_val = (growjo_data or {}).get("current_employees") or (apify_data.get("firmographics") or {}).get("employee_count")
     g_growth = (growjo_data or {}).get("employee_growth_pct")
@@ -89,7 +104,19 @@ def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None
         f"ATS: {career_data.get('ats_platform')}"
     )
 
-    # 7. Master Propensity Scorer
+    # 7. Overall Web Traffic & 90-Day % Growth
+    print("  [7/7] Domain web traffic & 90-day growth % scan...")
+    traffic = WebTrafficCollector()
+    traffic_data = traffic.analyze_web_traffic(
+        company_name=company_name,
+        domain=domain,
+    )
+    print(
+        f"        -> Monthly Visits: {traffic_data.get('monthly_web_visits_formatted')} | "
+        f"90D Growth: {traffic_data.get('web_traffic_growth_formatted')} ({traffic_data.get('traffic_trend_status')})"
+    )
+
+    # 8. Master Propensity Scorer
     scorer = PropensityScorer()
     scorecard = scorer.score_company(
         company_name=company_name,
@@ -99,6 +126,7 @@ def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None
         growjo_data=growjo_data,
         owler_data=owler_data,
         career_data=career_data,
+        traffic_data=traffic_data,
     )
 
     # --- Display ---
@@ -108,6 +136,17 @@ def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None
     print(f"  Company               : {scorecard['company_name']}")
     print(f"  Propensity Score      : {scorecard['propensity_score']} / 100")
     print(f"  Tier                  : [{scorecard['tier']}]")
+    print(f"  Urgency               : {scorecard['urgency_label']}")
+    print(f"  Talking Point         : {scorecard['primary_talking_point']}")
+
+    print(f"\n  Web Traffic & Recruitment Visibility:")
+    print(f"    Monthly Web Visits  : {traffic_data.get('monthly_web_visits_formatted')}")
+    print(f"    90D Traffic Growth  : {traffic_data.get('web_traffic_growth_formatted')} [{traffic_data.get('traffic_trend_status')}]")
+    print(f"    Traffic Direction   : {traffic_data.get('traffic_direction')}")
+    print(f"    Career Activity     : {career_data.get('career_page_traffic_activity')} (Score: {career_data.get('career_traffic_score')}/100)")
+    print(f"    ATS / Career Portal : {career_data.get('ats_platform')} | {career_data.get('career_page_url')}")
+    print(f"    30D Active Jobs     : {career_data.get('active_job_openings_30d')}")
+    print(f"    Hiring Trajectory   : {career_data.get('hiring_trajectory')} ({career_data.get('employee_growth_pct'):+.1f}% employee growth)")
     print(f"  Urgency               : {scorecard['urgency_label']}")
     print(f"  Talking Point         : {scorecard['primary_talking_point']}")
 

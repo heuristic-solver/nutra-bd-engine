@@ -1,5 +1,12 @@
 """
-generate_bd_report.py -- Batch BD intelligence report with consolidated primary columns.
+generate_bd_report.py -- Batch BD intelligence report with all signals:
+  1. Headcount & YoY Employee Growth % (Growjo & Live Velocity Model)
+  2. Hiring Trajectory & Career Page Traffic / ATS Discovery
+  3. Domain Web Traffic & 90-Day % Growth (Increments & Declines)
+  4. Owler Firmographics & M&A / Acquisitions
+  5. Serper 6-Month Market Signals (Facility & Exec Appointments)
+  6. openFDA Compliance & Recalls
+  7. Master BD Propensity Score (0-100) & Recruiter Talking Points
 """
 
 import csv
@@ -7,32 +14,48 @@ import time
 import warnings
 warnings.filterwarnings("ignore")
 from datetime import datetime, timezone
-
 import os
+from pathlib import Path
+
+# Load .env file automatically
+_env_path = Path(__file__).resolve().parent / ".env"
+if _env_path.exists():
+    with open(_env_path, "r", encoding="utf-8") as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith("#") and "=" in _line:
+                _k, _v = _line.split("=", 1)
+                _k = _k.strip()
+                _v = _v.strip().strip("'\"")
+                if _k and not os.environ.get(_k):
+                    os.environ[_k] = _v
+
 APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "")
 
-from bd_engine.collectors.growjo_collector  import GrowjoCollector
-from bd_engine.collectors.owler_collector   import OwlerCollector
-from bd_engine.collectors.apify_collector   import ApifyCollector
-from bd_engine.collectors.serper_collector  import SerperCollector
-from bd_engine.collectors.openfda_collector import OpenFDACollector
-from bd_engine.bd_scorer                    import PropensityScorer
+from bd_engine.collectors.growjo_collector         import GrowjoCollector
+from bd_engine.collectors.owler_collector          import OwlerCollector
+from bd_engine.collectors.apify_collector          import ApifyCollector
+from bd_engine.collectors.serper_collector         import SerperCollector
+from bd_engine.collectors.openfda_collector        import OpenFDACollector
+from bd_engine.collectors.career_traffic_collector import CareerTrafficCollector
+from bd_engine.collectors.web_traffic_collector    import WebTrafficCollector
+from bd_engine.bd_scorer                           import PropensityScorer
 
 COMPANIES = [
-    {"name": "Nordic Naturals",           "linkedin": "nordic-naturals"},
-    {"name": "Thorne Research",           "linkedin": "thorne-research"},
-    {"name": "Garden of Life",            "linkedin": "garden-of-life"},
-    {"name": "NOW Foods",                 "linkedin": "now-foods"},
-    {"name": "Jarrow Formulas",           "linkedin": "jarrow-formulas"},
-    {"name": "Solgar",                    "linkedin": "solgar"},
-    {"name": "Pure Encapsulations",       "linkedin": "pure-encapsulations"},
-    {"name": "Life Extension",            "linkedin": "life-extension"},
-    {"name": "American Health Holdings",  "linkedin": "american-health-holdings"},
-    {"name": "Natrol",                    "linkedin": "natrol"},
+    {"name": "Nordic Naturals",           "domain": "nordicnaturals.com",     "linkedin": "nordic-naturals"},
+    {"name": "Thorne Research",           "domain": "thorne.com",             "linkedin": "thorne-research"},
+    {"name": "Garden of Life",            "domain": "gardenoflife.com",       "linkedin": "garden-of-life"},
+    {"name": "NOW Foods",                 "domain": "nowfoods.com",           "linkedin": "now-foods"},
+    {"name": "Jarrow Formulas",           "domain": "jarrow.com",             "linkedin": "jarrow-formulas"},
+    {"name": "Solgar",                    "domain": "solgar.com",             "linkedin": "solgar"},
+    {"name": "Pure Encapsulations",       "domain": "pureencapsulations.com", "linkedin": "pure-encapsulations"},
+    {"name": "Life Extension",            "domain": "lifeextension.com",      "linkedin": "life-extension"},
+    {"name": "American Health Holdings",  "domain": "americanhealthus.com",   "linkedin": "american-health-holdings"},
+    {"name": "Natrol",                    "domain": "natrol.com",             "linkedin": "natrol"},
 ]
 
 OUT_FILE = "bd_intelligence_report_10co.csv"
-SEP = "=" * 70
+SEP = "=" * 80
 
 BATCH_SIZE = 4
 TIMEOUT    = 360
@@ -51,15 +74,6 @@ def format_currency(val):
         elif num > 0:
             return "${:,.0f}".format(num)
         return "$0"
-    except (ValueError, TypeError):
-        return str(val)
-
-def format_growth(val):
-    if val is None or val == "":
-        return "Unindexed (Growjo)"
-    try:
-        num = float(val)
-        return "{:+.2f}%".format(num)
     except (ValueError, TypeError):
         return str(val)
 
@@ -96,15 +110,17 @@ def fuzzy_match(name, index):
             return v
     return None
 
-def build_row(company, g, o, a, serper_data, fda_data, scorecard):
+def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data, scorecard):
     g = g or {}
     o = o or {}
     a = a or {}
+    career_data = career_data or {}
+    traffic_data = traffic_data or {}
     b = scorecard.get("score_breakdown", {})
     fda_sum    = (fda_data    or {}).get("summary", {})
     serper_sum = (serper_data or {}).get("signal_summary", {})
 
-    # 1. Primary Headcount Consolidation
+    # 1. Primary Headcount
     g_hc = g.get("current_employees")
     li_hc = a.get("employee_count")
     ow_hc = o.get("employee_count")
@@ -122,7 +138,7 @@ def build_row(company, g, o, a, serper_data, fda_data, scorecard):
         primary_hc = "N/A"
         hc_source = "Not Found"
 
-    # 2. Primary Revenue Consolidation
+    # 2. Primary Revenue
     g_rev = g.get("estimated_revenue")
     ow_rev_band = o.get("estimated_annual_revenue")
     ow_rev_raw = o.get("revenue")
@@ -140,39 +156,51 @@ def build_row(company, g, o, a, serper_data, fda_data, scorecard):
         primary_rev = "N/A"
         rev_source = "N/A"
 
-    # 3. Growth & Trajectory Consolidation
-    raw_growth = g.get("employee_growth_pct")
-    growth_formatted = format_growth(raw_growth)
-    
-    trajectory = g.get("trajectory")
-    if not trajectory:
-        trajectory = "STABLE (Baseline)" if primary_hc != "N/A" else "UNKNOWN"
+    # 3. Employee Growth & Trajectory
+    growth_val = career_data.get("employee_growth_pct", 0.0)
+    growth_formatted = "{:+.1f}%".format(growth_val)
+    growth_source = career_data.get("growth_source", "Hiring Velocity Model")
+    trajectory = career_data.get("hiring_trajectory", "STABLE")
+    open_jobs = career_data.get("active_job_openings_30d", 0)
 
-    jobs = g.get("job_openings")
-    open_jobs = int(jobs) if (jobs and str(jobs).isdigit()) else 0
+    # 4. Web Traffic Signals
+    monthly_visits = traffic_data.get("monthly_web_visits_formatted", "N/A")
+    web_growth_formatted = traffic_data.get("web_traffic_growth_formatted", "0.0%")
+    traffic_direction = traffic_data.get("traffic_direction", "FLAT")
+    traffic_trend_status = traffic_data.get("traffic_trend_status", "FLAT / STABLE")
 
     funding = g.get("total_funding") or o.get("total_funding")
-    if not funding or str(funding) in ("0", "", "None"):
+    if not funding or str(funding) in ("0", "$0", "None"):
         funding = "Self-Funded / Private"
 
     return {
         # === PRIMARY CONSOLIDATED SIGNALS ===
-        "company_name":             company["name"],
-        "primary_headcount":        primary_hc,
-        "headcount_source":         hc_source,
-        "yoy_headcount_growth_pct": growth_formatted,
-        "hiring_trajectory":        trajectory,
-        "active_job_openings":      open_jobs,
-        "estimated_annual_revenue": primary_rev,
-        "revenue_source":           rev_source,
-        "total_funding":            funding,
-        "propensity_score":         scorecard.get("propensity_score", ""),
-        "tier":                     scorecard.get("tier", ""),
-        "urgency_label":            scorecard.get("urgency_label", ""),
-        "primary_talking_point":    scorecard.get("primary_talking_point", ""),
+        "company_name":                 company["name"],
+        "primary_headcount":            primary_hc,
+        "headcount_source":             hc_source,
+        "employee_growth_pct":          growth_formatted,
+        "growth_source":                growth_source,
+        "hiring_trajectory":            trajectory,
+        "active_job_openings_30d":      open_jobs,
+        "monthly_web_visits":           monthly_visits,
+        "web_traffic_growth_pct":       web_growth_formatted,
+        "traffic_direction":            traffic_direction,
+        "traffic_trend_status":         traffic_trend_status,
+        "career_page_traffic_activity": career_data.get("career_page_traffic_activity", "LOW_TRAFFIC"),
+        "career_traffic_score":         career_data.get("career_traffic_score", 0),
+        "career_page_url":              career_data.get("career_page_url", "Not Found"),
+        "ats_platform":                 career_data.get("ats_platform", "Direct Web"),
+        "estimated_annual_revenue":     primary_rev,
+        "revenue_source":               rev_source,
+        "total_funding":                funding,
+        "propensity_score":             scorecard.get("propensity_score", ""),
+        "tier":                         scorecard.get("tier", ""),
+        "urgency_label":                scorecard.get("urgency_label", ""),
+        "primary_talking_point":        scorecard.get("primary_talking_point", ""),
+        "sample_open_roles":            " | ".join(career_data.get("sample_open_roles", [])[:3]),
 
-        # === CONTACT & IDENTITY ===
-        "domain":                   g.get("domain") or o.get("domain", ""),
+        # === IDENTITY & CONTACT ===
+        "domain":                   company.get("domain") or g.get("domain") or o.get("domain", ""),
         "website":                  g.get("website") or o.get("website", ""),
         "linkedin_url":             g.get("linkedin_url") or a.get("linkedin_url", ""),
         "city":                     g.get("city") or o.get("city", ""),
@@ -182,42 +210,132 @@ def build_row(company, g, o, a, serper_data, fda_data, scorecard):
         "phone":                    o.get("phone", ""),
         "founded_year":             g.get("founded_year") or o.get("founded", ""),
         "ownership":                o.get("ownership", ""),
-        "ticker":                   o.get("ticker", ""),
-        "exchange":                 o.get("exchange", ""),
 
         # === RAW VENDOR BREAKDOWN ===
         "growjo_current_employees": g.get("current_employees", ""),
         "growjo_last_employees":    g.get("last_employees", ""),
         "growjo_yoy_growth_pct":    g.get("employee_growth_pct", ""),
-        "growjo_trajectory":        g.get("trajectory", ""),
         "growjo_job_openings":      g.get("job_openings", ""),
         "growjo_estimated_revenue": g.get("estimated_revenue", ""),
         "growjo_total_funding":     g.get("total_funding", ""),
-        "growjo_valuation":         g.get("valuation", ""),
-        "growjo_lead_score":        g.get("lead_score", ""),
         "owler_revenue":            o.get("revenue", ""),
         "owler_estimated_annual_revenue": o.get("estimated_annual_revenue", ""),
-        "owler_total_funding":      o.get("total_funding", ""),
         "owler_total_acquisitions": o.get("total_acquisitions", ""),
         "owler_total_competitors":  o.get("total_competitors", ""),
-        "owler_employee_count":     o.get("employee_count", ""),
-        "owler_estimated_employees": o.get("estimated_employees", ""),
         "linkedin_employee_count":  a.get("employee_count", ""),
-        "linkedin_follower_count":  a.get("follower_count", ""),
-        "linkedin_employee_range":  a.get("employee_range", ""),
         "serper_facility_signals":  serper_sum.get("facility_count", 0),
         "serper_funding_ma_signals": serper_sum.get("funding_ma_count", 0),
         "serper_exec_turnover_signals": serper_sum.get("exec_signals_count", 0),
-        "serper_regulatory_press_hits": serper_sum.get("regulatory_count", 0),
         "fda_total_recalls":        fda_sum.get("total_recalls", 0),
-        "fda_class1_recalls":       fda_sum.get("class_1_critical", 0),
-        "fda_ongoing_recalls":      fda_sum.get("ongoing_active", 0),
         "fda_risk_score":           fda_sum.get("regulatory_risk_score", 0.0),
         "score_headcount_growth":   b.get("headcount_growth", {}).get("score", ""),
-        "score_headcount_source":   b.get("headcount_growth", {}).get("details", {}).get("data_source", ""),
         "score_expansions":         b.get("facility_expansions", {}).get("score", ""),
         "score_exec_turnover":      b.get("executive_turnover", {}).get("score", ""),
         "score_regulatory":         b.get("regulatory_pressure", {}).get("score", ""),
         "score_domain_alignment":   b.get("domain_alignment", {}).get("score", ""),
         "scraped_at":               datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
     }
+
+def main():
+    print(SEP)
+    print("  BD INTELLIGENCE MASTER REPORT -- 10 COMPANIES")
+    print("  Started: " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
+    print(SEP)
+
+    names = [c["name"] for c in COMPANIES]
+
+    print("\n[Phase 1] Growjo YoY growth data...")
+    g_collector = GrowjoCollector(api_token=APIFY_TOKEN)
+    growjo_idx = run_in_subbatches(names, lambda chunk: g_collector.fetch_companies(chunk, timeout_secs=TIMEOUT))
+
+    print("\n[Phase 2] Owler firmographic data...")
+    o_collector = OwlerCollector(api_token=APIFY_TOKEN)
+    owler_idx = run_in_subbatches(names, lambda chunk: o_collector.fetch_companies(chunk, timeout_secs=TIMEOUT))
+
+    print("\n[Phase 3] Apify LinkedIn snapshots...")
+    apify_idx = run_apify_subbatch(COMPANIES)
+
+    print("\n[Phase 4] Per-company Career Page, Web Traffic & Multi-Signal Scoring...")
+    career_collector = CareerTrafficCollector()
+    traffic_collector = WebTrafficCollector()
+    scorer = PropensityScorer()
+    rows = []
+
+    for i, company in enumerate(COMPANIES, 1):
+        name = company["name"]
+        domain = company.get("domain")
+        print("\n  [" + str(i) + "/10] Processing: " + name)
+
+        g = fuzzy_match(name, growjo_idx) or {}
+        o = fuzzy_match(name, owler_idx) or {}
+        a = fuzzy_match(name, apify_idx) or {}
+
+        # 1. Determine Headcount baseline
+        hc_val = g.get("current_employees") or a.get("employee_count") or o.get("employee_count")
+        try:
+            current_hc = int(hc_val) if hc_val else None
+        except Exception:
+            current_hc = None
+
+        g_growth = float(g["employee_growth_pct"]) if (g.get("employee_growth_pct") is not None) else None
+
+        # 2. Career & Hiring Velocity
+        career_data = career_collector.analyze_career_and_hiring(
+            company_name=name,
+            domain=domain,
+            current_headcount=current_hc,
+            growjo_growth_pct=g_growth,
+        )
+
+        # 3. Domain Web Traffic
+        traffic_data = traffic_collector.analyze_web_traffic(
+            company_name=name,
+            domain=domain,
+        )
+
+        # 4. Serper & openFDA
+        serper_data = SerperCollector().analyze_company(name)
+        fda_data    = OpenFDACollector().analyze_company(name, lookback_years=3)
+
+        apify_scored = None
+        if a:
+            apify_scored = {
+                "firmographics": a,
+                "headcount_growth": ApifyCollector.calculate_headcount_growth(
+                    a.get("employee_count", 0), a.get("employee_count", 0)
+                ),
+            }
+
+        # 5. Composite Scorecard
+        scorecard = scorer.score_company(
+            company_name=name,
+            apify_data=apify_scored,
+            serper_data=serper_data,
+            openfda_data=fda_data,
+            growjo_data=g,
+            owler_data=o,
+            career_data=career_data,
+            traffic_data=traffic_data,
+        )
+
+        row = build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data, scorecard)
+        rows.append(row)
+
+        print("    Score: " + str(scorecard.get("propensity_score")) + "/100 [" + str(scorecard.get("tier")) + "]")
+        print("    Growth: " + str(row["employee_growth_pct"]) + " (" + str(row["growth_source"]) + ") | Trajectory: " + str(row["hiring_trajectory"]))
+        print("    Web Traffic: " + str(row["monthly_web_visits"]) + " visits | 90D Change: " + str(row["web_traffic_growth_pct"]) + " (" + str(row["traffic_trend_status"]) + ")")
+        print("    Career Activity: " + str(row["career_page_traffic_activity"]) + " | Open 30D Jobs: " + str(row["active_job_openings_30d"]))
+
+    # Write Master CSV
+    with open(OUT_FILE, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()), extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(rows)
+
+    print("\n" + SEP)
+    print("  DONE -- " + OUT_FILE)
+    print("  Total rows generated: " + str(len(rows)))
+    print(SEP)
+
+if __name__ == "__main__":
+    main()

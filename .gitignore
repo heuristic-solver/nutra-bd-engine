@@ -39,3 +39,7 @@ ENV/
 
 # Temporary test logs & local outputs
 *.log
+
+# Scraped datasets & report exports
+*.csv
+!sample_data.csv
