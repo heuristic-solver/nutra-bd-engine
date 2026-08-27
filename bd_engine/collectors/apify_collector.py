@@ -55,7 +55,7 @@ class ApifyCollector:
         url = f"{APIFY_BASE_URL}/acts/{ACTOR_ID}/run-sync-get-dataset-items"
         params = {"token": self.api_token, "timeout": timeout_secs}
         payload = {
-            "companies": company_urls,
+            "companyUrls": company_urls,
             "maxConcurrency": 5,
         }
 
