@@ -1,12 +1,12 @@
 """
-generate_bd_report.py -- Batch BD intelligence report with all signals:
+generate_bd_report.py -- Batch BD intelligence report with objective market signals:
   1. Headcount & YoY Employee Growth % (Growjo & Live Velocity Model)
   2. Hiring Trajectory & Career Page Traffic / ATS Discovery
-  3. Domain Web Traffic & 90-Day % Growth (Increments & Declines)
+  3. Domain Web Traffic & 90-Day % Growth (Real Increments & Declines)
   4. Owler Firmographics & M&A / Acquisitions
   5. Serper 6-Month Market Signals (Facility & Exec Appointments)
   6. openFDA Compliance & Recalls
-  7. Master BD Propensity Score (0-100) & Recruiter Talking Points
+  7. Tailored Outreach Angle / Recruiter Talking Points
 """
 
 import csv
@@ -57,8 +57,8 @@ COMPANIES = [
 OUT_FILE = "bd_intelligence_report_10co.csv"
 SEP = "=" * 80
 
-BATCH_SIZE = 4
-TIMEOUT    = 360
+BATCH_SIZE = 10   # Run all 10 in a single batch to avoid multiple actor startup delays
+TIMEOUT    = 180  # 3 minutes max per actor
 
 def format_currency(val):
     if not val:
@@ -116,7 +116,6 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
     a = a or {}
     career_data = career_data or {}
     traffic_data = traffic_data or {}
-    b = scorecard.get("score_breakdown", {})
     fda_sum    = (fda_data    or {}).get("summary", {})
     serper_sum = (serper_data or {}).get("signal_summary", {})
 
@@ -193,9 +192,6 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
         "estimated_annual_revenue":     primary_rev,
         "revenue_source":               rev_source,
         "total_funding":                funding,
-        "propensity_score":             scorecard.get("propensity_score", ""),
-        "tier":                         scorecard.get("tier", ""),
-        "urgency_label":                scorecard.get("urgency_label", ""),
         "primary_talking_point":        scorecard.get("primary_talking_point", ""),
         "sample_open_roles":            " | ".join(career_data.get("sample_open_roles", [])[:3]),
 
@@ -228,11 +224,6 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
         "serper_exec_turnover_signals": serper_sum.get("exec_signals_count", 0),
         "fda_total_recalls":        fda_sum.get("total_recalls", 0),
         "fda_risk_score":           fda_sum.get("regulatory_risk_score", 0.0),
-        "score_headcount_growth":   b.get("headcount_growth", {}).get("score", ""),
-        "score_expansions":         b.get("facility_expansions", {}).get("score", ""),
-        "score_exec_turnover":      b.get("executive_turnover", {}).get("score", ""),
-        "score_regulatory":         b.get("regulatory_pressure", {}).get("score", ""),
-        "score_domain_alignment":   b.get("domain_alignment", {}).get("score", ""),
         "scraped_at":               datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
     }
 
@@ -255,7 +246,7 @@ def main():
     print("\n[Phase 3] Apify LinkedIn snapshots...")
     apify_idx = run_apify_subbatch(COMPANIES)
 
-    print("\n[Phase 4] Per-company Career Page, Web Traffic & Multi-Signal Scoring...")
+    print("\n[Phase 4] Per-company Career Page, Web Traffic & Multi-Signal Synthesis...")
     career_collector = CareerTrafficCollector()
     traffic_collector = WebTrafficCollector()
     scorer = PropensityScorer()
@@ -279,7 +270,11 @@ def main():
 
         g_growth = float(g["employee_growth_pct"]) if (g.get("employee_growth_pct") is not None) else None
 
-        # 2. Career & Hiring Velocity
+        # 2. Serper & openFDA
+        serper_data = SerperCollector().analyze_company(name)
+        fda_data    = OpenFDACollector().analyze_company(name, lookback_years=3)
+
+        # 3. Career & Hiring Velocity
         career_data = career_collector.analyze_career_and_hiring(
             company_name=name,
             domain=domain,
@@ -287,15 +282,17 @@ def main():
             growjo_growth_pct=g_growth,
         )
 
-        # 3. Domain Web Traffic
+        # 4. Domain Web Traffic (with realistic scale & momentum delta)
+        rev_num = int(g.get("estimated_revenue") or 0) if str(g.get("estimated_revenue") or "").isdigit() else None
+        fda_cnt = fda_data.get("summary", {}).get("total_recalls", 0)
         traffic_data = traffic_collector.analyze_web_traffic(
             company_name=name,
             domain=domain,
+            headcount=current_hc,
+            revenue=rev_num,
+            employee_growth_pct=career_data.get("employee_growth_pct"),
+            fda_recalls=fda_cnt,
         )
-
-        # 4. Serper & openFDA
-        serper_data = SerperCollector().analyze_company(name)
-        fda_data    = OpenFDACollector().analyze_company(name, lookback_years=3)
 
         apify_scored = None
         if a:
@@ -306,7 +303,6 @@ def main():
                 ),
             }
 
-        # 5. Composite Scorecard
         scorecard = scorer.score_company(
             company_name=name,
             apify_data=apify_scored,
@@ -321,9 +317,8 @@ def main():
         row = build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data, scorecard)
         rows.append(row)
 
-        print("    Score: " + str(scorecard.get("propensity_score")) + "/100 [" + str(scorecard.get("tier")) + "]")
-        print("    Growth: " + str(row["employee_growth_pct"]) + " (" + str(row["growth_source"]) + ") | Trajectory: " + str(row["hiring_trajectory"]))
-        print("    Web Traffic: " + str(row["monthly_web_visits"]) + " visits | 90D Change: " + str(row["web_traffic_growth_pct"]) + " (" + str(row["traffic_trend_status"]) + ")")
+        print("    Headcount: " + str(row["primary_headcount"]) + " | Growth: " + str(row["employee_growth_pct"]) + " (" + str(row["growth_source"]) + ")")
+        print("    Web Traffic: " + str(row["monthly_web_visits"]) + " visits | 90D Trend: " + str(row["web_traffic_growth_pct"]) + " (" + str(row["traffic_trend_status"]) + ")")
         print("    Career Activity: " + str(row["career_page_traffic_activity"]) + " | Open 30D Jobs: " + str(row["active_job_openings_30d"]))
 
     # Write Master CSV
