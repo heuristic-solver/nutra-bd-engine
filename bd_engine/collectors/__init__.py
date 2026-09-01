@@ -5,6 +5,7 @@ from .growjo_collector import GrowjoCollector
 from .owler_collector import OwlerCollector
 from .career_traffic_collector import CareerTrafficCollector
 from .web_traffic_collector import WebTrafficCollector
+from .crunchbase_collector import CrunchbaseCollector
 
 __all__ = [
     "SerperCollector",
@@ -14,4 +15,5 @@ __all__ = [
     "OwlerCollector",
     "CareerTrafficCollector",
     "WebTrafficCollector",
+    "CrunchbaseCollector",
 ]

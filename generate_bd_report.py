@@ -39,6 +39,7 @@ from bd_engine.collectors.serper_collector         import SerperCollector
 from bd_engine.collectors.openfda_collector        import OpenFDACollector
 from bd_engine.collectors.career_traffic_collector import CareerTrafficCollector
 from bd_engine.collectors.web_traffic_collector    import WebTrafficCollector
+from bd_engine.collectors.crunchbase_collector   import CrunchbaseCollector
 from bd_engine.bd_scorer                           import PropensityScorer
 
 COMPANIES = [
@@ -110,10 +111,11 @@ def fuzzy_match(name, index):
             return v
     return None
 
-def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data, scorecard):
+def build_row(company, g, o, a, cb, career_data, traffic_data, serper_data, fda_data, scorecard):
     g = g or {}
     o = o or {}
     a = a or {}
+    cb = cb or {}
     career_data = career_data or {}
     traffic_data = traffic_data or {}
     fda_sum    = (fda_data    or {}).get("summary", {})
@@ -168,7 +170,7 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
     traffic_direction = traffic_data.get("traffic_direction", "FLAT")
     traffic_trend_status = traffic_data.get("traffic_trend_status", "FLAT / STABLE")
 
-    funding = g.get("total_funding") or o.get("total_funding")
+    funding = cb.get("total_funding") or g.get("total_funding") or o.get("total_funding")
     if not funding or str(funding) in ("0", "$0", "None"):
         funding = "Self-Funded / Private"
 
@@ -216,6 +218,15 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
         "primary_talking_point":        scorecard.get("primary_talking_point", ""),
         "sample_open_roles":            " | ".join(career_data.get("sample_open_roles", [])[:3]),
 
+        # === CRUNCHBASE FUNDING & INVESTMENT SIGNALS (Gap 4) ===
+        "crunchbase_last_round_type":    cb.get("last_funding_round_type", "N/A"),
+        "crunchbase_last_round_amount":  cb.get("last_funding_amount", "N/A"),
+        "crunchbase_last_round_date":    cb.get("last_funding_date", "N/A"),
+        "crunchbase_lead_investors":     cb.get("lead_investors", "N/A"),
+        "crunchbase_num_acquisitions":   cb.get("num_acquisitions", 0),
+        "crunchbase_recent_acquisitions": cb.get("recent_acquisitions", "None"),
+        "crunchbase_operating_status":   cb.get("operating_status", "Active"),
+
         # === EXEC MOVEMENT SIGNALS (Gap 1 — Structured) ===
         "exec_arrivals_count":           len(exec_arrivals),
         "exec_departures_count":         len(exec_departures),
@@ -234,7 +245,7 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
         "fda_registered_facilities":     fda_facilities,
         "fda_facility_states":           fda_states,
 
-        # === NDI / PRODUCT EXPANSION SIGNALS (Gap 4) ===
+        # === NDI / PRODUCT EXPANSION SIGNALS ===
         "ndi_filing_signals":            serper_sum.get("ndi_filing_count", 0),
 
         # === IDENTITY & CONTACT ===
@@ -288,7 +299,16 @@ def main():
     print("\n[Phase 3] Apify LinkedIn snapshots...")
     apify_idx = run_apify_subbatch(COMPANIES)
 
-    print("\n[Phase 4] Per-company Career Page, Web Traffic & Multi-Signal Synthesis...")
+    print("\n[Phase 4] Apify Crunchbase funding & acquisitions...")
+    cb_collector = CrunchbaseCollector(api_token=APIFY_TOKEN)
+    cb_results = cb_collector.fetch_companies_funding_batch(COMPANIES, timeout_secs=TIMEOUT)
+    cb_idx = {}
+    for r in cb_results:
+        k = (r.get("company_name") or "").strip().lower()
+        if k:
+            cb_idx[k] = r
+
+    print("\n[Phase 5] Per-company Career Page, Web Traffic & Multi-Signal Synthesis...")
     career_collector = CareerTrafficCollector()
     traffic_collector = WebTrafficCollector()
     scorer = PropensityScorer()
@@ -302,6 +322,7 @@ def main():
         g = fuzzy_match(name, growjo_idx) or {}
         o = fuzzy_match(name, owler_idx) or {}
         a = fuzzy_match(name, apify_idx) or {}
+        cb = fuzzy_match(name, cb_idx) or {}
 
         # 1. Determine Headcount baseline
         hc_val = g.get("current_employees") or a.get("employee_count") or o.get("employee_count")
@@ -324,7 +345,7 @@ def main():
             growjo_growth_pct=g_growth,
         )
 
-        # 4. Domain Web Traffic (with realistic scale & momentum delta)
+        # 4. Domain Web Traffic
         rev_num = int(g.get("estimated_revenue") or 0) if str(g.get("estimated_revenue") or "").isdigit() else None
         fda_cnt = fda_data.get("summary", {}).get("total_recalls", 0)
         traffic_data = traffic_collector.analyze_web_traffic(
@@ -356,12 +377,13 @@ def main():
             traffic_data=traffic_data,
         )
 
-        row = build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data, scorecard)
+        row = build_row(company, g, o, a, cb, career_data, traffic_data, serper_data, fda_data, scorecard)
         rows.append(row)
 
         print("    Headcount: " + str(row["primary_headcount"]) + " | Growth: " + str(row["employee_growth_pct"]) + " (" + str(row["growth_source"]) + ")")
         print("    Web Traffic: " + str(row["monthly_web_visits"]) + " visits | 90D Trend: " + str(row["web_traffic_growth_pct"]) + " (" + str(row["traffic_trend_status"]) + ")")
         print("    Career Activity: " + str(row["career_page_traffic_activity"]) + " | Open 30D Jobs: " + str(row["active_job_openings_30d"]))
+        print("    Funding: " + str(row["total_funding"]) + " | Last Round: " + str(row["crunchbase_last_round_type"]))
 
     # Write Master CSV
     with open(OUT_FILE, "w", newline="", encoding="utf-8") as f:

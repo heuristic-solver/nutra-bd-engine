@@ -28,6 +28,7 @@ bd-engine/
 │       ├── __init__.py
 │       ├── growjo_collector.py          # YoY Headcount Growth %, Revenue, Funding, Valuation
 │       ├── owler_collector.py           # Revenue Bands, Acquisitions, Competitor Tracking
+│       ├── crunchbase_collector.py      # Verified Funding Rounds, Amounts, Dates, Lead Investors
 │       ├── career_traffic_collector.py  # Career Page & ATS Discovery, Open Roles, Traffic Index
 │       ├── web_traffic_collector.py     # Monthly Web Visits, Signed 90-Day % Growth (Increments & Declines)
 │       ├── apify_collector.py           # LinkedIn Headcount & Follower Snapshots
