@@ -172,6 +172,27 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
     if not funding or str(funding) in ("0", "$0", "None"):
         funding = "Self-Funded / Private"
 
+    # 5. Structured exec event summaries (Gap 1)
+    exec_events     = (serper_data or {}).get("signals", {}).get("exec_appointments", [])
+    exec_arrivals   = [e for e in exec_events if e.get("direction") == "ARRIVAL"]
+    exec_departures = [e for e in exec_events if e.get("direction") == "DEPARTURE"]
+    exec_senior     = [e for e in exec_events if e.get("is_senior_level")]
+    exec_unresolved = [e for e in exec_departures if not e.get("replacement_detected")]
+
+    def _fmt_exec(events):
+        return " | ".join(
+            f"{e.get('executive_name','?')} ({e.get('function','?')} — {e.get('date','?')})"
+            for e in events[:3]
+        )
+
+    # 6. Job function breakdown (Gap 2)
+    fn_breakdown = career_data.get("job_function_breakdown", {})
+    fn_str = "; ".join(f"{k}: {v}" for k, v in fn_breakdown.items()) if fn_breakdown else ""
+
+    # 7. FDA facilities (Gap 3)
+    fda_facilities  = fda_sum.get("fda_registered_facilities", 0)
+    fda_states      = ", ".join(fda_sum.get("facility_states", []))
+
     return {
         # === PRIMARY CONSOLIDATED SIGNALS ===
         "company_name":                 company["name"],
@@ -195,6 +216,27 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
         "primary_talking_point":        scorecard.get("primary_talking_point", ""),
         "sample_open_roles":            " | ".join(career_data.get("sample_open_roles", [])[:3]),
 
+        # === EXEC MOVEMENT SIGNALS (Gap 1 — Structured) ===
+        "exec_arrivals_count":           len(exec_arrivals),
+        "exec_departures_count":         len(exec_departures),
+        "exec_senior_level_moves":       len(exec_senior),
+        "exec_unresolved_departures":    len(exec_unresolved),
+        "exec_arrivals_detail":          _fmt_exec(exec_arrivals),
+        "exec_departures_detail":        _fmt_exec(exec_departures),
+
+        # === JOB POSTING FUNCTION BREAKDOWN (Gap 2) ===
+        "job_function_breakdown":        fn_str,
+        "ta_hire_detected":              career_data.get("ta_hire_detected", False),
+        "reposted_role_count":           career_data.get("reposted_role_count", 0),
+        "reposted_roles":                " | ".join(career_data.get("reposted_roles", [])[:3]),
+
+        # === FDA FACILITY REGISTRATIONS (Gap 3) ===
+        "fda_registered_facilities":     fda_facilities,
+        "fda_facility_states":           fda_states,
+
+        # === NDI / PRODUCT EXPANSION SIGNALS (Gap 4) ===
+        "ndi_filing_signals":            serper_sum.get("ndi_filing_count", 0),
+
         # === IDENTITY & CONTACT ===
         "domain":                   company.get("domain") or g.get("domain") or o.get("domain", ""),
         "website":                  g.get("website") or o.get("website", ""),
@@ -208,23 +250,23 @@ def build_row(company, g, o, a, career_data, traffic_data, serper_data, fda_data
         "ownership":                o.get("ownership", ""),
 
         # === RAW VENDOR BREAKDOWN ===
-        "growjo_current_employees": g.get("current_employees", ""),
-        "growjo_last_employees":    g.get("last_employees", ""),
-        "growjo_yoy_growth_pct":    g.get("employee_growth_pct", ""),
-        "growjo_job_openings":      g.get("job_openings", ""),
-        "growjo_estimated_revenue": g.get("estimated_revenue", ""),
-        "growjo_total_funding":     g.get("total_funding", ""),
-        "owler_revenue":            o.get("revenue", ""),
+        "growjo_current_employees":  g.get("current_employees", ""),
+        "growjo_last_employees":     g.get("last_employees", ""),
+        "growjo_yoy_growth_pct":     g.get("employee_growth_pct", ""),
+        "growjo_job_openings":       g.get("job_openings", ""),
+        "growjo_estimated_revenue":  g.get("estimated_revenue", ""),
+        "growjo_total_funding":      g.get("total_funding", ""),
+        "owler_revenue":             o.get("revenue", ""),
         "owler_estimated_annual_revenue": o.get("estimated_annual_revenue", ""),
-        "owler_total_acquisitions": o.get("total_acquisitions", ""),
-        "owler_total_competitors":  o.get("total_competitors", ""),
-        "linkedin_employee_count":  a.get("employee_count", ""),
-        "serper_facility_signals":  serper_sum.get("facility_count", 0),
+        "owler_total_acquisitions":  o.get("total_acquisitions", ""),
+        "owler_total_competitors":   o.get("total_competitors", ""),
+        "linkedin_employee_count":   a.get("employee_count", ""),
+        "serper_facility_signals":   serper_sum.get("facility_count", 0),
         "serper_funding_ma_signals": serper_sum.get("funding_ma_count", 0),
-        "serper_exec_turnover_signals": serper_sum.get("exec_signals_count", 0),
-        "fda_total_recalls":        fda_sum.get("total_recalls", 0),
-        "fda_risk_score":           fda_sum.get("regulatory_risk_score", 0.0),
-        "scraped_at":               datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "serper_exec_signals_total": serper_sum.get("exec_signals_count", 0),
+        "fda_total_recalls":         fda_sum.get("total_recalls", 0),
+        "fda_risk_score":            fda_sum.get("regulatory_risk_score", 0.0),
+        "scraped_at":                datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
     }
 
 def main():
