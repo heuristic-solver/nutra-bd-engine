@@ -175,17 +175,58 @@ def build_row(company, g, o, a, cb, career_data, traffic_data, serper_data, fda_
         funding = "Self-Funded / Private"
 
     # 5. Structured exec event summaries (Gap 1)
-    exec_events     = (serper_data or {}).get("signals", {}).get("exec_appointments", [])
-    exec_arrivals   = [e for e in exec_events if e.get("direction") == "ARRIVAL"]
-    exec_departures = [e for e in exec_events if e.get("direction") == "DEPARTURE"]
-    exec_senior     = [e for e in exec_events if e.get("is_senior_level")]
-    exec_unresolved = [e for e in exec_departures if not e.get("replacement_detected")]
+    # 5. Structured exec and role change event summaries (Strict 90-Day Window)
+    rc_events = (serper_data or {}).get("signals", {}).get("role_changes", []) or []
+    exec_events = (serper_data or {}).get("signals", {}).get("exec_appointments", []) or []
+    all_rc_events = rc_events + exec_events
 
-    def _fmt_exec(events):
-        return " | ".join(
-            f"{e.get('executive_name','?')} ({e.get('function','?')} — {e.get('date','?')})"
-            for e in events[:3]
-        )
+    rc_arr = [e for e in all_rc_events if e.get("direction") in ("ARRIVAL", "INTERNAL_PROMOTION", "INTERNAL_MOVE")]
+    rc_dep = [e for e in all_rc_events if e.get("direction") == "DEPARTURE"]
+    exec_senior = [e for e in all_rc_events if e.get("is_senior_level")]
+    exec_unresolved = [e for e in rc_dep if not e.get("replacement_detected")]
+
+    def _fmt_segregated(events, is_departure=False):
+        parts = []
+        seen = set()
+        for ev in events:
+            raw_name = ev.get("person_name") or ev.get("executive_name")
+            raw_role = ev.get("role_title") or ev.get("executive_title")
+            name = SerperCollector.clean_person_name(raw_name)
+            role = SerperCollector.clean_role_title(raw_role)
+            if name and role:
+                key = f"{name.lower()}::{role.lower()}"
+                if key not in seen:
+                    seen.add(key)
+                    parts.append(f"{name} (Ex-{role})" if is_departure else f"{name} ({role})")
+            elif name and not role:
+                key = name.lower()
+                if key not in seen:
+                    seen.add(key)
+                    parts.append(f"{name} (Ex-Employee)" if is_departure else f"{name} (New Arrival / Promotion)")
+            elif role and not name:
+                key = role.lower()
+                if key not in seen:
+                    seen.add(key)
+                    parts.append(f"1 Ex-{role}" if is_departure else f"1 {role}")
+        return " | ".join(parts[:5]) if parts else "None detected in 90-day window"
+
+    arr_segregated = _fmt_segregated(rc_arr, is_departure=False)
+    dep_segregated = _fmt_segregated(rc_dep, is_departure=True)
+
+    # Role change rate calculation
+    hc_val = primary_hc if isinstance(primary_hc, int) and primary_hc > 0 else 500
+    total_rc = len(rc_arr) + len(rc_dep)
+    rc_rate_pct = f"{round((total_rc / hc_val) * 100, 1)}%"
+
+    # Trajectory
+    if len(rc_dep) >= 2 and len(rc_dep) >= len(rc_arr):
+        rc_trajectory = "LEADERSHIP RESTRUCTURING (Executive Gaps)"
+    elif len(rc_arr) >= 4:
+        rc_trajectory = "RAPID TEAM EXPANSION (High Hiring Velocity)"
+    elif total_rc >= 2:
+        rc_trajectory = "ACTIVE WORKFORCE ROTATION"
+    else:
+        rc_trajectory = "STABLE / LOW CHURN"
 
     # 6. Job function breakdown (Gap 2)
     fn_breakdown = career_data.get("job_function_breakdown", {})
@@ -227,13 +268,16 @@ def build_row(company, g, o, a, cb, career_data, traffic_data, serper_data, fda_
         "crunchbase_recent_acquisitions": cb.get("recent_acquisitions", "None"),
         "crunchbase_operating_status":   cb.get("operating_status", "Active"),
 
-        # === EXEC MOVEMENT SIGNALS (Gap 1 — Structured) ===
-        "exec_arrivals_count":           len(exec_arrivals),
-        "exec_departures_count":         len(exec_departures),
+        # === ROLE CHANGE & PERSONNEL MOVEMENTS (Strict 90 Days) ===
+        "role_change_total_3m":          total_rc,
+        "role_change_arrivals_count":    len(rc_arr),
+        "role_change_departures_count":  len(rc_dep),
+        "role_change_rate_pct":          rc_rate_pct,
+        "role_change_trajectory":        rc_trajectory,
+        "recent_arrivals_segregated":    arr_segregated,
+        "recent_departures_segregated":  dep_segregated,
         "exec_senior_level_moves":       len(exec_senior),
         "exec_unresolved_departures":    len(exec_unresolved),
-        "exec_arrivals_detail":          _fmt_exec(exec_arrivals),
-        "exec_departures_detail":        _fmt_exec(exec_departures),
 
         # === JOB POSTING FUNCTION BREAKDOWN (Gap 2) ===
         "job_function_breakdown":        fn_str,

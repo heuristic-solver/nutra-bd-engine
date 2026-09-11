@@ -32,6 +32,7 @@ from bd_engine.collectors.growjo_collector import GrowjoCollector
 from bd_engine.collectors.owler_collector import OwlerCollector
 from bd_engine.collectors.career_traffic_collector import CareerTrafficCollector
 from bd_engine.collectors.web_traffic_collector import WebTrafficCollector
+from bd_engine.collectors.role_change_pipeline import RoleChangePipeline
 from bd_engine.bd_scorer import PropensityScorer
 
 APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "")
@@ -41,6 +42,16 @@ def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None
     print("\n" + "=" * 80)
     print(f"  360 BD PROPENSITY INTELLIGENCE SCAN: {company_name}")
     print("=" * 80)
+
+    # 1. 3-Layer Role Change & Apollo B2B Intelligence
+    print("\n  [1/8] Multi-Source Role Change & Apollo B2B Scan...")
+    rc_pipe = RoleChangePipeline()
+    rc_data = rc_pipe.analyze_company(company_name, domain=domain, linkedin_url=linkedin_url)
+    print(
+        f"        -> Verified Headcount: {rc_data.get('apollo_verified_headcount')} | "
+        f"90D Movements: {rc_data.get('total_role_changes_90d')} ({rc_data.get('arrivals_count')}A / {rc_data.get('departures_count')}D) | "
+        f"Rate: {rc_data.get('role_change_rate_pct')}%"
+    )
 
     # 1. openFDA Compliance
     print("\n  [1/6] openFDA compliance scan...")
@@ -139,6 +150,18 @@ def run_360_scan(company_name: str, domain: str = None, linkedin_url: str = None
     print(f"  Urgency               : {scorecard['urgency_label']}")
     print(f"  Talking Point         : {scorecard['primary_talking_point']}")
 
+    print(f"\n  Personnel & Role Change Intelligence (Strict 90-Day Window):")
+    print(f"    Apollo Headcount    : {rc_data.get('apollo_verified_headcount')} employees")
+    print(f"    Company Domain      : {rc_data.get('primary_domain')} | LinkedIn: {rc_data.get('linkedin_company_url')}")
+    print(f"    90D Role Movements  : {rc_data.get('total_role_changes_90d')} total ({rc_data.get('arrivals_count')} Arrivals / {rc_data.get('departures_count')} Departures)")
+    print(f"    Role Change Rate %  : {rc_data.get('role_change_rate_pct')}% ({rc_data.get('turnover_trajectory')})")
+    print(f"    Recent Arrivals     : {rc_data.get('recent_arrivals_formatted')}")
+    print(f"    Recent Departures   : {rc_data.get('recent_departures_formatted')}")
+    print(f"    Key Active Leads    : {rc_data.get('key_active_leads_formatted')}")
+    print(f"    Impacted Functions  : {rc_data.get('impacted_functions')}")
+    print(f"    Executive Leadership: {rc_data.get('executive_leadership_summary')}")
+    print(f"    Tailored BD Angle   : {rc_data.get('bd_talking_point')}")
+
     print(f"\n  Web Traffic & Recruitment Visibility:")
     print(f"    Monthly Web Visits  : {traffic_data.get('monthly_web_visits_formatted')}")
     print(f"    90D Traffic Growth  : {traffic_data.get('web_traffic_growth_formatted')} [{traffic_data.get('traffic_trend_status')}]")
@@ -187,7 +210,7 @@ def main():
     parser.add_argument("--prev_headcount", type=int, default=None, help="Previous headcount baseline")
     args = parser.parse_args()
 
-    run_360_scan(args.company, args.linkedin, args.prev_headcount)
+    run_360_scan(company_name=args.company, linkedin_url=args.linkedin, prev_headcount=args.prev_headcount)
 
 
 if __name__ == "__main__":

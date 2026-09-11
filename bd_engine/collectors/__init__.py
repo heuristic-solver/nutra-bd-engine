@@ -6,6 +6,7 @@ from .owler_collector import OwlerCollector
 from .career_traffic_collector import CareerTrafficCollector
 from .web_traffic_collector import WebTrafficCollector
 from .crunchbase_collector import CrunchbaseCollector
+from .linkedin_role_collector import LinkedInRoleCollector
 
 __all__ = [
     "SerperCollector",
@@ -16,4 +17,5 @@ __all__ = [
     "CareerTrafficCollector",
     "WebTrafficCollector",
     "CrunchbaseCollector",
+    "LinkedInRoleCollector",
 ]
