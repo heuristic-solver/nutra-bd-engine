@@ -1,0 +1,228 @@
+[
+  {
+    "company_name": "Lief Labs",
+    "domain": "lieflabs.com",
+    "website": null,
+    "profile": {
+      "company_name": "Lief Labs",
+      "domain": "lieflabs.com",
+      "website": null,
+      "headquarters": null,
+      "ownership": "Private",
+      "source_sheet": null,
+      "specialty": "Contract Manufacturing & Formulation",
+      "segments": {},
+      "key_ingredients": [],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [],
+      "hiring_functions": [],
+      "role_mapping": [],
+      "raw_kb_data": null
+    },
+    "role_changes": [],
+    "target_hiring_functions": [],
+    "mapped_target_roles": [],
+    "recruitment_intelligence": "",
+    "strategic_insights": "",
+    "funding_events": [],
+    "strategic_movements": [
+      {
+        "company_name": "Lief Labs",
+        "category": "FACILITY_EXPANSION",
+        "headline": "Lief Labs Appoints Chief Business Officer to Lead the Firm's Industry Expansion in the US and Globally - Yahoo Finance",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOUkx6c2tISDdCMS1Ic3JscnNhNm5CRVdBOGtGV0IzY0oyT08yak5sYUpHdmMzcWNOLXZKQ3FWbmk3Wk1ERnRxRm1uQUFPMHVORnlUbm5MbEJFYURGenUxWDhwMjBoQXRfV1Njbno2cTIyVHZ0T1pZVFNfdU1TZk1la091WVExdw?oc=5\" target=\"_blank\">Lief Labs Appoints Chief Business Officer to ",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Wed, 11 Nov 2020 08:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOUkx6c2tISDdCMS1Ic3JscnNhNm5CRVdBOGtGV0IzY0oyT08yak5sYUpHdmMzcWNOLXZKQ3FWbmk3Wk1ERnRxRm1uQUFPMHVORnlUbm5MbEJFYURGenUxWDhwMjBoQXRfV1Njbno2cTIyVHZ0T1pZVFNfdU1TZk1la091WVExdw?oc=5",
+        "source_name": "Yahoo Finance",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-14T06:08:49.745949Z"
+      }
+    ],
+    "scan_timestamp": "2026-09-14T06:08:57.246036Z",
+    "execution_time_sec": 9.93,
+    "data_sources_scraped": [
+      "Multi-Engine News & Web Search"
+    ],
+    "total_signals_discovered": 1
+  },
+  {
+    "company_name": "Vitaquest International",
+    "domain": "vitaquest.com",
+    "website": null,
+    "profile": {
+      "company_name": "Vitaquest International",
+      "domain": "vitaquest.com",
+      "website": null,
+      "headquarters": null,
+      "ownership": "Private",
+      "source_sheet": null,
+      "specialty": "Contract Manufacturing",
+      "segments": {},
+      "key_ingredients": [],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [],
+      "hiring_functions": [],
+      "role_mapping": [],
+      "raw_kb_data": null
+    },
+    "role_changes": [
+      {
+        "person_name": "Luigi Cappello",
+        "company_name": "Vitaquest International",
+        "movement_type": "JOINED",
+        "role_title": "Chief Commercial Officer (CCO)",
+        "previous_role": null,
+        "department": null,
+        "date_str": "Tue, 08 Sep 2026 12:27:15 GMT",
+        "evidence_snippet": "Vitaquest International Appoints Luigi Cappello as Chief Commercial Officer - citybiz",
+        "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVGl4UDRENjAxTWpHYjktT0FaMEZsYXllZU1BT0xUaFJTaURKLWw4eWQ3dTg0Q280Y253aHRkbDdwRlY5c3FBQVNtc0V3UXh6ZmpzN0xWdFFPX0V5V09BZnlWRGNtMlhrVXBvWTBoYzVlZFJFMHlKaFhhYUFHb1hkWHE5QTFqZGl1b2FNbllDdllvQkU5ZV94Rnp2cDl3LTRoQ1RGd3h6NUhNVTdyLVNsQXZMd2U?oc=5",
+        "source_name": "citybiz",
+        "confidence_score": 0.92,
+        "discovered_at": "2026-09-14T06:08:49.888104Z"
+      },
+      {
+        "person_name": "Tim Condron",
+        "company_name": "Vitaquest International",
+        "movement_type": "JOINED",
+        "role_title": "Chief Executive Officer (CEO)",
+        "previous_role": null,
+        "department": null,
+        "date_str": "Mon, 06 Apr 2026 07:00:00 GMT",
+        "evidence_snippet": "Vitaquest International Appoints Tim Condron as Chief Executive Officer - GlobeNewswire",
+        "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZkdGczRuTzR1aU9QR0lrNWw1MVR5bF96djRtZlZ6c3FNSE5RRl84cXd0anRsWDBjVVhIcEdTTmhPR2FnMEtJQ0JlUEJNM2ZxRUFIM2dKdEdiLURPQ2lQQjg1RlVodVlkcnNZc2swZHJVN01VclZYdDdIQ2Fnc0dKNnJpM0dBY1plVzE5emFfUkZDeFJGODdUNlgwTzQtS1ZsS251SWVYVTlIVVo2UE5tZkVWM1MxaVVmTGNnZ0pXVWJVREVydFJUUzRHZHFUQ0NUQXRiWU9FR2dEQjg?oc=5",
+        "source_name": "GlobeNewswire",
+        "confidence_score": 0.92,
+        "discovered_at": "2026-09-14T06:08:49.888661Z"
+      },
+      {
+        "person_name": "David Alcaraz",
+        "company_name": "Vitaquest International",
+        "movement_type": "JOINED",
+        "role_title": "Senior Vice President",
+        "previous_role": null,
+        "department": null,
+        "date_str": "Thu, 07 Nov 2024 08:00:00 GMT",
+        "evidence_snippet": "Vitaquest Hires David Alcaraz as Senior Vice President, Quality Assurance - TMX Newsfile",
+        "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWkl3UkFmeUx2b0U0bGtuNXRWWkxMc3dOc0FESVNOMGtCYjg4Y1dzLXByVW0xQUk2SVI5ZHNfTTNPWlpQcm44VTdTLWg0Ul9vZFZZQ051VlR0amlhQ0xpdmY1WE5xaUlTNjY2MTU1cmNnbUVvcEFGQkZ0ZnQ1OVVUY2Y2VlFBa3paNXNFZTB3czA5bVAwNGJFdnhyVHpHUnBWMVUwRlFRVEczSDg0LW84WjRta0hURDA?oc=5",
+        "source_name": "TMX Newsfile",
+        "confidence_score": 0.92,
+        "discovered_at": "2026-09-14T06:08:49.889622Z"
+      }
+    ],
+    "target_hiring_functions": [],
+    "mapped_target_roles": [],
+    "recruitment_intelligence": "",
+    "strategic_insights": "",
+    "funding_events": [],
+    "strategic_movements": [
+      {
+        "company_name": "Vitaquest International",
+        "category": "FACILITY_EXPANSION",
+        "headline": "Vitaquest’s planned new facility is ‘the most significant investment’ in company history, says CEO - NutraIngredients.com",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb0NCc0Y3RXhRbVBxazlhZmlTNEdET05IanRVQW9QQTZ6cElabjNWbDN3eTJTWnNjNjBkNlduQ0dwWU5BWmJjVzFsemR4T2lZbDJ6YzY5d2owcllWWEVQM25PYVJrLXVkN0JYV0MwaHAyWlN2Z1hUMWF1MlpkNWwwNXlEZzZEcU1mclg0cDJ6TXpJWUlaMll1N3hOQU9jNmxqRUt1UjRqOHhNTktBeUxWM0QzdVBZaU1DR2",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Thu, 11 Jul 2019 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb0NCc0Y3RXhRbVBxazlhZmlTNEdET05IanRVQW9QQTZ6cElabjNWbDN3eTJTWnNjNjBkNlduQ0dwWU5BWmJjVzFsemR4T2lZbDJ6YzY5d2owcllWWEVQM25PYVJrLXVkN0JYV0MwaHAyWlN2Z1hUMWF1MlpkNWwwNXlEZzZEcU1mclg0cDJ6TXpJWUlaMll1N3hOQU9jNmxqRUt1UjRqOHhNTktBeUxWM0QzdVBZaU1DR2pycVh1Z0VTN0pVWDZPakdOM0d1b3RlYWppYmt5OVhFZE9sV05PbDh3?oc=5",
+        "source_name": "NutraIngredients.com",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-14T06:08:49.890074Z"
+      },
+      {
+        "company_name": "Vitaquest International",
+        "category": "MERGER_ACQUISITION",
+        "headline": "Vitaquest International Acquires Ashland Powder Processing Facility - TMX Newsfile",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxONzh4cXdwMTFDcDdadlZaM0J1UEJES2tXNXJvcEVCczZJck5lMExpdmlEZldkLTRPa3RtazBwdFB0QWRfZHZnSzJCT0RSNk9IOVp6M1FMVHMwVDRRLWJKOE9SY1lGV2FldENxOVNqblZSUkJWVTVabnp4MjkzR3JKS2pxU1JkaHVFak9VY0JuN20ycGI0WFQ1cVV6SEdjNklPcWc3QXJyTmtZZTlobmM3NA?oc=5\" targe",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Mon, 02 Oct 2023 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONzh4cXdwMTFDcDdadlZaM0J1UEJES2tXNXJvcEVCczZJck5lMExpdmlEZldkLTRPa3RtazBwdFB0QWRfZHZnSzJCT0RSNk9IOVp6M1FMVHMwVDRRLWJKOE9SY1lGV2FldENxOVNqblZSUkJWVTVabnp4MjkzR3JKS2pxU1JkaHVFak9VY0JuN20ycGI0WFQ1cVV6SEdjNklPcWc3QXJyTmtZZTlobmM3NA?oc=5",
+        "source_name": "TMX Newsfile",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-14T06:08:49.890195Z"
+      }
+    ],
+    "scan_timestamp": "2026-09-14T06:08:57.251707Z",
+    "execution_time_sec": 9.94,
+    "data_sources_scraped": [
+      "Multi-Engine News & Web Search"
+    ],
+    "total_signals_discovered": 5
+  },
+  {
+    "company_name": "Gencor Pacific",
+    "domain": "gencorpacific.com",
+    "website": null,
+    "profile": {
+      "company_name": "Gencor Pacific",
+      "domain": "gencorpacific.com",
+      "website": null,
+      "headquarters": null,
+      "ownership": "Private",
+      "source_sheet": null,
+      "specialty": "Branded Botanical Extracts",
+      "segments": {},
+      "key_ingredients": [],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [],
+      "hiring_functions": [],
+      "role_mapping": [],
+      "raw_kb_data": null
+    },
+    "role_changes": [],
+    "target_hiring_functions": [],
+    "mapped_target_roles": [],
+    "recruitment_intelligence": "",
+    "strategic_insights": "",
+    "funding_events": [],
+    "strategic_movements": [
+      {
+        "company_name": "Gencor Pacific",
+        "category": "REBRANDING",
+        "headline": "Gencor rebrands to Saanroo, will operate as separate nutraceutical division - Nutritional Outlook",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOEszb3JhUlJ0Z0NQMmdUSk41a0RjUmZRN2hycDNIZWxYLXBDRU82UFJZV2V4RVJzTWpHbmQteG9sVGdCd29FdlF3WVBIMkc2cTR4T3psSEVuVDhOUGRrcFRYYnV5QmpJWEs4Sjl4dC1RX0swTU54SU1vY0NHUGVpQjYwSXdpRFE0amMtUlZHVDg5a2x3U3FoRFg5T1hLd3J0SzV6Rkd2bUhwV0dxbnVQd0xSV2trWERoaU",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Wed, 29 Oct 2025 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOEszb3JhUlJ0Z0NQMmdUSk41a0RjUmZRN2hycDNIZWxYLXBDRU82UFJZV2V4RVJzTWpHbmQteG9sVGdCd29FdlF3WVBIMkc2cTR4T3psSEVuVDhOUGRrcFRYYnV5QmpJWEs4Sjl4dC1RX0swTU54SU1vY0NHUGVpQjYwSXdpRFE0amMtUlZHVDg5a2x3U3FoRFg5T1hLd3J0SzV6Rkd2bUhwV0dxbnVQd0xSV2trWERoaUppdkYxV2k1SmRzUFdFbw?oc=5",
+        "source_name": "Nutritional Outlook",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-14T06:08:49.747491Z"
+      },
+      {
+        "company_name": "Gencor Pacific",
+        "category": "REBRANDING",
+        "headline": "Gencor spins out nutraceutical division as Saanroo - NutraIngredients.com",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOWDF6ZWk2Y0lTN2xxZXo2ZFkxMGR4eWt0ODNyM0tzNjlkT2puUXptVWRFZVdmX1R5a0tqTlhYZHduY2NDVDZkQk9Eamo4VmgycHp0a0lQMUYtcUtnT3JzdF94Nm8yZDBvclotUnE2QnA4Z1hlZU9FZHZKMi05U2p0TTZxNVFKSDh0VkVhNXRPV3JkVlJka29pbmpMdjRGYmRnT3M5VFN3?oc=5\" target=\"_blank\">Gen",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Wed, 29 Oct 2025 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWDF6ZWk2Y0lTN2xxZXo2ZFkxMGR4eWt0ODNyM0tzNjlkT2puUXptVWRFZVdmX1R5a0tqTlhYZHduY2NDVDZkQk9Eamo4VmgycHp0a0lQMUYtcUtnT3JzdF94Nm8yZDBvclotUnE2QnA4Z1hlZU9FZHZKMi05U2p0TTZxNVFKSDh0VkVhNXRPV3JkVlJka29pbmpMdjRGYmRnT3M5VFN3?oc=5",
+        "source_name": "NutraIngredients.com",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-14T06:08:49.747607Z"
+      },
+      {
+        "company_name": "Gencor Pacific",
+        "category": "MERGER_ACQUISITION",
+        "headline": "Struggling InSight Biopharmaceuticals Acquired by Hong Kong’s Gencor Pacific - calcalistech.com",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE43QmRFYmNoSnNKTmdMUm1uSXhyT0t4OEtGdlU2RlpqWkQwbFcwelNPUVVwYk1NTjFPVFVKdGxkeE1RaUQ1Nk9xYlFOZGp4ejhHQlR5OElHUXFhdVlvOGxzT2RMNlU5TVdNaXdmRXFRWVhMMFV6SFBn?oc=5\" target=\"_blank\">Struggling InSight Biopharmaceuticals Acquired by Hong Kong’s Genco",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Sun, 13 Jan 2019 08:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE43QmRFYmNoSnNKTmdMUm1uSXhyT0t4OEtGdlU2RlpqWkQwbFcwelNPUVVwYk1NTjFPVFVKdGxkeE1RaUQ1Nk9xYlFOZGp4ejhHQlR5OElHUXFhdVlvOGxzT2RMNlU5TVdNaXdmRXFRWVhMMFV6SFBn?oc=5",
+        "source_name": "calcalistech.com",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-14T06:08:49.748083Z"
+      }
+    ],
+    "scan_timestamp": "2026-09-14T06:08:57.304635Z",
+    "execution_time_sec": 9.99,
+    "data_sources_scraped": [
+      "Multi-Engine News & Web Search"
+    ],
+    "total_signals_discovered": 3
+  }
+]

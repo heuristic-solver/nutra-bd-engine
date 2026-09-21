@@ -43,3 +43,5 @@ ENV/
 # Scraped datasets & report exports
 *.csv
 !sample_data.csv
+!nutraceutical_company_intelligence_master_report.csv
+!company_info_output/kb_full/*.csv

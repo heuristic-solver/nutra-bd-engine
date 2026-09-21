@@ -1,0 +1,2086 @@
+[
+  {
+    "company_name": "4POTENTIA",
+    "domain": "4potentia.com",
+    "website": "https://www.4potentia.com",
+    "profile": {
+      "company_name": "4POTENTIA",
+      "domain": "4potentia.com",
+      "website": "https://www.4potentia.com",
+      "headquarters": "Anaheim, California",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "Branded Ingredients",
+      "segments": {
+        "supplement_brand": true,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Myrosinase",
+        "Glucoraphanin",
+        "Diindolylmethane (DIM)",
+        "Creatine",
+        "Sulforaphane",
+        "Broccoli"
+      ],
+      "branded_ingredients": [
+        "MyZyme™",
+        "OptiBroc®",
+        "BIO-DiMaX®",
+        "CreaVida™",
+        "CellBerry®",
+        "4RESTORE®",
+        "Cinnulin PF"
+      ],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels"
+      ],
+      "hiring_functions": [
+        "Regulatory",
+        "QA/QC",
+        "R&D",
+        "Sales",
+        "Manufacturing",
+        "Technical"
+      ],
+      "role_mapping": [
+        "Regulatory Scientist",
+        "Quality Analyst",
+        "Research Scientist",
+        "Sales Representative",
+        "Manufacturing Engineer",
+        "Technical Support Specialist"
+      ],
+      "raw_kb_data": {
+        "company_name": "4POTENTIA",
+        "source_sheet": "Ingredients",
+        "known_website": "www.4potentia.com",
+        "known_speciality": "Branded Ingredients",
+        "known_hq": "Anaheim,CA",
+        "research_timestamp": "2026-05-30T19:58:56.196592",
+        "founding_year": "null",
+        "headquarters": "Anaheim, California",
+        "global_offices": "null",
+        "ownership_structure": "Private",
+        "parent_company": "null",
+        "revenue_estimates": "null",
+        "employee_count": "null",
+        "geographic_reach": [
+          "Afghanistan",
+          "Australia",
+          "New Zealand",
+          "United States"
+        ],
+        "core_business_model": "Development and supply of scientifically-backed natural compounds to enhance health, happiness, and wellbeing.",
+        "strategic_positioning": "To discover and provide the most powerful and profound natural compounds for health and wellbeing.",
+        "market_focus": "Health and wellness market, nutraceuticals, supplement industry.",
+        "key_differentiators": "Science-backed ingredients, proprietary formulations, focus on natural compounds.",
+        "segments": {
+          "supplement_brand": true,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "Partnerships with formulators, customers, and suppliers.  Focus on innovation and product development.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Myrosinase",
+            "Glucoraphanin",
+            "Diindolylmethane (DIM)",
+            "Creatine",
+            "Sulforaphane"
+          ],
+          "amino_acids": [],
+          "botanicals": [
+            "Broccoli"
+          ],
+          "probiotics_prebiotics": [],
+          "nutraceutical_compounds": [],
+          "enzymes_proteins": [
+            "Myrosinase"
+          ],
+          "specialty_emerging": [
+            "Cinnulin PF"
+          ]
+        },
+        "branded_ingredients": [
+          "MyZyme™",
+          "OptiBroc®",
+          "BIO-DiMaX®",
+          "CreaVida™",
+          "CellBerry®",
+          "4RESTORE®",
+          "Cinnulin PF"
+        ],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels"
+        ],
+        "packaging_capabilities": [
+          "Blister"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA"
+        ],
+        "certifications": [
+          "cGMP",
+          "USP"
+        ],
+        "scientific_sophistication": "Medium — The company utilizes standardized extracts and enzyme technology, indicating a moderate level of scientific rigor in their ingredient sourcing and formulation processes.",
+        "hiring_functions": [
+          "Regulatory",
+          "QA/QC",
+          "R&D",
+          "Sales",
+          "Manufacturing",
+          "Technical"
+        ],
+        "role_mapping": [
+          "Regulatory Scientist",
+          "Quality Analyst",
+          "Research Scientist",
+          "Sales Representative",
+          "Manufacturing Engineer",
+          "Technical Support Specialist"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "4Potentia focuses on the development and supply of scientifically-backed natural ingredients, primarily for the nutraceutical and supplement industries. They emphasize innovation and proprietary formulations, suggesting a need for R&D specialists, regulatory affairs professionals, and sales personnel with expertise in the health and wellness sector. Given their focus on ingredient sourcing and partnerships, they likely require individuals with strong technical and commercial skills.",
+        "risk_indicators": "Potential risk indicators could include reliance on specific suppliers for key ingredients, potential challenges in scaling up production of novel ingredients, and the need to maintain rigorous quality control to ensure product consistency and compliance with regulatory standards. The company's focus on patented ingredients suggests a need to manage intellectual property rights and potential infringement claims.",
+        "strategic_insights": "4Potentia's strategic focus is on developing and supplying innovative, scientifically-validated natural ingredients to the nutraceutical and supplement markets. Recruitment efforts should target individuals with expertise in ingredient science, formulation development, regulatory affairs, and sales within the health and wellness sector. A key strategic element is their emphasis on proprietary ingredients, indicating a need for strong R&D capabilities and intellectual property management."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T09:56:29.630845",
+    "execution_time_sec": 87.62,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  },
+  {
+    "company_name": "A&Y Nutrition",
+    "domain": "aynutrition.com",
+    "website": "https://www.aynutrition.com/",
+    "profile": {
+      "company_name": "A&Y Nutrition",
+      "domain": "aynutrition.com",
+      "website": "https://www.aynutrition.com/",
+      "headquarters": "Morristown, New Jersey",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "Nutrition Ingredients",
+      "segments": {
+        "supplement_brand": false,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Vitamin",
+        "Mineral",
+        "Botanical Extracts"
+      ],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels"
+      ],
+      "hiring_functions": [
+        "Regulatory",
+        "QA/QC",
+        "R&D",
+        "Manufacturing",
+        "Sales"
+      ],
+      "role_mapping": [
+        "Regulatory Affairs Specialist",
+        "Quality Control Analyst",
+        "Research & Development Scientist",
+        "Manufacturing Engineer",
+        "Sales Representative"
+      ],
+      "raw_kb_data": {
+        "company_name": "A&Y Nutrition",
+        "source_sheet": "Ingredients",
+        "known_website": "https://www.aynutrition.com/",
+        "known_speciality": "Nutrition Ingredients",
+        "known_hq": "Morriston,NJ",
+        "research_timestamp": "2026-05-30T20:00:27.015724",
+        "founding_year": "2019",
+        "headquarters": "Morristown, New Jersey",
+        "global_offices": null,
+        "ownership_structure": "Private",
+        "parent_company": null,
+        "revenue_estimates": null,
+        "employee_count": "7",
+        "geographic_reach": [
+          "United States"
+        ],
+        "core_business_model": "A&Y Nutrition is a Fully Vertically Integrated Customer Centric US Distributor of Dietary Raw Ingredients. A&Y sources the finest ingredients worldwide, providing solutions, quality, services, and price to its clients.",
+        "strategic_positioning": "A&Y Nutrition positions itself as a customer-centric distributor of high-quality dietary raw ingredients, emphasizing value and tailored solutions.",
+        "market_focus": "Dietary Raw Ingredients",
+        "key_differentiators": "Solutions, Quality, Services, Price, Vertical Integration, Customer Centric Approach",
+        "segments": {
+          "supplement_brand": false,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "A&Y Nutrition maintains relationships with third-party testing labs (Eurofins, Alkemist, Silliker, Sora Lab, Beta Analytic) and focuses on customer satisfaction through manufacturing solutions and document management.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Vitamin",
+            "Mineral"
+          ],
+          "amino_acids": [],
+          "botanicals": [
+            "Botanical Extracts"
+          ],
+          "probiotics_prebiotics": [
+            "Probiotics",
+            "Prebiotics"
+          ],
+          "nutraceutical_compounds": [],
+          "enzymes_proteins": [],
+          "specialty_emerging": []
+        },
+        "branded_ingredients": [],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels"
+        ],
+        "packaging_capabilities": [
+          "Blister"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "CGMP"
+        ],
+        "certifications": [
+          "Organic",
+          "SQF"
+        ],
+        "scientific_sophistication": "Medium — The company utilizes a team of experienced professionals and third-party labs for testing, indicating a moderate level of scientific rigor in quality control and ingredient analysis.",
+        "hiring_functions": [
+          "Regulatory",
+          "QA/QC",
+          "R&D",
+          "Manufacturing",
+          "Sales"
+        ],
+        "role_mapping": [
+          "Regulatory Affairs Specialist",
+          "Quality Control Analyst",
+          "Research & Development Scientist",
+          "Manufacturing Engineer",
+          "Sales Representative"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "A&Y Nutrition is a vertically integrated distributor of dietary raw ingredients, emphasizing quality, solutions, and customer satisfaction. They require personnel with expertise in regulatory compliance, quality assurance, research and development, manufacturing operations, and sales to support their global sourcing and distribution network. Given their focus on organic certification and SQF certification, expertise in these areas is highly desirable. The company's emphasis on a customer-centric approach suggests a need for strong sales and customer service professionals.",
+        "risk_indicators": "Potential risks include supply chain disruptions due to reliance on global sourcing, challenges in maintaining organic and SQF certifications, and potential regulatory scrutiny related to dietary supplement manufacturing. Turnover signals could indicate issues with employee satisfaction or operational inefficiencies. Monitoring compliance with CGMP regulations is crucial.",
+        "strategic_insights": "A&Y Nutrition is a niche player focused on providing value-added services and high-quality ingredients to its customers. Recruitment efforts should target individuals with strong technical skills, regulatory knowledge, and a commitment to customer satisfaction. The company's growth potential depends on its ability to maintain its certifications, expand its product offerings, and effectively manage its supply chain."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T09:56:39.649628",
+    "execution_time_sec": 97.64,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  },
+  {
+    "company_name": "AB Enzymes GmbH",
+    "domain": "abenzymes.com",
+    "website": "http://www.abenzymes.com/",
+    "profile": {
+      "company_name": "AB Enzymes GmbH",
+      "domain": "abenzymes.com",
+      "website": "http://www.abenzymes.com/",
+      "headquarters": "Darmstadt",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "Food Ingredients",
+      "segments": {
+        "supplement_brand": false,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Vitamin C",
+        "Vitamin B2",
+        "Calcium",
+        "Magnesium"
+      ],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [
+        "Granules",
+        "Liquid Enzymes",
+        "Powders"
+      ],
+      "hiring_functions": [
+        "R&D",
+        "Sales",
+        "Technical Sales",
+        "Supply Chain",
+        "Regulatory",
+        "QA/QC"
+      ],
+      "role_mapping": [
+        "Research Scientist",
+        "Sales Manager",
+        "Technical Sales Manager",
+        "Supply Chain Analyst",
+        "Regulatory Affairs Specialist",
+        "Quality Control Analyst"
+      ],
+      "raw_kb_data": {
+        "company_name": "AB Enzymes GmbH",
+        "source_sheet": "Ingredients",
+        "known_website": "http://www.abenzymes.com/",
+        "known_speciality": "Food Ingredients",
+        "known_hq": "Darmstadt,Germany",
+        "research_timestamp": "2026-05-30T20:02:30.153756",
+        "founding_year": "1969",
+        "headquarters": "Darmstadt",
+        "global_offices": "Worldwide",
+        "ownership_structure": "Private",
+        "parent_company": "Associated British Foods",
+        "revenue_estimates": "€135 million (2023)",
+        "employee_count": "600",
+        "geographic_reach": [
+          "Europe",
+          "North America",
+          "South America",
+          "Asia Pacific"
+        ],
+        "core_business_model": "Development, manufacturing, and supply of enzyme solutions for industrial applications worldwide. Focuses on providing tailored enzyme solutions to improve processes and product quality across various industries.",
+        "strategic_positioning": "As a leading biotech company specializing in enzyme solutions, AB Enzymes focuses on innovation, customer collaboration, and sustainable solutions to meet the evolving needs of its global customer base.",
+        "market_focus": "Industrial applications across food and beverage, animal feed, pulp and paper, textile, and other industries requiring enzyme solutions.",
+        "key_differentiators": "Strong R&D capabilities, customized enzyme development, global distribution network, and a commitment to sustainability and customer service.",
+        "segments": {
+          "supplement_brand": false,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "AB Enzymes maintains strong relationships with its customers through collaborative R&D, technical support, and a global network of distributors. The company also partners with research institutions and universities to drive innovation and develop new enzyme technologies. AB Enzymes is part of Associated British Foods, which provides strategic support and resources.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Vitamin C",
+            "Vitamin B2",
+            "Calcium",
+            "Magnesium"
+          ],
+          "amino_acids": [
+            "L-Glutamic Acid",
+            "L-Lysine",
+            "L-Threonine",
+            "L-Arginine"
+          ],
+          "botanicals": [],
+          "probiotics_prebiotics": [],
+          "nutraceutical_compounds": [],
+          "enzymes_proteins": [
+            "Amylases",
+            "Proteases",
+            "Lipases",
+            "Cellulases",
+            "Pectinases"
+          ],
+          "specialty_emerging": [
+            "Plant-Based Protein Enzymes",
+            "Mushroom Enzymes"
+          ]
+        },
+        "branded_ingredients": [],
+        "manufacturing_capabilities": [
+          "Granules",
+          "Liquid Enzymes",
+          "Powders"
+        ],
+        "packaging_capabilities": [
+          "Multi-layer bags",
+          "IBCs",
+          "Bulk Bags"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA",
+          "EU"
+        ],
+        "certifications": [
+          "GMP",
+          "ISO 9001",
+          "ISO 22000"
+        ],
+        "scientific_sophistication": "Medium — AB Enzymes develops and manufactures enzyme solutions for a wide range of industrial applications, utilizing established enzyme technologies and research & development activities.",
+        "hiring_functions": [
+          "R&D",
+          "Sales",
+          "Technical Sales",
+          "Supply Chain",
+          "Regulatory",
+          "QA/QC"
+        ],
+        "role_mapping": [
+          "Research Scientist",
+          "Sales Manager",
+          "Technical Sales Manager",
+          "Supply Chain Analyst",
+          "Regulatory Affairs Specialist",
+          "Quality Control Analyst"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "AB Enzymes is a leading biotech company specializing in enzyme solutions for industrial applications. They are focused on developing, manufacturing, and supplying these solutions globally, with a strong emphasis on innovation and sustainability. They actively seek talent in R&D, sales, technical sales, supply chain management, and regulatory affairs to support their growing global operations and product portfolio. The company emphasizes a dynamic culture of innovation and collaboration, attracting individuals passionate about creating sustainable solutions for diverse industries.",
+        "risk_indicators": "None identified based on provided data. However, reliance on a single supplier for specialized enzyme solutions could represent a supply chain risk. Turnover within key R&D roles could indicate potential loss of innovation.",
+        "strategic_insights": "AB Enzymes is a well-established player in the industrial enzyme market with a global footprint. Recruitment efforts should focus on attracting talent with expertise in enzyme technology, application development, and market trends. Given their commitment to sustainability, candidates with experience in eco-friendly processes and formulations would be highly valuable. The company's growth strategy suggests a need for skilled professionals in sales and technical support to expand its market reach and support customer needs."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T09:56:41.111678",
+    "execution_time_sec": 99.1,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  },
+  {
+    "company_name": "A&A Pharmachem Inc.",
+    "domain": "aapharmachem.com",
+    "website": "http://www.aapharmachem.com",
+    "profile": {
+      "company_name": "A&A Pharmachem Inc.",
+      "domain": "aapharmachem.com",
+      "website": "http://www.aapharmachem.com",
+      "headquarters": "Ottawa, Ont, Canada",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "Nutrition Ingredients",
+      "segments": {
+        "supplement_brand": true,
+        "contract_manufacturer": true,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin E",
+        "B Vitamins",
+        "Calcium",
+        "Magnesium",
+        "Zinc",
+        "Iron",
+        "Oregano Oil",
+        "Ashwagandha",
+        "Rhodiola"
+      ],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels"
+      ],
+      "hiring_functions": [
+        "Regulatory",
+        "QA/QC",
+        "R&D",
+        "Sales",
+        "Customer Service",
+        "Manufacturing"
+      ],
+      "role_mapping": [
+        "Regulatory Scientist",
+        "Quality Analyst",
+        "Research & Development Scientist",
+        "Sales Representative",
+        "Customer Service Representative",
+        "Manufacturing Technician"
+      ],
+      "raw_kb_data": {
+        "company_name": "A&A Pharmachem Inc.",
+        "source_sheet": "Ingredients",
+        "known_website": "http://www.aapharmachem.com",
+        "known_speciality": "Nutrition Ingredients",
+        "known_hq": "Ottawa,Ontario,Canada",
+        "research_timestamp": "2026-05-30T19:59:48.736663",
+        "founding_year": "1992",
+        "headquarters": "Ottawa, Ont, Canada",
+        "global_offices": "United States",
+        "ownership_structure": "Private",
+        "parent_company": null,
+        "revenue_estimates": null,
+        "employee_count": "6,304",
+        "geographic_reach": [
+          "Canada",
+          "United States"
+        ],
+        "core_business_model": "A&A Pharmachem is a nutraceutical and pharmaceutical ingredients supplier specializing in sourcing high-quality raw materials and supplying them to manufacturers of functional food, dietary supplements, pet products, sports nutrition, and OTCs.",
+        "strategic_positioning": "A&A Pharmachem positions itself as a supplier of high-quality, potent nutraceutical and pharmaceutical ingredients, leveraging global sourcing and decades of industry expertise.",
+        "market_focus": "The company’s market focus is on the nutraceutical and pharmaceutical industries, supplying ingredients to a diverse range of consumer product manufacturers.",
+        "key_differentiators": "Key differentiators include its certified partner manufacturing facilities compliant with Good Manufacturing Practices (GMP), its extensive product catalogue, its commitment to sustainability through certified organic and non-GMO sourcing, and its focus on innovation through R&D.",
+        "segments": {
+          "supplement_brand": true,
+          "contract_manufacturer": true,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "A&A Pharmachem fosters long-term relationships with its customers, including manufacturers of functional food, dietary supplements, pet products, sports nutrition, and OTCs. It collaborates with growers to ensure a consistent supply and utilizes advanced testing techniques to guarantee product quality and potency.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin D",
+            "Vitamin E",
+            "B Vitamins",
+            "Calcium",
+            "Magnesium",
+            "Zinc",
+            "Iron"
+          ],
+          "amino_acids": [
+            "L-Glutamine",
+            "L-Citrulline",
+            "BCAAs",
+            "Creatine"
+          ],
+          "botanicals": [
+            "Oregano Oil",
+            "Ashwagandha",
+            "Rhodiola"
+          ],
+          "probiotics_prebiotics": [
+            "Probiotics",
+            "Prebiotics"
+          ],
+          "nutraceutical_compounds": [
+            "Omega-3 Fatty Acids",
+            "Curcumin",
+            "Resveratrol"
+          ],
+          "enzymes_proteins": [],
+          "specialty_emerging": [
+            "Collagen Peptides",
+            "Hyaluronic Acid"
+          ]
+        },
+        "branded_ingredients": [],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels"
+        ],
+        "packaging_capabilities": [
+          "Blister",
+          "Bottles"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA",
+          "Canadian Government's Natural Health Products Directorate (NHPD)",
+          "United States Pharmacopeia (USP)"
+        ],
+        "certifications": [
+          "cGMP",
+          "NSF",
+          "Organic"
+        ],
+        "scientific_sophistication": "Medium — The company utilizes advanced testing techniques like HPLC and Mass Spectrometry, demonstrating a moderate level of scientific rigor in product analysis and quality control.",
+        "hiring_functions": [
+          "Regulatory",
+          "QA/QC",
+          "R&D",
+          "Sales",
+          "Customer Service",
+          "Manufacturing"
+        ],
+        "role_mapping": [
+          "Regulatory Scientist",
+          "Quality Analyst",
+          "Research & Development Scientist",
+          "Sales Representative",
+          "Customer Service Representative",
+          "Manufacturing Technician"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "A&A Pharmachem is a nutraceutical and pharmaceutical ingredients supplier focused on sourcing high-quality raw materials. They emphasize GMP compliance and rigorous testing, indicating a need for personnel with expertise in quality assurance, regulatory affairs, and analytical chemistry. The company’s focus on innovation (R&D) and expanding its product catalogue suggests a demand for research scientists and potentially formulation specialists. Sales and customer service roles are crucial for managing relationships with a diverse client base including manufacturers in functional food, dietary supplements, and sports nutrition.",
+        "risk_indicators": "The company’s reliance on global sourcing and partnerships introduces supply chain risks. Maintaining GMP compliance and adhering to regulations from multiple agencies (Canadian, US, and potentially others) requires robust quality control processes and ongoing training. Turnover signals could be associated with the competitive nature of the nutraceutical market and the company’s focus on innovation and new product development.",
+        "strategic_insights": "A&A Pharmachem’s strategic focus on sustainability and organic sourcing presents opportunities for recruitment of individuals with expertise in environmental science, supply chain management, and traceability. The company’s commitment to innovation and expanding its product catalogue suggests a need for skilled R&D professionals and formulation specialists.  Given their established customer base and long-term relationships, a recruitment consultant should focus on roles supporting sales, customer service, and potentially technical support to maintain and grow these valuable partnerships."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T09:56:41.620722",
+    "execution_time_sec": 99.61,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  },
+  {
+    "company_name": "A2 Trading GmbH",
+    "domain": "a2-trading.com",
+    "website": "https://a2-trading.com/en/",
+    "profile": {
+      "company_name": "A2 Trading GmbH",
+      "domain": "a2-trading.com",
+      "website": "https://a2-trading.com/en/",
+      "headquarters": "Hamburg",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "",
+      "segments": {
+        "supplement_brand": false,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Aloe vera",
+        "Licorice",
+        "Chitosan",
+        "Jojoba oil",
+        "Spirulina",
+        "Johannis bread flour",
+        "Gelatin"
+      ],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels"
+      ],
+      "hiring_functions": [
+        "Sales",
+        "Marketing",
+        "R&D",
+        "QA/QC",
+        "Regulatory",
+        "Logistics"
+      ],
+      "role_mapping": [
+        "Sales Representative",
+        "Marketing Specialist",
+        "Research & Development Scientist",
+        "Quality Analyst",
+        "Regulatory Affairs Specialist",
+        "Logistics Coordinator"
+      ],
+      "raw_kb_data": {
+        "company_name": "A2 Trading GmbH",
+        "source_sheet": "Ingredients",
+        "known_website": "https://a2-trading.com/en/",
+        "known_speciality": "",
+        "known_hq": "Hamburg,Germany",
+        "research_timestamp": "2026-05-30T20:01:38.081673",
+        "founding_year": "2007",
+        "headquarters": "Hamburg",
+        "global_offices": "Germany, Italy",
+        "ownership_structure": "Private",
+        "parent_company": null,
+        "revenue_estimates": null,
+        "employee_count": null,
+        "geographic_reach": [
+          "Germany",
+          "Italy",
+          "Worldwide"
+        ],
+        "core_business_model": "Purchasing and marketing of natural raw materials, especially hydrocolloids and gelling agents for the food and pharmaceutical industry. Sourcing, processing, refining, and supplying finished natural raw materials to customers worldwide.",
+        "strategic_positioning": "To be a reliable supplier of high-quality natural raw materials, leveraging decades of experience and a global network of suppliers and customers.",
+        "market_focus": "Food and pharmaceutical industries requiring hydrocolloids and gelling agents.",
+        "key_differentiators": "Long-term business relationships with suppliers and customers, in-house logistics team ensuring timely delivery, over 50 years of combined experience within the team.",
+        "segments": {
+          "supplement_brand": false,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "Maintaining long-term business relationships with suppliers and customers, providing logistics support, and offering a range of natural raw materials for various applications.",
+        "ingredients": {
+          "vitamins_minerals": [],
+          "amino_acids": [],
+          "botanicals": [
+            "Aloe vera",
+            "Licorice",
+            "Chitosan",
+            "Jojoba oil",
+            "Spirulina",
+            "Johannis bread flour",
+            "Gelatin"
+          ],
+          "probiotics_prebiotics": [],
+          "nutraceutical_compounds": [],
+          "enzymes_proteins": [],
+          "specialty_emerging": []
+        },
+        "branded_ingredients": [],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels"
+        ],
+        "packaging_capabilities": [
+          "Blister"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA",
+          "EU"
+        ],
+        "certifications": [
+          "cGMP",
+          "Organic"
+        ],
+        "scientific_sophistication": "Low — Based on the limited information, A2-Trading focuses on sourcing and marketing natural raw materials, primarily hydrocolloids, suggesting a foundational level of understanding within the industry.",
+        "hiring_functions": [
+          "Sales",
+          "Marketing",
+          "R&D",
+          "QA/QC",
+          "Regulatory",
+          "Logistics"
+        ],
+        "role_mapping": [
+          "Sales Representative",
+          "Marketing Specialist",
+          "Research & Development Scientist",
+          "Quality Analyst",
+          "Regulatory Affairs Specialist",
+          "Logistics Coordinator"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "A2 Trading GmbH specializes in the sourcing, processing, and marketing of natural raw materials, particularly hydrocolloids and gelling agents for the food and pharmaceutical industries. They require personnel with expertise in sales and marketing to drive revenue, R&D scientists to develop new applications for their products, quality control specialists to ensure product standards, regulatory affairs professionals to navigate complex regulations, and logistics coordinators to manage their global supply chain. Given their focus on organic and natural ingredients, demand for individuals with backgrounds in botany, chemistry, and food science is likely.",
+        "risk_indicators": "Potential risk indicators could include supply chain disruptions due to reliance on natural raw materials, fluctuations in raw material prices, and challenges in maintaining consistent product quality across diverse sourcing locations. Turnover within the logistics team could also signal operational inefficiencies. Monitoring regulatory changes impacting the food and pharmaceutical industries is crucial.",
+        "strategic_insights": "A2 Trading GmbH presents a recruitment opportunity for a consultant to assess the company's need for sales and marketing professionals to expand its market reach, particularly within the food and pharmaceutical sectors. The company's long-standing experience and established customer base provide a solid foundation for growth, but a strategic focus on innovation and regulatory compliance is essential. The consultant should identify talent gaps and recommend recruitment strategies to support the company's long-term objectives."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T09:56:44.793397",
+    "execution_time_sec": 102.78,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  },
+  {
+    "company_name": "ADM",
+    "domain": "adm.com",
+    "website": "http://www.adm.com",
+    "profile": {
+      "company_name": "ADM",
+      "domain": "adm.com",
+      "website": "http://www.adm.com",
+      "headquarters": "Chicago",
+      "ownership": "Public",
+      "source_sheet": "Ingredients",
+      "specialty": "Botanical,tea -extracts",
+      "segments": {
+        "supplement_brand": false,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Calcium",
+        "Iron",
+        "Vitamin E",
+        "Vitamin B Complex",
+        "Zinc",
+        "Magnesium",
+        "Green Tea Extract",
+        "Turmeric",
+        "Ginger",
+        "Rosemary Extract",
+        "Capsicum"
+      ],
+      "branded_ingredients": [
+        "Deerfield Probiotics & Enzymes",
+        "ADM Animal Nutrition"
+      ],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels",
+        "Liquid Formulations",
+        "Powders"
+      ],
+      "hiring_functions": [
+        "Human Nutrition",
+        "Animal Nutrition",
+        "Industrial Biosolutions",
+        "Food Processing",
+        "Commodities Trading"
+      ],
+      "role_mapping": [
+        "Regulatory Scientist",
+        "Quality Analyst",
+        "Process Technician",
+        "Sourcing Operations Director",
+        "Plant Manager",
+        "Customer Experience Specialist"
+      ],
+      "raw_kb_data": {
+        "company_name": "ADM",
+        "source_sheet": "Ingredients",
+        "known_website": "http://www.adm.com",
+        "known_speciality": "Botanical,tea -extracts",
+        "known_hq": "Chicago,IL",
+        "research_timestamp": "2026-05-30T20:05:04.406851",
+        "founding_year": "1902",
+        "headquarters": "Chicago",
+        "global_offices": "270 plants and 420 crop procurement facilities worldwide",
+        "ownership_structure": "Public",
+        "parent_company": null,
+        "revenue_estimates": "$85.5 billion (2024)",
+        "employee_count": "44,043 (2024)",
+        "geographic_reach": [
+          "North America",
+          "South America",
+          "Europe",
+          "Middle East",
+          "Africa",
+          "Asia Pacific"
+        ],
+        "core_business_model": "ADM connects crops and markets in 200 countries and operates in North America, South America, Europe, Middle East, Africa and Asia Pacific. The company processes agricultural commodities into a wide range of ingredients and products for food, beverage, nutraceutical, industrial, and animal feed markets.",
+        "strategic_positioning": "ADM’s strategic positioning is centered around its global supply chain expertise, its ability to process agricultural commodities into value-added ingredients, and its focus on innovation and sustainability.",
+        "market_focus": "ADM’s market focus is on providing ingredients and solutions to the food, beverage, nutraceutical, industrial, and animal feed markets. It serves a diverse range of customers, including food manufacturers, beverage companies, pharmaceutical companies, and animal feed producers.",
+        "key_differentiators": "ADM’s key differentiators include its global supply chain network, its extensive product portfolio, its technical expertise, and its commitment to sustainability. It is also known for its strong relationships with farmers and its ability to provide customized solutions to its customers.",
+        "segments": {
+          "supplement_brand": false,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "ADM’s ecosystem relationships include partnerships with farmers, manufacturers, distributors, and technology providers. It also engages in acquisitions and joint ventures to expand its capabilities and reach. The company’s operations are supported by a complex network of transportation and logistics services.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Calcium",
+            "Iron",
+            "Vitamin E",
+            "Vitamin B Complex",
+            "Zinc",
+            "Magnesium"
+          ],
+          "amino_acids": [
+            "Lysine",
+            "Methionine",
+            "Taurine",
+            "Glutamine",
+            "Arginine"
+          ],
+          "botanicals": [
+            "Green Tea Extract",
+            "Turmeric",
+            "Ginger",
+            "Rosemary Extract",
+            "Capsicum"
+          ],
+          "probiotics_prebiotics": [
+            "Lactobacillus",
+            "Bifidobacterium",
+            "Fructooligosaccharides (FOS)",
+            "Inulin"
+          ],
+          "nutraceutical_compounds": [
+            "Curcumin",
+            "Resveratrol",
+            "Anthocyanins",
+            "Polyphenols"
+          ],
+          "enzymes_proteins": [
+            "Amylase",
+            "Protease",
+            "Lipase",
+            "Cellulase"
+          ],
+          "specialty_emerging": [
+            "Microbial Fermentation Products",
+            "Plant-Based Proteins",
+            "Bioactive Peptides"
+          ]
+        },
+        "branded_ingredients": [
+          "Deerfield Probiotics & Enzymes",
+          "ADM Animal Nutrition"
+        ],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels",
+          "Liquid Formulations",
+          "Powders"
+        ],
+        "packaging_capabilities": [
+          "Blister Packs",
+          "Bottles",
+          "Jars",
+          "Pouches"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA",
+          "EU Regulations"
+        ],
+        "certifications": [
+          "cGMP",
+          "NSF",
+          "USP"
+        ],
+        "scientific_sophistication": "Medium — ADM possesses significant expertise in agricultural processing, ingredient sourcing, and product formulation, supported by extensive research and development capabilities.",
+        "hiring_functions": [
+          "Human Nutrition",
+          "Animal Nutrition",
+          "Industrial Biosolutions",
+          "Food Processing",
+          "Commodities Trading"
+        ],
+        "role_mapping": [
+          "Regulatory Scientist",
+          "Quality Analyst",
+          "Process Technician",
+          "Sourcing Operations Director",
+          "Plant Manager",
+          "Customer Experience Specialist"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "ADM is a global leader in agricultural processing and commodities trading, focusing on providing ingredients and solutions to the food, beverage, and animal nutrition industries. They operate across a wide range of product categories, including corn, soybeans, wheat, and other agricultural commodities. ADM’s core business involves transforming raw agricultural products into value-added ingredients and finished products for various applications. The company’s scale and global network provide a competitive advantage in sourcing, processing, and distributing agricultural products. ADM is actively investing in innovation and sustainability initiatives to meet evolving consumer demands and industry trends.",
+        "risk_indicators": "ADM’s operations are subject to various risks, including commodity price volatility, supply chain disruptions, geopolitical events, and regulatory changes. The company’s significant exposure to agricultural commodities makes it vulnerable to fluctuations in global demand and supply. ADM has faced scrutiny regarding its sourcing practices and environmental impact, leading to potential reputational and financial risks. Turnover signals could indicate operational inefficiencies or challenges in attracting and retaining talent. ADM’s reliance on global supply chains also exposes it to logistical risks and potential disruptions.",
+        "strategic_insights": "ADM’s strategic focus is on leveraging its global scale and expertise to capture growth opportunities in the food and beverage, animal nutrition, and industrial biosolutions markets. The company is investing in innovation and sustainability to develop new products and solutions that meet evolving consumer preferences and address environmental challenges. ADM’s strategic priorities include expanding its presence in emerging markets, strengthening its supply chain capabilities, and driving operational efficiencies. The company’s long-term success depends on its ability to adapt to changing market dynamics, manage risks effectively, and maintain a competitive advantage in the global agricultural commodities landscape."
+      }
+    },
+    "role_changes": [
+      {
+        "person_name": "Jeff Rowe",
+        "company_name": "ADM",
+        "movement_type": "JOINED",
+        "role_title": "Executive Vice President and Chief Oper",
+        "previous_role": null,
+        "department": null,
+        "date_str": "Mon, 20 Jul 2026 07:00:00 GMT",
+        "evidence_snippet": "ADM appoints Jeff Rowe as Executive Vice President and Chief Operating Officer - Capitol City Now",
+        "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZWtjLWlZMjMwODhjdWNZNnJaOGF2ekFsT2hqcXNEd1gzTjNZeGthY2pmQXFoOXdCZFRJZ2MzaHZKUl9mblV1ZWhLa3U5T2I1bUlrM3g5YkNza2pNS05UcEk0UzlfTnBDaUdTYVJhVXVtNzZEaW1lYzZKWFRabzdHVGtxbFZKc3B6VU5rM0VoQ0luWVhLbG9BQmZVczJBeS1CVXdDQkVLMTBOYTZEb2ZlQnk2czZqUjlBWlE?oc=5",
+        "source_name": "Capitol City Now",
+        "confidence_score": 0.92,
+        "discovered_at": "2026-09-11T09:56:41.979910"
+      },
+      {
+        "person_name": "Brady Umberger",
+        "company_name": "ADM",
+        "movement_type": "DEPARTED",
+        "role_title": "President",
+        "previous_role": null,
+        "department": null,
+        "date_str": "Wed, 24 Jun 2026 07:00:00 GMT",
+        "evidence_snippet": "ADM Names Brady Umberger President as Devine Steps Down - For Construction Pros",
+        "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQdXdtY1haOGJ5eE9va3pDQ3B1N1hucHVqOG9Nc0dlSUVpQ0NyanhLdUhaa1gzTTB3T05iN3B0bENvMzNmRzdvMXEwRE5ZeERmRi11RDBJU0lNYVdxdmxhcjdkaEJBTkZTN1JJVEp1UUQ4d0JfSDRCaFktdnhzb1B6d1lsQUZQbDlIdjRmWERCdFMwb2o0bUFwT1ozdFc4UzJNX19TNDJYUkJ0WkZTVVlDSnJrTlpETnNiNWJ0anNtaklrMHpHM3FSdXlvdkJFeWIxVEltRWU3c3RFUVhBTVlpYnBzdEsyS2ZMVTM5cHozRTJXcFNK?oc=5",
+        "source_name": "For Construction Pros",
+        "confidence_score": 0.92,
+        "discovered_at": "2026-09-11T09:56:43.247954"
+      }
+    ],
+    "funding_events": [
+      {
+        "company_name": "ADM",
+        "round_type": "Undisclosed / Venture Round",
+        "amount_raw": null,
+        "amount_usd": null,
+        "lead_investors": [],
+        "participating_investors": [],
+        "valuation_raw": null,
+        "date_str": "Tue, 08 Sep 2026 19:25:57 GMT",
+        "announcement_title": "Is Earnings Outlook Upgrade Altering The Investment Case For ADM Stock? - simplywall.st",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxNdFc4WGJvdDIxRW1kWVl1WkZGZWhfVDRjU0pMTy1WRDIyQnBhR1ZSdWtTdG5kYnJNQ2x0U2M5dnRjU0djcWtNMHV4S01KV1lkaUJKWnpBZ05SV3lycmtmX0FRTHFraUJPbko1a1ZxMjhxbGg2dVhzaDZqSmJVWTJRVmlyRUhNMDdTTjMyODFEWUhJZlVOV1hkR2FkaWZubmJtUGJ5QzBSM0pDOEhNS05DNkljdmRVTjBSLU",
+        "source_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNdFc4WGJvdDIxRW1kWVl1WkZGZWhfVDRjU0pMTy1WRDIyQnBhR1ZSdWtTdG5kYnJNQ2x0U2M5dnRjU0djcWtNMHV4S01KV1lkaUJKWnpBZ05SV3lycmtmX0FRTHFraUJPbko1a1ZxMjhxbGg2dVhzaDZqSmJVWTJRVmlyRUhNMDdTTjMyODFEWUhJZlVOV1hkR2FkaWZubmJtUGJ5QzBSM0pDOEhNS05DNkljdmRVTjBSLUV4QUduYmFCcDhJU0RvSTFUa1M4LXk0QTgwNm5sQ3FYUlhMMGlWQWVoV0VHd9IB6wFBVV95cUxOMlQ3OWlUeHNMRm5rN1ZoUndmbVF0VkFvV3lYZm9oeTFZZy1XZG1WamRPT3cwaV9CZ1NMTDhxRHV2V3Brbm1ZWkV5Z1ZOU2laWWFGY05vTWNBTnJqXzRDcHVZYWNSZENUNzd0VUhnSlZvZm9nbjBaMXJxdGw0b05FVGM1TjFDUUIwdVEyYUtkWnMtR0NqV041ak04ekxxeFlkNEFVdWo5bVhCZnpMOTFtTW5FSTJTTDJTVEhYTUlMTDJFdVJmdW5JeXhhLXFSeC1hYmxYYjZYZmMxUkgzSklTcmdHUFJOeUtHYWZv?oc=5",
+        "source_name": "simplywall.st",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:43.847892"
+      },
+      {
+        "company_name": "ADM",
+        "round_type": "Undisclosed / Venture Round",
+        "amount_raw": "$103M",
+        "amount_usd": 103000000.0,
+        "lead_investors": [],
+        "participating_investors": [],
+        "valuation_raw": null,
+        "date_str": "Tue, 23 Jun 2026 07:00:00 GMT",
+        "announcement_title": "Turner applauds $103 million ADM investment in Decatur - Illinois Senate Democratic Caucus",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQlhHSHphUm13Ri1uWVM4YmQtdU1ZcE4tNDZCd1FYcTBqd2dmWGFoREFXT0FYVXVQVHlTRW1QMmNYa3NEWms5bU5yd0ltX2lYX3ZnczZqM3ctYWhrRnFsTTNFOE50SUJsVENFWHIxMmwtcm50aTA4MkdNc3h6TjJ5VHI3OXBuRXFkam9sMXdXNXltSmRZeUs5UGV5SXNJMVdzOUlPWVo4b1ROZjhPNFM3OGlfOEZucGNmZW",
+        "source_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQlhHSHphUm13Ri1uWVM4YmQtdU1ZcE4tNDZCd1FYcTBqd2dmWGFoREFXT0FYVXVQVHlTRW1QMmNYa3NEWms5bU5yd0ltX2lYX3ZnczZqM3ctYWhrRnFsTTNFOE50SUJsVENFWHIxMmwtcm50aTA4MkdNc3h6TjJ5VHI3OXBuRXFkam9sMXdXNXltSmRZeUs5UGV5SXNJMVdzOUlPWVo4b1ROZjhPNFM3OGlfOEZucGNmZWgwZmMxc292Y2hYZWhqUnpnbktkWjBTalBkWVdn?oc=5",
+        "source_name": "Illinois Senate Democratic Caucus",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:43.848102"
+      }
+    ],
+    "strategic_movements": [
+      {
+        "company_name": "ADM",
+        "category": "MERGER_ACQUISITION",
+        "headline": "115,435 Shares in Archer Daniels Midland Company $ADM Bought by Jupiter Topco LLC - MarketBeat",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOR3UtUEJldFF3OVhkbFhGbTFIMVp3T2VMZXF3UWtPQWhJbXdua3RNMGNnQlNxNXJmYzBsU0xkNk5wVzFobTdFTU9xT0VobXVRTmYwZVppS2xvd2tZc1JIX2VOV1VzOXJubTBDeUVEY3RmZTJRazgydExCVldTdDVWN0YyR042V0NXdW52bGtCWWR1NXpEalprTy11Q3VWeWk4UmJXTHV3eVI1RndfNGNoWndWMWM4Z2dOZ3",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Mon, 31 Aug 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOR3UtUEJldFF3OVhkbFhGbTFIMVp3T2VMZXF3UWtPQWhJbXdua3RNMGNnQlNxNXJmYzBsU0xkNk5wVzFobTdFTU9xT0VobXVRTmYwZVppS2xvd2tZc1JIX2VOV1VzOXJubTBDeUVEY3RmZTJRazgydExCVldTdDVWN0YyR042V0NXdW52bGtCWWR1NXpEalprTy11Q3VWeWk4UmJXTHV3eVI1RndfNGNoWndWMWM4Z2dOZ3BVdXJqdUZkcUhQTjM3akZoRkh1OHZPaWVlbktpTQ?oc=5",
+        "source_name": "MarketBeat",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:44.427290"
+      },
+      {
+        "company_name": "ADM",
+        "category": "MERGER_ACQUISITION",
+        "headline": "74,515 Shares in Archer Daniels Midland Company $ADM Acquired by OMERS ADMINISTRATION Corp - MarketBeat",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxQT3dJTHh3eTJrUzdObjE4Z1hSV3hfWFAxb0poeTZpVjF0NjZJa3hiaWxnbElReGZKVzlwQ0duSG5mXzZzdHNaVnczZTZqcWFxNkR5M0VpQmM4bm5GOWhnVlNkUGlSekFBQmljaWxwRHYwLUtBc2RoMDJPNlRwLW5VWklHWmJ0SnZQc3F5RWVtaDRRbUN0SnNQU1BJWnotWWM0T0RtNG5YMU5ad2ZKTW4tREU5OHh4UmxfeT",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Tue, 25 Aug 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQT3dJTHh3eTJrUzdObjE4Z1hSV3hfWFAxb0poeTZpVjF0NjZJa3hiaWxnbElReGZKVzlwQ0duSG5mXzZzdHNaVnczZTZqcWFxNkR5M0VpQmM4bm5GOWhnVlNkUGlSekFBQmljaWxwRHYwLUtBc2RoMDJPNlRwLW5VWklHWmJ0SnZQc3F5RWVtaDRRbUN0SnNQU1BJWnotWWM0T0RtNG5YMU5ad2ZKTW4tREU5OHh4UmxfeTE3aHU4QklBUDVkMDZTVVBsVUk5YmVLeHNzYkNxcDlJTmRmMEkyQThwcw?oc=5",
+        "source_name": "MarketBeat",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:44.427316"
+      },
+      {
+        "company_name": "ADM",
+        "category": "MERGER_ACQUISITION",
+        "headline": "1,667,143 Shares in Archer Daniels Midland Company $ADM Bought by Caisse de depot et placement du Quebec - MarketBeat",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi9AFBVV95cUxPUG9QY29SLVJLTFFIdVE3VXo1Yi1hUVZCQ2M4UGdlaGR5b3FvQnBzaHFWY1BEWEFKOXlkekpoVUVyMXJWeWNMU0dzeTNpWXlkX1ItTF9NQXViN09velR1a01WVncxUmZlMG96SGx6eE1lT2lvOU0wQWhxejdqdnlDZUd4ZGpYanZOazVFZnQ4V1JGMF92dG5nSXpsaWJpY2hzcFBVTXRmaV9OM1JSSVNCUi1pM1FDTDdHZT",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Thu, 27 Aug 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPUG9QY29SLVJLTFFIdVE3VXo1Yi1hUVZCQ2M4UGdlaGR5b3FvQnBzaHFWY1BEWEFKOXlkekpoVUVyMXJWeWNMU0dzeTNpWXlkX1ItTF9NQXViN09velR1a01WVncxUmZlMG96SGx6eE1lT2lvOU0wQWhxejdqdnlDZUd4ZGpYanZOazVFZnQ4V1JGMF92dG5nSXpsaWJpY2hzcFBVTXRmaV9OM1JSSVNCUi1pM1FDTDdHZTZ4MkRpdFYxSDgwNE02NXlkSi1lZzJYeDVScGlBcWs4Z1pERjJWUXdYTXlXR0RiVDVDYk01ZGJ2N2ZQ?oc=5",
+        "source_name": "MarketBeat",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:44.427380"
+      },
+      {
+        "company_name": "ADM",
+        "category": "MERGER_ACQUISITION",
+        "headline": "143,458 Shares in Archer Daniels Midland Company $ADM Acquired by Meiji Yasuda Asset Management Co Ltd. - MarketBeat",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxPeXRNUmlkcGpBeUJNWTZ5NmsxWUVNUHE1RUs3dkdCaGtMNFR1SEFFbGt1eWd4SGNEd3o0NjU0NkZpRnZGbFE3VHgwUVdCWDdPeU9mVXFIRmtCcGxIWEdMWEloR19keU5Sakk3RElNWGJGblRZV2JoVWxxVnpfaTJhN2NSb1ZIbWFqVV9iX3RvWm01aklONmpOZVk5MzlWUW9JZXRKRUUxZFRva2pBeWkwVWZhaldLUm5CLV",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Mon, 24 Aug 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPeXRNUmlkcGpBeUJNWTZ5NmsxWUVNUHE1RUs3dkdCaGtMNFR1SEFFbGt1eWd4SGNEd3o0NjU0NkZpRnZGbFE3VHgwUVdCWDdPeU9mVXFIRmtCcGxIWEdMWEloR19keU5Sakk3RElNWGJGblRZV2JoVWxxVnpfaTJhN2NSb1ZIbWFqVV9iX3RvWm01aklONmpOZVk5MzlWUW9JZXRKRUUxZFRva2pBeWkwVWZhaldLUm5CLVZEdno1dmVaeDdLMzR5MC0yeHJDWWdvRGxBUlV2TkxmaEdTZkpWY0piQVo2UVlMajZRMWJhcDVoNDQ?oc=5",
+        "source_name": "MarketBeat",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:44.427396"
+      },
+      {
+        "company_name": "ADM",
+        "category": "MERGER_ACQUISITION",
+        "headline": "13,976 Shares in Archer Daniels Midland Company $ADM Bought by First National Bank of Omaha - MarketBeat",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxPQVFudlloMHAxalBjbzdnS2hGSWU1SDJvVU1vMXVUelQxVXBlLVUyNW5Fa1J1d0NYOXBEaTZnT3ZNbm90dE0yc3JGZlVYSmtveTBFZTFyUi1pTWJSSU5reHZGMEY2dDVMaXRMbnc2V3FNN0E0bXRLUk11UUFZYk5laUxLUWlEZ19YYVU2alhRUGNvLVRWSlluODd1c1BSTTZ6MWwzWTdpZ3lRSEJJYkNpa0hvS0huNGtKZn",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Thu, 20 Aug 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPQVFudlloMHAxalBjbzdnS2hGSWU1SDJvVU1vMXVUelQxVXBlLVUyNW5Fa1J1d0NYOXBEaTZnT3ZNbm90dE0yc3JGZlVYSmtveTBFZTFyUi1pTWJSSU5reHZGMEY2dDVMaXRMbnc2V3FNN0E0bXRLUk11UUFZYk5laUxLUWlEZ19YYVU2alhRUGNvLVRWSlluODd1c1BSTTZ6MWwzWTdpZ3lRSEJJYkNpa0hvS0huNGtKZnZKUlFNNVF6bm8xZXI2dUUwZDd6eUFYOU5VTUFFQ2czYmlIUzAtczB5Rjc?oc=5",
+        "source_name": "MarketBeat",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:44.427453"
+      },
+      {
+        "company_name": "ADM",
+        "category": "MERGER_ACQUISITION",
+        "headline": "FDL, a Portfolio Company of Highlander Partners, Enters into Definitive Agreement to Be Acquired By ADM - PR Newswire",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRG9pTWx0QUg1OGFickxQcnN1OEJxM0xITFVTNy1FTUVmakxVZWN0aTJUanVYa1pYcGFqalV3NVJITFhEVS1tb0VVdlNWdkxKaXQwRGlZSmlLRXowbUNaUHpUTWl6cXA0dFJGc0lJZTVyMnNPdGRMU1Fudlp5Q2ladnhvWW1RYkhNUkFVcXROdVB2elNfYnVXZHRFMlU0a3k5V3FMang0dkxsMEdrYWh2NGhiNXg3bEc5Uk",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Tue, 19 Dec 2023 08:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRG9pTWx0QUg1OGFickxQcnN1OEJxM0xITFVTNy1FTUVmakxVZWN0aTJUanVYa1pYcGFqalV3NVJITFhEVS1tb0VVdlNWdkxKaXQwRGlZSmlLRXowbUNaUHpUTWl6cXA0dFJGc0lJZTVyMnNPdGRMU1Fudlp5Q2ladnhvWW1RYkhNUkFVcXROdVB2elNfYnVXZHRFMlU0a3k5V3FMang0dkxsMEdrYWh2NGhiNXg3bEc5UkNKeFhwVGVYdHdfTVdYY3V1Z3JNRUIwUWNqWEU0cWJzMWFncmJnTVRXZ216STdVVlY5VUtB?oc=5",
+        "source_name": "PR Newswire",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:56:44.427471"
+      },
+      {
+        "company_name": "ADM",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "Quantum Launches ADM to Reduce Storage Costs and Optimize Data - Zacks Investment Research",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNY3JsdFpBUDFEZlhKX2J0RTRJY3doUGliVDRyRU9iZGc2b29QZVRHblpEVmZTRk80amJvR1B4UFlaRHRjTHJOU3JRMVBBZWxRdXU2NUFLcnZhT19mTTBMSzIxeThNb0NqdTdySHBkSUJkZnlDYU53bkRzelcxNmlLUDZQTU1KZlZBdHIwbmZxRDhCZFc4WXdjTV9WUDNvVG5TYjZFMXF3?oc=5\" target=\"_blank\">Qua",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Wed, 09 Sep 2026 12:00:31 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNY3JsdFpBUDFEZlhKX2J0RTRJY3doUGliVDRyRU9iZGc2b29QZVRHblpEVmZTRk80amJvR1B4UFlaRHRjTHJOU3JRMVBBZWxRdXU2NUFLcnZhT19mTTBMSzIxeThNb0NqdTdySHBkSUJkZnlDYU53bkRzelcxNmlLUDZQTU1KZlZBdHIwbmZxRDhCZFc4WXdjTV9WUDNvVG5TYjZFMXF3?oc=5",
+        "source_name": "Zacks Investment Research",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:56:46.386296"
+      },
+      {
+        "company_name": "ADM",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "Walmart (WMT) Launches 40,000 Acre Regenerative Agriculture Effort With General Mills And ADM - finance.yahoo.com",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQenhnbkloWnhvdzFqU2pNY2h3eDFNUFBLd1lVd1h1NjRTVWZQZFpKYzFPelFwN3lHVzFuT19iQUJia3REMDU4X29LTGx2dzlJUk1vak1xWS1FbHA4QnhwTXFHbkdITHNsdzVUM1JOWVFxSWppM3hsMHltYXZvanp6TUtNUUZDaDFQM09FbmVJc3JHMURpdVBN?oc=5\" target=\"_blank\">Walmart (WMT) Launches ",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Sun, 26 Jul 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQenhnbkloWnhvdzFqU2pNY2h3eDFNUFBLd1lVd1h1NjRTVWZQZFpKYzFPelFwN3lHVzFuT19iQUJia3REMDU4X29LTGx2dzlJUk1vak1xWS1FbHA4QnhwTXFHbkdITHNsdzVUM1JOWVFxSWppM3hsMHltYXZvanp6TUtNUUZDaDFQM09FbmVJc3JHMURpdVBN?oc=5",
+        "source_name": "finance.yahoo.com",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:56:46.386478"
+      },
+      {
+        "company_name": "ADM",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "ADM Launches Eight Soy and Pea Protein Ingredients Across North America and Europe - vegconomist - the vegan business magazine",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNa3oyREpGVmlfSnd2M1dwYkFuQ2thOU53alp6c1dKMkNnal9pTVJneFU0Y2djUzFyMUhOOUdrYi1hd19JVHV4ZzlWUmFzT19rTGhZcmJMNWtiOHhqMnlTYTA1NFZ1VXNSQ3Zfc2dhclZ0YWR6RnlwWjI2ai1SM1kyUWUzV0RGeEhQU1RwZTBYeVRtUWw1eG5TNUlsc2c0cGlqMmozbjhuZ0VLVlN6NWNoOA?oc=5\" targe",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Thu, 21 May 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNa3oyREpGVmlfSnd2M1dwYkFuQ2thOU53alp6c1dKMkNnal9pTVJneFU0Y2djUzFyMUhOOUdrYi1hd19JVHV4ZzlWUmFzT19rTGhZcmJMNWtiOHhqMnlTYTA1NFZ1VXNSQ3Zfc2dhclZ0YWR6RnlwWjI2ai1SM1kyUWUzV0RGeEhQU1RwZTBYeVRtUWw1eG5TNUlsc2c0cGlqMmozbjhuZ0VLVlN6NWNoOA?oc=5",
+        "source_name": "vegconomist - the vegan business magazine",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:56:46.386659"
+      },
+      {
+        "company_name": "ADM",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "Shipyard Commander Rear Adm. Kavon Hakimzadeh Launches Leadership Insight Series at America’s Shipyard - DVIDS",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPM1ZkUlF4YmVSbEVSQ2FDLUtHWk5fRjV6M2psSVBBVjhMcFNDWDFTbDIyMEh0d0RaRDZpamItUW1kYmhqSy1UUk1vYXJLck1zV2p3X1QxU0phUXFNZmU1QVVMTkVBRGFOUkNOOGN1dFBEVWdFUDVzOGdTWk1DazlYWlZCeWxadGU4UEJ0UU1IZEFsYmF0ZW5DdFRrVkFuX2xmV0tEV2g0dXU4TXN6SGEzZW1tMnNITXA1Uz",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Tue, 23 Jun 2026 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPM1ZkUlF4YmVSbEVSQ2FDLUtHWk5fRjV6M2psSVBBVjhMcFNDWDFTbDIyMEh0d0RaRDZpamItUW1kYmhqSy1UUk1vYXJLck1zV2p3X1QxU0phUXFNZmU1QVVMTkVBRGFOUkNOOGN1dFBEVWdFUDVzOGdTWk1DazlYWlZCeWxadGU4UEJ0UU1IZEFsYmF0ZW5DdFRrVkFuX2xmV0tEV2g0dXU4TXN6SGEzZW1tMnNITXA1UzFCTUhmUEtadk5fZTZvdFVmODFJbzVuS3c?oc=5",
+        "source_name": "DVIDS",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:56:46.386783"
+      }
+    ],
+    "scan_timestamp": "2026-09-11T09:58:58.765697",
+    "execution_time_sec": 137.65,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 14
+  },
+  {
+    "company_name": "ADM Wild Europe GmbH + Co. Kg",
+    "domain": "adm.com",
+    "website": "https://www.adm.com/en-us/standalone-pages/adm-wild/",
+    "profile": {
+      "company_name": "ADM Wild Europe GmbH + Co. Kg",
+      "domain": "adm.com",
+      "website": "https://www.adm.com/en-us/standalone-pages/adm-wild/",
+      "headquarters": "Rolle, Switzerland",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "Natural Ingredients-Food",
+      "segments": {
+        "supplement_brand": false,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": true,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Vitamin E",
+        "Vitamin B Complex",
+        "Iron",
+        "Zinc",
+        "Coconut Oil",
+        "Cocoa Butter",
+        "Vanilla Extract",
+        "Mint Extracts"
+      ],
+      "branded_ingredients": [
+        "WILD Flavors"
+      ],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels",
+        "Flavor Systems",
+        "Natural Flavors and Extracts",
+        "Fruit Juice Concentrates and Blends",
+        "Mint Oils and Flavors",
+        "Colors from Natural Sources",
+        "Sweetening Systems",
+        "Seasonings",
+        "Turnkey Solutions"
+      ],
+      "hiring_functions": [
+        "R&D",
+        "Sales",
+        "Production",
+        "Quality Control",
+        "Engineering",
+        "Operations"
+      ],
+      "role_mapping": [
+        "Flavor Scientist",
+        "Application Development Scientist",
+        "Production Technician",
+        "Quality Analyst",
+        "Process Engineer",
+        "Supply Chain Specialist",
+        "Sales Representative"
+      ],
+      "raw_kb_data": {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "source_sheet": "Ingredients",
+        "known_website": "https://www.adm.com/en-us/standalone-pages/adm-wild/",
+        "known_speciality": "Natural Ingredients-Food",
+        "known_hq": "Germany",
+        "research_timestamp": "2026-05-30T20:07:07.113170",
+        "founding_year": "1931",
+        "headquarters": "Rolle, Switzerland",
+        "global_offices": "Europe, Middle East and Africa",
+        "ownership_structure": "Private",
+        "parent_company": "ADM",
+        "revenue_estimates": "null",
+        "employee_count": "null",
+        "geographic_reach": [
+          "Europe",
+          "Middle East",
+          "Africa"
+        ],
+        "core_business_model": "ADM WILD Europe GmbH & Co. KG produces natural ingredients for the food and beverage industry. The Company offers products such as beverage flavor systems.",
+        "strategic_positioning": "ADM WILD Europe GmbH & Co. KG remains at the forefront of a number of product categories based on natural ingredients.",
+        "market_focus": "Creating on-trend consumer products.",
+        "key_differentiators": "The company’s acquisition of WILD Flavors GmbH in 2014 marked an important milestone in ADM’s 120 year-old history to further its product portfolio. Unlocking Nature. Enriching Life.",
+        "segments": {
+          "supplement_brand": false,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": true,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "The acquisition of WILD Flavors GmbH in 2014 marked the beginning of a series of strategic expansions for ADM across Europe, Middle East and Africa over the past decade.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Vitamin E",
+            "Vitamin B Complex",
+            "Iron",
+            "Zinc"
+          ],
+          "amino_acids": [
+            "L-Leucine",
+            "L-Isoleucine",
+            "L-Valine",
+            "L-Lysine",
+            "L-Threonine"
+          ],
+          "botanicals": [
+            "Coconut Oil",
+            "Cocoa Butter",
+            "Vanilla Extract",
+            "Mint Extracts"
+          ],
+          "probiotics_prebiotics": [
+            "Probiotics",
+            "Prebiotics"
+          ],
+          "nutraceutical_compounds": [
+            "Polyphenols",
+            "Antioxidants"
+          ],
+          "enzymes_proteins": [
+            "Enzymes",
+            "Proteins"
+          ],
+          "specialty_emerging": [
+            "Fermentation Technologies"
+          ]
+        },
+        "branded_ingredients": [
+          "WILD Flavors"
+        ],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels",
+          "Flavor Systems",
+          "Natural Flavors and Extracts",
+          "Fruit Juice Concentrates and Blends",
+          "Mint Oils and Flavors",
+          "Colors from Natural Sources",
+          "Sweetening Systems",
+          "Seasonings",
+          "Turnkey Solutions"
+        ],
+        "packaging_capabilities": [
+          "Blister Packaging",
+          "Bottles",
+          "Jerry Cans",
+          "Stainless Steel Reusable Container",
+          "Aseptic Packagings (Bag-in-Box / Bag-in-Bucket Systems)"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA",
+          "EU"
+        ],
+        "certifications": [
+          "IFS Food",
+          "ISO 14001:2015",
+          "ISO 9001:2015"
+        ],
+        "scientific_sophistication": "Medium — The company utilizes fermentation technologies and extracts natural flavors and ingredients, indicating a moderate level of scientific understanding and application.",
+        "hiring_functions": [
+          "R&D",
+          "Sales",
+          "Production",
+          "Quality Control",
+          "Engineering",
+          "Operations"
+        ],
+        "role_mapping": [
+          "Flavor Scientist",
+          "Application Development Scientist",
+          "Production Technician",
+          "Quality Analyst",
+          "Process Engineer",
+          "Supply Chain Specialist",
+          "Sales Representative"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "ADM WILD Europe GmbH & Co. KG is a key player in the natural flavors and ingredients market, specializing in the production of a wide range of products for the food and beverage industry. They focus on delivering innovative solutions based on natural ingredients, catering to diverse applications like beverages, confectionery, and savory products. The company's history, marked by acquisitions and expansions, demonstrates a strategic approach to growth and market penetration. They are likely seeking candidates with expertise in flavor development, food science, production operations, quality assurance, and sales/marketing to support their continued growth and innovation.",
+        "risk_indicators": "The company's reliance on agricultural origins and processing could expose it to supply chain disruptions. The history of acquisitions and expansions suggests a potential for integration challenges. Monitoring employee turnover rates and maintaining certifications (as indicated by the provided documentation) are crucial risk indicators. The company's focus on natural ingredients also requires careful attention to regulatory changes and consumer preferences.",
+        "strategic_insights": "ADM WILD Europe GmbH & Co. KG represents a strategic opportunity for a recruitment consultant to identify talent within the flavor and ingredients sector. The company's focus on innovation and diverse product portfolio suggests a need for skilled scientists, engineers, and sales professionals. Understanding the company's history and strategic acquisitions can inform recruitment strategies and target individuals with experience in similar growth-oriented organizations. A key strategic insight is the company's commitment to sustainable and natural ingredients, which aligns with current market trends and consumer demand."
+      }
+    },
+    "role_changes": [
+      {
+        "person_name": "Jeff Rowe",
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "movement_type": "JOINED",
+        "role_title": "Executive Vice President and Chief Oper",
+        "previous_role": null,
+        "department": null,
+        "date_str": "Mon, 20 Jul 2026 07:00:00 GMT",
+        "evidence_snippet": "ADM Appoints Jeff Rowe as Executive Vice President and Chief Operating Officer - Business Wire",
+        "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOdW1OUENhZzNNSTNmRTlBdkV5T05TaDJzbXVIVy1PS1FXbWFodkNBSFVyUXh6N2g2UGo1WWNOZVhHUHFEc1VwakNtdGRJQk5kQTRlM0s2cWVMaVJPeGZOOU50WEJTalF2MUdDQ0JSMnRYakdBWnk0Ty12NGt3V2FXMG1CWUQtMWd3Wi0weXRSYmJkNi0yeGdRUDFwcU9UQTR0b3UxN1piYjlxNWZUNHFIWnRwUkM3a2NYM2lkNVpDTnhIVktWcjJ5dE1YZ0sxV1dW?oc=5",
+        "source_name": "Business Wire",
+        "confidence_score": 0.92,
+        "discovered_at": "2026-09-11T09:56:45.417334"
+      }
+    ],
+    "funding_events": [
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "round_type": "Undisclosed / Venture Round",
+        "amount_raw": null,
+        "amount_usd": null,
+        "lead_investors": [],
+        "participating_investors": [],
+        "valuation_raw": null,
+        "date_str": "Thu, 07 May 2026 07:00:00 GMT",
+        "announcement_title": "ADM Announces Investment to Upgrade Clinton, Iowa, Corn Processing Facility - ADM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxONm16cHFlVzJ5R2o1aFA2MUp5S3JTeVJWRERhSkp3dkdjZzJxZzJPc1FWXzFlTkZITWR5Wl9iZlI1WlVJdVVTVFN3TXNUeUd4WnZobjJtdzdjcENKdU1ocUF3cnJ0UFQxTmZRS2dzWktXamtXRzJUOXNUSmItcWFydEdqNmphNlpOQjRBU0ZhcE91SHNsb0daNEVRR1pCSUFXQ1R2RlZYUkdEMkItMTd6Z25MOUNzZ3B1Qj",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONm16cHFlVzJ5R2o1aFA2MUp5S3JTeVJWRERhSkp3dkdjZzJxZzJPc1FWXzFlTkZITWR5Wl9iZlI1WlVJdVVTVFN3TXNUeUd4WnZobjJtdzdjcENKdU1ocUF3cnJ0UFQxTmZRS2dzWktXamtXRzJUOXNUSmItcWFydEdqNmphNlpOQjRBU0ZhcE91SHNsb0daNEVRR1pCSUFXQ1R2RlZYUkdEMkItMTd6Z25MOUNzZ3B1QjdXVnlRbE1XSlQ3?oc=5",
+        "source_name": "ADM",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:57:27.004409"
+      },
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "round_type": "Undisclosed / Venture Round",
+        "amount_raw": "$8.3M",
+        "amount_usd": 8300000.000000001,
+        "lead_investors": [],
+        "participating_investors": [],
+        "valuation_raw": null,
+        "date_str": "Thu, 24 Sep 2015 07:00:00 GMT",
+        "announcement_title": "ADM expansion in Erlanger will result in investment of more than $8.3 million, will add 200 jobs in NKy - Northern Kentucky Tribune",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxQTUNncjcwREVNTEFlT213NExQZzFNUmNMSjFMNmp6Y0s1dWJtaFNmUGZ2T1owbTBGOEhwRUE4RUxtcnlwZENGQ1p4OS1qelBHSld5RkdTeHRERldlS1Ixc2FtaXByQ2NHY29qSU1teDBxR2FXYlp4RldYaTE1a2NZejZwMERQTE1rY0hHUjhnSnQtdHZzc0FqSHFCU3liYnVOaDUzRHN5YUF0TTVlZ2x1M0JxRi1hMUozWk",
+        "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTUNncjcwREVNTEFlT213NExQZzFNUmNMSjFMNmp6Y0s1dWJtaFNmUGZ2T1owbTBGOEhwRUE4RUxtcnlwZENGQ1p4OS1qelBHSld5RkdTeHRERldlS1Ixc2FtaXByQ2NHY29qSU1teDBxR2FXYlp4RldYaTE1a2NZejZwMERQTE1rY0hHUjhnSnQtdHZzc0FqSHFCU3liYnVOaDUzRHN5YUF0TTVlZ2x1M0JxRi1hMUozWkhaNjg3NjdSOGtXS2E3WGlTLVNGUQ?oc=5",
+        "source_name": "Northern Kentucky Tribune",
+        "confidence_score": 0.88,
+        "discovered_at": "2026-09-11T09:57:27.004788"
+      }
+    ],
+    "strategic_movements": [
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "ADM Launches Sweet Insights Tool For Navigating Sugar Reduction Trends, Worldwide - ADM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaWpuSklUTnpvVEs0anFQNGQ3aU1DNXRpMW1IMVlpU0tEdkNMTW4zYU81V3FSVnJjcVJ5cWlpblF5d0dNd1JLWGlOcHNza0Z1eS04UEQ5aHplay1WTTBXZG5pMGFJTWsweTMxOUtjTXZXa3hrM0ZOMWpaX3Eyb1VSTXNVamlpMnEwdGEzOFNUOUlmeHBmTzBHaHcxRUFHeWNaeEdFaVpEdHdramdsZzdYbWRfNzB3blNHYX",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Thu, 07 Nov 2024 17:53:46 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaWpuSklUTnpvVEs0anFQNGQ3aU1DNXRpMW1IMVlpU0tEdkNMTW4zYU81V3FSVnJjcVJ5cWlpblF5d0dNd1JLWGlOcHNza0Z1eS04UEQ5aHplay1WTTBXZG5pMGFJTWsweTMxOUtjTXZXa3hrM0ZOMWpaX3Eyb1VSTXNVamlpMnEwdGEzOFNUOUlmeHBmTzBHaHcxRUFHeWNaeEdFaVpEdHdramdsZzdYbWRfNzB3blNHYXFSUUxENS1BQQ?oc=5",
+        "source_name": "ADM",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:58:07.568887"
+      },
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "category": "STRATEGIC_PARTNERSHIP",
+        "headline": "ADM advances sustainability and efficiency with strategic partnership with Wärtsilä Group - ADM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxNV3RabFdfbHJIOWZMRFJVU0UyR3lpRGxnWFI5bm5jREV0UDZBdW16QkpFckRBR0RBQWtLQlhjbEgwbjJ3Q1NRU3FDRFZucHgyaXBKdmxEbktxMlZiU0ZzdnVKVUJHQXZPZ2wwc3dZM3o1eXphUHZaVkZHTGM1WkVSUXIzcGNBWGtuRjkzaVZybkFRcHBlOXVYRVRMVkZ2SFlmaHhleGdlS2cybGJmZE5IZk1LdDFJQkNTdk",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Fri, 04 Apr 2025 02:39:09 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNV3RabFdfbHJIOWZMRFJVU0UyR3lpRGxnWFI5bm5jREV0UDZBdW16QkpFckRBR0RBQWtLQlhjbEgwbjJ3Q1NRU3FDRFZucHgyaXBKdmxEbktxMlZiU0ZzdnVKVUJHQXZPZ2wwc3dZM3o1eXphUHZaVkZHTGM1WkVSUXIzcGNBWGtuRjkzaVZybkFRcHBlOXVYRVRMVkZ2SFlmaHhleGdlS2cybGJmZE5IZk1LdDFJQkNTdktjVTNkWEdFcWpWc2wtV21vaVNzUQ?oc=5",
+        "source_name": "ADM",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:58:07.568984"
+      },
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "category": "STRATEGIC_PARTNERSHIP",
+        "headline": "ADM and Temasek’s Asia Sustainable Foods Platform Inaugurate ScaleUp Bio Joint Venture - ADM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxOOWtvNGVRMFF6QktRNmlVV0UwWTdXajZqNEUyQ0M0RXd4Uy04WGdqcFhMdlV0QVdPV3RZazlRSnd0MFFGNXVKU2lnSlEwMjczZl9wMjEza2ZneFRaelhxTWVMbTFaTWpHeEduNDd0SnBiMkRpRUVIVmU5OFBseVZHb2g3WHlOb2RYWm5wZXYwSXVFZGJwa3RnZG12RzVpeURxUmoxbnVWQkFsX0ZYbV9HckM1WW5rRjd0NF",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Mon, 01 Aug 2022 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOOWtvNGVRMFF6QktRNmlVV0UwWTdXajZqNEUyQ0M0RXd4Uy04WGdqcFhMdlV0QVdPV3RZazlRSnd0MFFGNXVKU2lnSlEwMjczZl9wMjEza2ZneFRaelhxTWVMbTFaTWpHeEduNDd0SnBiMkRpRUVIVmU5OFBseVZHb2g3WHlOb2RYWm5wZXYwSXVFZGJwa3RnZG12RzVpeURxUmoxbnVWQkFsX0ZYbV9HckM1WW5rRjd0NFdRN1hFWnlYUGlEdms1cnBleHdJWUF5V3c?oc=5",
+        "source_name": "ADM",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:58:07.569084"
+      },
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "Creating a More Sustainable Slice: ADM Launches HarvestEdge™ Oro - ADM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdlJUUFR2SDlGazl5Vzh6dGdDbnJOTzROSG9jejRTOXUtZWVUQ0VZa1pBQnZ1Y3JlQXJRUXpWdldjdlpUN2tDY0I3ODZUWUpJWjZtM2RjMXRhTWhlUEtwdERNZ1NHUFdyZ3JvdzlvWkNNVTJEX000eko0YXlEYUxnT1ZNMFEwZjdNN29YelVHSnE0Vm5pbFdjQjNrY2IwcnQwbjNFRDFrX1NFZw?oc=5\" target=\"_blan",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Thu, 04 May 2023 00:17:19 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdlJUUFR2SDlGazl5Vzh6dGdDbnJOTzROSG9jejRTOXUtZWVUQ0VZa1pBQnZ1Y3JlQXJRUXpWdldjdlpUN2tDY0I3ODZUWUpJWjZtM2RjMXRhTWhlUEtwdERNZ1NHUFdyZ3JvdzlvWkNNVTJEX000eko0YXlEYUxnT1ZNMFEwZjdNN29YelVHSnE0Vm5pbFdjQjNrY2IwcnQwbjNFRDFrX1NFZw?oc=5",
+        "source_name": "ADM",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:58:07.569172"
+      },
+      {
+        "company_name": "ADM Wild Europe GmbH + Co. Kg",
+        "category": "STRATEGIC_PARTNERSHIP",
+        "headline": "Vitafort, a joint venture with ADM, invests in state-of-the-art facility in Hungary - ADM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQc3BvV0d3cHNFdkpOTVZ1dml3bXQ1RE03MVhDYkIzOElVaDQ5YlR1aXdzZThCWkJNQXo0bUVvMnZWOXRaQ1U4aUxHMmhsejFVY1FDZi1qeHNZTUN6eERmcmRCT3dUeGF4djZVQWE3SGhwc0NoRmYzUEpvOVlRQ2RMT0cyZ0VOYzNGVmVCY3ZrdmY4LXFXWkNjUzhJSmlvYjdJeGc?oc=5\" target=\"_blank\">Vitafort",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Tue, 14 Nov 2023 10:33:42 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQc3BvV0d3cHNFdkpOTVZ1dml3bXQ1RE03MVhDYkIzOElVaDQ5YlR1aXdzZThCWkJNQXo0bUVvMnZWOXRaQ1U4aUxHMmhsejFVY1FDZi1qeHNZTUN6eERmcmRCT3dUeGF4djZVQWE3SGhwc0NoRmYzUEpvOVlRQ2RMT0cyZ0VOYzNGVmVCY3ZrdmY4LXFXWkNjUzhJSmlvYjdJeGc?oc=5",
+        "source_name": "ADM",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:58:07.569249"
+      }
+    ],
+    "scan_timestamp": "2026-09-11T10:00:14.127608",
+    "execution_time_sec": 209.33,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 8
+  },
+  {
+    "company_name": "ACTIV'INSIDE",
+    "domain": "activinside.com",
+    "website": "http://www.activinside.com",
+    "profile": {
+      "company_name": "ACTIV'INSIDE",
+      "domain": "activinside.com",
+      "website": "http://www.activinside.com",
+      "headquarters": "Bordeaux Area, France",
+      "ownership": "Private",
+      "source_sheet": "Ingredients",
+      "specialty": "Branded Ingredients",
+      "segments": {
+        "supplement_brand": true,
+        "contract_manufacturer": true,
+        "ingredient_supplier": true,
+        "packaging": true,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Vitamin C",
+        "Vitamin E",
+        "Zinc",
+        "Chromium",
+        "B Vitamins",
+        "Camellia Sinensis (Green Tea)",
+        "Bambusa Vulgaris (Bamboo)",
+        "Saccharomyces Cerevisiae (Brewer's Yeast)",
+        "Crocus Sativus (Saffron)",
+        "Filipendula Ulmaria (Shepherd's Purse)",
+        "Vaccinium Angustifolium (Blueberry)",
+        "Vitis Vinifera (Grapes)"
+      ],
+      "branded_ingredients": [
+        "Hair'inside™",
+        "AiFlex'inside™",
+        "Safr'inside™",
+        "Memophenol™",
+        "SkinAx²™",
+        "Belightᵌ™"
+      ],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels"
+      ],
+      "hiring_functions": [
+        "Sales",
+        "Marketing",
+        "Regulatory",
+        "QA/QC",
+        "R&D",
+        "Consultant",
+        "Recruitment Specialist"
+      ],
+      "role_mapping": [
+        "Sales Manager",
+        "Product Coordinator",
+        "Consultant",
+        "Recruitment Specialist"
+      ],
+      "raw_kb_data": {
+        "company_name": "ACTIV'INSIDE",
+        "source_sheet": "Ingredients",
+        "known_website": "http://www.activinside.com",
+        "known_speciality": "Branded Ingredients",
+        "known_hq": "Beychac et Caillau, Bordeaux Area,France",
+        "research_timestamp": "2026-05-30T20:04:12.169649",
+        "founding_year": "null",
+        "headquarters": "Bordeaux Area, France",
+        "global_offices": "null",
+        "ownership_structure": "Private",
+        "parent_company": "null",
+        "revenue_estimates": "$5.3 Million",
+        "employee_count": "null",
+        "geographic_reach": [
+          "France",
+          "USA"
+        ],
+        "core_business_model": "Providing a 360° approach to the development and production of nutraceuticals, including ingredients, formulation, contract manufacturing, and private labeling services.",
+        "strategic_positioning": "A health food-tech company dedicated to innovation and science in the nutraceutical sector.",
+        "market_focus": "Health, pharmaceutical, and food supplement sector.",
+        "key_differentiators": "360° nutraceutical expertise, innovative and patented active ingredients, fast track formulation configurator, and commitment to exceptional quality and transparency.",
+        "segments": {
+          "supplement_brand": true,
+          "contract_manufacturer": true,
+          "ingredient_supplier": true,
+          "packaging": true,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "Partners, customers, and suppliers within the health supplement industry. The company facilitates the development and production of nutraceutical products for its clients, leveraging its expertise in ingredients, formulation, and manufacturing.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Vitamin C",
+            "Vitamin E",
+            "Zinc",
+            "Chromium",
+            "B Vitamins"
+          ],
+          "amino_acids": [
+            "L-Arginine",
+            "L-Glutamine",
+            "L-Lysine",
+            "BCAAs"
+          ],
+          "botanicals": [
+            "Camellia Sinensis (Green Tea)",
+            "Bambusa Vulgaris (Bamboo)",
+            "Saccharomyces Cerevisiae (Brewer's Yeast)",
+            "Crocus Sativus (Saffron)",
+            "Filipendula Ulmaria (Shepherd's Purse)",
+            "Vaccinium Angustifolium (Blueberry)",
+            "Vitis Vinifera (Grapes)"
+          ],
+          "probiotics_prebiotics": [
+            "Lactobacillus",
+            "Bifidobacterium",
+            "Inulin",
+            "Fructooligosaccharides (FOS)"
+          ],
+          "nutraceutical_compounds": [
+            "Grape Seed Extract",
+            "Viniferin",
+            "Glycyrrhiza Glabra Extract",
+            "Ube Extract"
+          ],
+          "enzymes_proteins": [],
+          "specialty_emerging": [
+            "AiFlex'inside™",
+            "Safr'inside™",
+            "Memophenol™",
+            "SkinAx²™",
+            "Belightᵌ™"
+          ]
+        },
+        "branded_ingredients": [
+          "Hair'inside™",
+          "AiFlex'inside™",
+          "Safr'inside™",
+          "Memophenol™",
+          "SkinAx²™",
+          "Belightᵌ™"
+        ],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels"
+        ],
+        "packaging_capabilities": [
+          "Blister",
+          "Bottles"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA"
+        ],
+        "certifications": [
+          "cGMP",
+          "NSF"
+        ],
+        "scientific_sophistication": "Medium — Activ'Inside utilizes botanical extracts and established nutraceutical compounds, indicating a moderate level of scientific understanding and application within the nutraceutical space.",
+        "hiring_functions": [
+          "Sales",
+          "Marketing",
+          "Regulatory",
+          "QA/QC",
+          "R&D",
+          "Consultant",
+          "Recruitment Specialist"
+        ],
+        "role_mapping": [
+          "Sales Manager",
+          "Product Coordinator",
+          "Consultant",
+          "Recruitment Specialist"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "Activ'Inside is a health food-tech company specializing in nutraceutical ingredients, formulation, contract manufacturing, and private labeling services. They cater to clients in the health, pharmaceutical, and food supplement sectors, offering a 360° approach to product development and production. They are actively hiring across various roles including sales, R&D, and recruitment, indicating growth and expansion within the nutraceutical market. The company’s focus on innovation and science, combined with its commitment to quality and transparency, positions it as a key partner for businesses seeking to develop and launch nutraceutical products.",
+        "risk_indicators": "The reliance on third-party manufacturers for contract manufacturing and private labeling introduces potential supply chain risks. The company's focus on regulatory compliance (EC Regulation CE n. 1924/2006) requires ongoing monitoring and adaptation to evolving regulations, which could pose a risk if not managed effectively. Turnover signals are not explicitly mentioned but the company's growth and hiring activity suggest a potential need for talent retention strategies.",
+        "strategic_insights": "Activ'Inside presents a strong strategic position as a full-service nutraceutical partner, offering a comprehensive suite of services from ingredient sourcing to private labeling. Their focus on innovation and technology, coupled with their location in the Bordeaux area (a hub for biotechnology and food science), provides a competitive advantage. The company's emphasis on digital solutions (Fast Track Formulation™) demonstrates a commitment to efficiency and customer satisfaction. A recruitment consultant should focus on identifying talent with expertise in formulation, regulatory affairs, and market development to support Activ'Inside's growth strategy."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [
+      {
+        "company_name": "ACTIV'INSIDE",
+        "category": "PRODUCT_LAUNCH",
+        "headline": "Activ'Inside launches SkinAx2 supplement - Cosmetics Business",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPb0dSMnY1Vy1zanI2UHBNM19CTG1MR3psWmNUaVpkV1p1QVg1M1d3QjhCM25MYy1YZUJyeVROZFVnSHJWMXhldWZqc0lJV1ROMjgwUHNRMFhnLWw4X1NCSWwzTUg2WHFUZk1FXzl5b1RWV3Jod3E2S1M4SDlTNkpUQ0FMVQ?oc=5\" target=\"_blank\">Activ'Inside launches SkinAx2 supplement</a>&nbsp",
+        "counterparty": null,
+        "location": null,
+        "date_str": "Fri, 09 Oct 2015 07:00:00 GMT",
+        "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPb0dSMnY1Vy1zanI2UHBNM19CTG1MR3psWmNUaVpkV1p1QVg1M1d3QjhCM25MYy1YZUJyeVROZFVnSHJWMXhldWZqc0lJV1ROMjgwUHNRMFhnLWw4X1NCSWwzTUg2WHFUZk1FXzl5b1RWV3Jod3E2S1M4SDlTNkpUQ0FMVQ?oc=5",
+        "source_name": "Cosmetics Business",
+        "confidence_score": 0.85,
+        "discovered_at": "2026-09-11T09:59:20.441092"
+      }
+    ],
+    "scan_timestamp": "2026-09-11T10:01:39.936654",
+    "execution_time_sec": 300.29,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 1
+  },
+  {
+    "company_name": "ACT Heath& Nutrition",
+    "domain": "act.de",
+    "website": "https://www.act.de/industries/",
+    "profile": {
+      "company_name": "ACT Heath& Nutrition",
+      "domain": "act.de",
+      "website": "https://www.act.de/industries/",
+      "headquarters": "Hamburg, Germany",
+      "ownership": "private",
+      "source_sheet": "Ingredients",
+      "specialty": "Food Ingredients",
+      "segments": {
+        "supplement_brand": false,
+        "contract_manufacturer": false,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D3",
+        "Vitamin E",
+        "Niacin",
+        "Folate",
+        "Biotin",
+        "Calcium",
+        "Astaxanthin",
+        "Curcumin",
+        "Green Tea Extract",
+        "Davana Oil",
+        "Golden Chlorella"
+      ],
+      "branded_ingredients": [],
+      "manufacturing_capabilities": [
+        "Capsules",
+        "Powders",
+        "Tinctures",
+        "Tablets",
+        "Gummies",
+        "Soft Gels"
+      ],
+      "hiring_functions": [
+        "Regulatory",
+        "QA/QC",
+        "R&D",
+        "Sales",
+        "Marketing",
+        "Product Development",
+        "Manufacturing",
+        "Distribution",
+        "Retail"
+      ],
+      "role_mapping": [
+        "Regulatory Scientist",
+        "Quality Analyst",
+        "Research & Development Scientist",
+        "Sales Representative",
+        "Marketing Specialist",
+        "Formulation Scientist",
+        "Production Technician",
+        "Distribution Manager",
+        "Retail Sales Associate"
+      ],
+      "raw_kb_data": {
+        "company_name": "ACT Heath& Nutrition",
+        "source_sheet": "Ingredients",
+        "known_website": "https://www.act.de/industries/",
+        "known_speciality": "Food Ingredients",
+        "known_hq": "Hamburg,Germany",
+        "research_timestamp": "2026-05-30T20:03:20.476786",
+        "founding_year": "null",
+        "headquarters": "Hamburg, Germany",
+        "global_offices": "14 locations worldwide",
+        "ownership_structure": "private",
+        "parent_company": "null",
+        "revenue_estimates": "null",
+        "employee_count": "null",
+        "geographic_reach": [
+          "Germany",
+          "Europe",
+          "North America",
+          "Asia"
+        ],
+        "core_business_model": "Distribution of high-quality vitamins and nutritional ingredients to food, feed, cosmetics, pharmaceutical and technical applications.",
+        "strategic_positioning": "To be a leading supplier of high-quality raw materials for the food, feed, cosmetics, pharmaceutical and technical industries.",
+        "market_focus": "Food, feed, cosmetics, pharmaceuticals and technical applications.",
+        "key_differentiators": "Long-term partnerships built on consistently high quality and customer satisfaction, internal quality management department continuously checks supplier approval and raw materials, independent test laboratories for monitoring.",
+        "segments": {
+          "supplement_brand": false,
+          "contract_manufacturer": false,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "Partnerships with suppliers and customers, acquisitions (not specified).",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin D3",
+            "Vitamin E",
+            "Niacin",
+            "Folate",
+            "Biotin",
+            "Calcium"
+          ],
+          "amino_acids": [
+            "Alanine",
+            "Alpha-Ketoglutaric Acid",
+            "Glycine",
+            "BCAA"
+          ],
+          "botanicals": [
+            "Astaxanthin",
+            "Curcumin",
+            "Green Tea Extract",
+            "Davana Oil",
+            "Golden Chlorella"
+          ],
+          "probiotics_prebiotics": [],
+          "nutraceutical_compounds": [
+            "Coenzyme Q10",
+            "Glucosamine Hydrochloride",
+            "Hyaluronic Acid",
+            "Gamma-Aminobutyric Acid"
+          ],
+          "enzymes_proteins": [],
+          "specialty_emerging": []
+        },
+        "branded_ingredients": [],
+        "manufacturing_capabilities": [
+          "Capsules",
+          "Powders",
+          "Tinctures",
+          "Tablets",
+          "Gummies",
+          "Soft Gels"
+        ],
+        "packaging_capabilities": [
+          "Blister",
+          "Bottles"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA"
+        ],
+        "certifications": [
+          "cGMP",
+          "NSF"
+        ],
+        "scientific_sophistication": "Medium — The company offers a diverse portfolio of vitamins and minerals, indicating a moderate level of scientific understanding and formulation expertise. The inclusion of botanical extracts and nutraceutical compounds suggests an effort to leverage scientific research for product development.",
+        "hiring_functions": [
+          "Regulatory",
+          "QA/QC",
+          "R&D",
+          "Sales",
+          "Marketing",
+          "Product Development",
+          "Manufacturing",
+          "Distribution",
+          "Retail"
+        ],
+        "role_mapping": [
+          "Regulatory Scientist",
+          "Quality Analyst",
+          "Research & Development Scientist",
+          "Sales Representative",
+          "Marketing Specialist",
+          "Formulation Scientist",
+          "Production Technician",
+          "Distribution Manager",
+          "Retail Sales Associate"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "ACT Health & Nutrition is focused on the distribution and marketing of a broad portfolio of vitamin and nutritional ingredients. They operate primarily through wholesale channels, supplying to manufacturers of dietary supplements, food products, and animal feed.  Given their focus on high-quality materials and a global distribution network, they likely require personnel with expertise in supply chain management, regulatory affairs (particularly related to food and feed additives), sales and marketing within the nutraceutical industry, and potentially technical support for their ingredient offerings.  Due to the nature of their business, a strong emphasis on quality control and compliance with industry regulations (like CGMP) is crucial.",
+        "risk_indicators": "Potential risk indicators include reliance on a limited number of suppliers for key ingredients, potential supply chain disruptions due to global sourcing, and the evolving regulatory landscape surrounding dietary supplements. Turnover signals within the sales and marketing teams could indicate shifts in market demand or competitive pressures.  Monitoring compliance with CGMP regulations is paramount to avoid potential regulatory actions or product recalls.",
+        "strategic_insights": "ACT Health & Nutrition operates in a highly competitive and regulated market. Their strategic focus appears to be on providing a diverse portfolio of high-quality ingredients to a broad customer base.  A recruitment consultant advising ACT should prioritize candidates with strong regulatory knowledge, established relationships within the nutraceutical industry, and a proven ability to manage complex supply chains.  Further strategic insights would require a deeper understanding of their market share, customer retention rates, and competitive landscape."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T10:03:14.932928",
+    "execution_time_sec": 405.3,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  },
+  {
+    "company_name": "ADM Deerland Probiotics & Enzymes",
+    "domain": "Deerland.com",
+    "website": "http://www.Deerland.com",
+    "profile": {
+      "company_name": "ADM Deerland Probiotics & Enzymes",
+      "domain": "Deerland.com",
+      "website": "http://www.Deerland.com",
+      "headquarters": "Kennesaw, Georgia",
+      "ownership": "Private Equity-backed",
+      "source_sheet": "Ingredients",
+      "specialty": "Nutrition Ingredients",
+      "segments": {
+        "supplement_brand": true,
+        "contract_manufacturer": true,
+        "ingredient_supplier": true,
+        "packaging": false,
+        "testing_cro_consulting": false
+      },
+      "key_ingredients": [
+        "Calcium",
+        "Vitamin K2",
+        "Vitamin B12",
+        "Magnesium",
+        "Zinc",
+        "Selenium",
+        "Iron",
+        "Ginger",
+        "Turmeric"
+      ],
+      "branded_ingredients": [
+        "DE111",
+        "BPL1",
+        "MuniSpore",
+        "Esflorin1™ Probiotic"
+      ],
+      "manufacturing_capabilities": [
+        "Tablets",
+        "Gummies",
+        "Softgels",
+        "Powders"
+      ],
+      "hiring_functions": [
+        "Regulatory",
+        "QA/QC",
+        "R&D",
+        "Sales",
+        "Manufacturing",
+        "Quality Assurance",
+        "Research Assistant"
+      ],
+      "role_mapping": [
+        "Regulatory Scientist",
+        "Quality Analyst",
+        "Research Scientist",
+        "Sales Representative",
+        "Manufacturing Technician",
+        "QA Specialist",
+        "R&D Associate"
+      ],
+      "raw_kb_data": {
+        "company_name": "ADM Deerland Probiotics & Enzymes",
+        "source_sheet": "Ingredients",
+        "known_website": "http://www.Deerland.com",
+        "known_speciality": "Nutrition Ingredients",
+        "known_hq": "Kennesaw,Georgia",
+        "research_timestamp": "2026-05-30T20:05:59.842076",
+        "founding_year": "1994",
+        "headquarters": "Kennesaw, Georgia",
+        "global_offices": "United States, Europe",
+        "ownership_structure": "Private Equity-backed",
+        "parent_company": "ADM",
+        "revenue_estimates": "Approximately $775 billion (ADM)",
+        "employee_count": "Approximately 320",
+        "geographic_reach": [
+          "North America",
+          "Europe",
+          "Global"
+        ],
+        "core_business_model": "Deerland Probiotics & Enzymes specializes in customized enzyme and probiotic-based formulations for dietary supplements and other food and beverage applications. They offer contract manufacturing services and a range of probiotic strains, including spore-forming probiotics.",
+        "strategic_positioning": "To be a leading global provider of probiotic and enzyme technology, leveraging ADM’s global reach and capabilities to deliver innovative solutions to the health and wellness market.",
+        "market_focus": "The market focus is on functional food and beverage ingredients, dietary supplements, and animal nutrition, with a particular emphasis on microbiome health solutions.",
+        "key_differentiators": "Deerland’s key differentiators include its expertise in spore-forming probiotics, its commitment to research and development, its cGMP-compliant manufacturing facilities, and its strategic partnership with ADM.",
+        "segments": {
+          "supplement_brand": true,
+          "contract_manufacturer": true,
+          "ingredient_supplier": true,
+          "packaging": false,
+          "testing_cro_consulting": false
+        },
+        "ecosystem_relationships": "Deerland Probiotics & Enzymes is part of the ADM family, benefiting from ADM’s global distribution network and resources. They collaborate with food and beverage brands, dietary supplement manufacturers, and research institutions to develop and commercialize innovative microbiome solutions. The acquisition by ADM expands Deerland’s reach and capabilities, allowing them to serve a broader range of customers and markets.",
+        "ingredients": {
+          "vitamins_minerals": [
+            "Calcium",
+            "Vitamin K2",
+            "Vitamin B12",
+            "Magnesium",
+            "Zinc",
+            "Selenium",
+            "Iron"
+          ],
+          "amino_acids": [
+            "Glutamine",
+            "Arginine",
+            "Lysine",
+            "Methionine",
+            "Taurine"
+          ],
+          "botanicals": [
+            "Ginger",
+            "Turmeric"
+          ],
+          "probiotics_prebiotics": [
+            "Lactobacillus spp.",
+            "Bifidobacterium spp.",
+            "Fructooligosaccharides (FOS)",
+            "Inulin"
+          ],
+          "nutraceutical_compounds": [
+            "Curcumin",
+            "Polyphenols"
+          ],
+          "enzymes_proteins": [
+            "Amylase",
+            "Protease",
+            "Lipase",
+            "Cellulase"
+          ],
+          "specialty_emerging": [
+            "Bacillus subtilis"
+          ]
+        },
+        "branded_ingredients": [
+          "DE111",
+          "BPL1",
+          "MuniSpore",
+          "Esflorin1™ Probiotic"
+        ],
+        "manufacturing_capabilities": [
+          "Tablets",
+          "Gummies",
+          "Softgels",
+          "Powders"
+        ],
+        "packaging_capabilities": [
+          "Blister Packs",
+          "Bottles",
+          "Pouches"
+        ],
+        "regulatory_compliance": [
+          "FDA",
+          "DSHEA",
+          "FSSC 22000"
+        ],
+        "certifications": [
+          "cGMP",
+          "NSF"
+        ],
+        "scientific_sophistication": "Medium — Deerland Probiotics & Enzymes utilizes a range of probiotic strains and enzyme technologies, supported by clinical studies, indicating a moderate level of scientific sophistication in their formulations and research.",
+        "hiring_functions": [
+          "Regulatory",
+          "QA/QC",
+          "R&D",
+          "Sales",
+          "Manufacturing",
+          "Quality Assurance",
+          "Research Assistant"
+        ],
+        "role_mapping": [
+          "Regulatory Scientist",
+          "Quality Analyst",
+          "Research Scientist",
+          "Sales Representative",
+          "Manufacturing Technician",
+          "QA Specialist",
+          "R&D Associate"
+        ],
+        "competitors": [],
+        "recruitment_intelligence": "ADM Deerland Probiotics & Enzymes is seeking talent in areas related to probiotic and enzyme formulation, manufacturing, quality control, and sales. Given the company's focus on microbiome solutions and dietary supplements, roles requiring scientific expertise, regulatory knowledge, and a strong understanding of food science are particularly relevant. The acquisition by ADM expands the talent pool and opportunities for growth within the organization.",
+        "risk_indicators": "The FSSC 22000 certification indicates a strong focus on quality and food safety, suggesting a potential risk if standards are not consistently maintained. The company's reliance on microbial fermentation processes introduces inherent risks related to contamination and product stability. Turnover signals would need to be monitored closely to assess employee satisfaction and retention.",
+        "strategic_insights": "ADM's acquisition of Deerland Probiotics & Enzymes represents a strategic move to bolster its position in the rapidly growing microbiome solutions market. Recruitment efforts should prioritize individuals with expertise in probiotic and enzyme technology, fermentation processes, and regulatory compliance. Targeting talent with experience in functional food and beverage development, as well as consumer trends in health and wellness, will be crucial for driving innovation and market expansion."
+      }
+    },
+    "role_changes": [],
+    "funding_events": [],
+    "strategic_movements": [],
+    "scan_timestamp": "2026-09-11T10:03:34.494780",
+    "execution_time_sec": 412.87,
+    "data_sources_scraped": [
+      "Google News RSS & Open Web Multi-Search"
+    ],
+    "total_signals_discovered": 0
+  }
+]

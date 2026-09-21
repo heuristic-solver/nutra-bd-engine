@@ -1,0 +1,22 @@
+{
+  "total_companies_scanned": 10,
+  "companies_with_signals": 3,
+  "companies_with_roles": 0,
+  "companies_with_funding": 1,
+  "companies_with_movements": 3,
+  "total_roles_captured": 0,
+  "total_people_joined": 0,
+  "total_people_departed": 0,
+  "total_funding_events": 2,
+  "total_funding_usd": 0.0,
+  "total_strategic_movements": 3,
+  "role_distribution": {},
+  "funding_distribution": {
+    "Undisclosed / Venture Round": 2
+  },
+  "movement_distribution": {
+    "PRODUCT_LAUNCH": 1,
+    "STRATEGIC_PARTNERSHIP": 1,
+    "FACILITY_EXPANSION": 1
+  }
+}

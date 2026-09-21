@@ -1,0 +1,16 @@
+{
+  "total_companies_scanned": 5,
+  "companies_with_signals": 0,
+  "companies_with_roles": 0,
+  "companies_with_funding": 0,
+  "companies_with_movements": 0,
+  "total_roles_captured": 0,
+  "total_people_joined": 0,
+  "total_people_departed": 0,
+  "total_funding_events": 0,
+  "total_funding_usd": 0,
+  "total_strategic_movements": 0,
+  "role_distribution": {},
+  "funding_distribution": {},
+  "movement_distribution": {}
+}

@@ -1,0 +1,22 @@
+{
+  "total_companies_scanned": 20,
+  "companies_with_signals": 4,
+  "companies_with_roles": 1,
+  "companies_with_funding": 0,
+  "companies_with_movements": 3,
+  "total_roles_captured": 1,
+  "total_people_joined": 1,
+  "total_people_departed": 0,
+  "total_funding_events": 0,
+  "total_funding_usd": 0,
+  "total_strategic_movements": 8,
+  "role_distribution": {
+    "JOINED": 1
+  },
+  "funding_distribution": {},
+  "movement_distribution": {
+    "STRATEGIC_PARTNERSHIP": 1,
+    "PRODUCT_LAUNCH": 1,
+    "MERGER_ACQUISITION": 6
+  }
+}

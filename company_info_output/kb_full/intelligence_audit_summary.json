@@ -1,0 +1,29 @@
+{
+  "total_companies_scanned": 1018,
+  "companies_with_signals": 928,
+  "companies_with_roles": 11,
+  "companies_with_funding": 3,
+  "companies_with_movements": 75,
+  "total_roles_captured": 13,
+  "total_people_joined": 13,
+  "total_people_departed": 0,
+  "total_funding_events": 8,
+  "total_funding_usd": 243200000.0,
+  "total_strategic_movements": 140,
+  "role_distribution": {
+    "JOINED": 12,
+    "PROMOTED": 1
+  },
+  "funding_distribution": {
+    "Series C": 2,
+    "Undisclosed / Venture Round": 6
+  },
+  "movement_distribution": {
+    "STRATEGIC_PARTNERSHIP": 23,
+    "PRODUCT_LAUNCH": 50,
+    "MERGER_ACQUISITION": 58,
+    "REGULATORY_MILESTONE": 3,
+    "FACILITY_EXPANSION": 5,
+    "REBRANDING": 1
+  }
+}
