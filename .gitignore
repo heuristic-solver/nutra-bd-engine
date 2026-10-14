@@ -1,47 +1,6 @@
-# Byte-compiled / optimized / DLL files
+.env
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environments
-.env
-.venv
-env/
 venv/
-ENV/
-
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Temporary test logs & local outputs
-*.log
-
-# Scraped datasets & report exports
-*.csv
-!sample_data.csv
-!nutraceutical_company_intelligence_master_report.csv
-!company_info_output/kb_full/*.csv
+.venv/

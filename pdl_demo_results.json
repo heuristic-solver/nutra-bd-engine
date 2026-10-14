@@ -1,0 +1,141 @@
+{
+  "API Co., Ltd.": {
+    "company_info": {
+      "name": "API Co,. Ltd.",
+      "employee_count": 4,
+      "size_bucket": "1001-5000",
+      "founded": 1907,
+      "industry": "food production",
+      "location": "gifu, japan",
+      "linkedin_url": "linkedin.com/company/api-co-ltd",
+      "technologies": [
+        "oem",
+        "supplement oem",
+        "soft gel capsule",
+        "made in japan",
+        "contract manufacturer",
+        "health food",
+        "japanese",
+        "ingredient"
+      ]
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  },
+  "Apis Flora": {
+    "company_info": {
+      "name": "Apis Flora Industrial e Comercial Ltda.",
+      "employee_count": 101,
+      "size_bucket": "51-200",
+      "founded": 1982,
+      "industry": "pharmaceuticals",
+      "location": "ribeir\u00e3o preto, brazil",
+      "linkedin_url": "linkedin.com/company/apisflora",
+      "technologies": [
+        "industria famac\u00eautica",
+        "industria aliment cia",
+        "industria cosm tica",
+        "industria famac utica",
+        "apiter\u00e1picos",
+        "industria aliment\u00edcia",
+        "industria cosm\u00e9tica",
+        "distribui o de medicamentos"
+      ]
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  },
+  "Cmbio": {
+    "company_info": {
+      "name": "cmbio",
+      "employee_count": 86,
+      "size_bucket": "11-50",
+      "founded": 2015,
+      "industry": "biotechnology",
+      "location": "copenhagen, denmark",
+      "linkedin_url": "linkedin.com/company/clinical-microbiomics",
+      "technologies": [
+        "human trials",
+        "bioinformatics",
+        "metabolomics",
+        "biomarkers",
+        "microbiome science",
+        "lipidomics",
+        "discovery",
+        "microbiome analysis services"
+      ]
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  },
+  "Caltron Clays & Chemicals Pvt. Ltd.": {
+    "company_info": {
+      "name": "Caltron Clays & Chemicals Pvt Ltd",
+      "employee_count": 15,
+      "size_bucket": "11-50",
+      "founded": 2000,
+      "industry": "pharmaceuticals",
+      "location": "mumbai, india",
+      "linkedin_url": "linkedin.com/company/caltron-clays-chemicals-pvt-ltd",
+      "technologies": [
+        "caltron overseas",
+        "cosmetic raw materials",
+        "caltron clays",
+        "pharmaceutical raw materials",
+        "supplier",
+        "pharmaceutical manufacturer"
+      ]
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  },
+  "Greenspace Herbs": {
+    "company_info": {
+      "name": "Greenspace Herbs",
+      "employee_count": 30,
+      "size_bucket": "1-10",
+      "founded": 2005,
+      "industry": "pharmaceuticals",
+      "location": "anandnagar, india",
+      "linkedin_url": "linkedin.com/company/greenspace-herbs",
+      "technologies": []
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  },
+  "Wisesorbent Technology LLC": {
+    "company_info": {
+      "name": "Wisesorbent Technology",
+      "employee_count": 12,
+      "size_bucket": "201-500",
+      "founded": 2001,
+      "industry": "pharmaceuticals",
+      "location": "marlton, united states",
+      "linkedin_url": "linkedin.com/company/wisesorbent-technology",
+      "technologies": []
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  },
+  "PRONTO": {
+    "company_info": {
+      "name": "PRONTO Manufacturing & Fulfillment",
+      "employee_count": 13,
+      "size_bucket": "1-10",
+      "founded": null,
+      "industry": "consumer goods",
+      "location": "manassas, united states",
+      "linkedin_url": "linkedin.com/company/prontous",
+      "technologies": []
+    },
+    "current_roster": [],
+    "departures_alumni": [],
+    "stats": {}
+  }
+}

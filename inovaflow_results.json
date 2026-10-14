@@ -1,0 +1,61 @@
+[
+  {
+    "person": "Prashant Halbe",
+    "firstName": "Prashant",
+    "lastName": "Halbe",
+    "newTitle": "Head of Brand",
+    "normalizedTitle": "head of brand",
+    "seniority": "head",
+    "department": "marketing",
+    "company": "Pronto",
+    "domain": "pronto.io",
+    "website": "https://pronto.io",
+    "domainSource": "homepage-guess",
+    "changeType": "joined",
+    "previousCompany": null,
+    "previousTitle": null,
+    "effectiveDate": null,
+    "announcedDate": "2026-09-04",
+    "firstSeen": "2026-09-28T10:45:05.989Z",
+    "daysSinceChange": 24,
+    "linkedinUrl": null,
+    "location": null,
+    "sources": [
+      "appointment-news"
+    ],
+    "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSVZsTWtjZHh2T0NxdnVPc1lTaVNsMmUzVEZGdnVEdXVMVWt1SlJxU2V2a0RVV3N3bDRSLXg1ZTcxVWVqd1FaYk1XcURFLTNXSVloaExPOFV2aXFUeVRWT0JRaDdlRHA4Y2d5RG53VURac20xN0dNOEZtOHpvWnZ3am9MQUM5eUNQZGtQalhyVHBHdEFROHpiMV9uRUNhazQtcTVRN2xLRVlwdFhlVlHSAa4BQVVfeXFMTklWbE1rY2R4dk9DcXZ1T3NZU2lTbDJlM1RGRnZ1RHV1TFVrdUpScVNldmtEVVdzd2w0Ui14NWU3MVVlandRWmJNV3FERS0zV0lZaGhMTzhVdmlxVHlUVk9CUWg3ZURwOGNneURud1VEWnNtMTdHTThGbTh6b1p2d2pvTEFDOXlDUGRrUGpYclRwR3RBUTh6YjFfbkVDYWs0LXE1UTdsS0VZcHRYZVZR?oc=5",
+    "sourceUrls": [
+      "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSVZsTWtjZHh2T0NxdnVPc1lTaVNsMmUzVEZGdnVEdXVMVWt1SlJxU2V2a0RVV3N3bDRSLXg1ZTcxVWVqd1FaYk1XcURFLTNXSVloaExPOFV2aXFUeVRWT0JRaDdlRHA4Y2d5RG53VURac20xN0dNOEZtOHpvWnZ3am9MQUM5eUNQZGtQalhyVHBHdEFROHpiMV9uRUNhazQtcTVRN2xLRVlwdFhlVlHSAa4BQVVfeXFMTklWbE1rY2R4dk9DcXZ1T3NZU2lTbDJlM1RGRnZ1RHV1TFVrdUpScVNldmtEVVdzd2w0Ui14NWU3MVVlandRWmJNV3FERS0zV0lZaGhMTzhVdmlxVHlUVk9CUWg3ZURwOGNneURud1VEWnNtMTdHTThGbTh6b1p2d2pvTEFDOXlDUGRrUGpYclRwR3RBUTh6YjFfbkVDYWs0LXE1UTdsS0VZcHRYZVZR?oc=5",
+      "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMXlQbTZfYzJFV2pLXy15bE1xLXpCd28xRlBXTjV0eEcwS2pfVVpzcGoxcDJSTkU0Y2VSV2NNTUVjOE04NmFKRHR3Y1h6MnVZanlVWlljY2VsOHNGZE9HbDItdE5pT1NvWHZqZ05IbmxGN0M2c2hRMHhTNGtja3dOVE92Z0NUd1NSWTV1UE11aWdqM2NXUkM1VE93QndSeFpURUtaNXRPRW5sTmd5RHFBQQ?oc=5"
+    ],
+    "publishers": [
+      "bestmediainfo.com",
+      "Exchange4Media"
+    ],
+    "mentions": 2,
+    "headline": "Prashant Halbe joins Pronto as Head of Brand - bestmediainfo.com",
+    "signalScore": 80,
+    "signalTags": [
+      "new-head",
+      "new-head-marketing",
+      "new-marketing-leader",
+      "external-hire",
+      "within-30-days",
+      "dept-marketing",
+      "domain-guessed"
+    ],
+    "sellTo": [
+      "Prashant Halbe \u2014 Head of Brand",
+      "Their manager (the C-level owner of Marketing)",
+      "Head of RevOps / Marketing Ops"
+    ],
+    "buyingWindow": "Reach out now \u2014 inside the 30-day window when a new leader is still choosing their tools",
+    "whyNow": "Prashant Halbe became Head of Brand at Pronto 24 days ago \u2014 the first 90 days are when a leader re-picks martech and attribution.",
+    "isNewSinceLastRun": false,
+    "replacedPerson": null,
+    "runsSeen": 1,
+    "watchlistEntry": "PRONTO",
+    "watchId": "auto-bb6de47de0c7",
+    "runAt": "2026-09-28T10:45:05.989Z"
+  }
+]

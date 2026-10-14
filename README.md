@@ -1,117 +1,79 @@
 # Nutraceutical Business Development (BD) Engine
 
-A multi-signal Business Development intelligence engine built specifically for Nutraceutical, Dietary Supplement, Functional Food, and Natural Health Products talent acquisition and executive search.
+A multi-source talent acquisition and business development intelligence engine built specifically for Nutraceutical, Functional Food, Dietary Supplement, and Natural Health Products recruitment.
 
 ---
 
-## System Overview
-
-The platform identifies, scores, and ranks nutraceutical companies with the highest propensity to hire external recruitment agencies by aggregating live signals across:
-
-1. **Headcount Growth & Hiring Velocity (30% Weight)**: YoY headcount growth percentage, real-time hiring velocity, and open requisition volume via Growjo and Career Traffic collectors.
-2. **Facility Expansions, M&A & Web Traffic Surges (25% Weight)**: New plant openings, capacity upgrades, verified corporate acquisitions, and domain web traffic momentum via Serper, Owler, and Web Traffic collectors.
-3. **Executive Leadership Turnover (20% Weight)**: C-Suite and VP appointments and departures tracked within a 6-month recency window via Serper.
-4. **FDA Regulatory & Compliance Pressure (15% Weight)**: Official FDA Class I/II product recall enforcement and cGMP compliance risk scoring via openFDA.
-5. **Nutraceutical Domain Alignment (10% Weight)**: Pre-seeded taxonomy of 1,022 verified nutraceutical companies across Finished Brands, Contract Manufacturers (CDMOs), Raw Ingredient Suppliers, and Testing CROs.
-
----
-
-## Repository Architecture
+## Architecture & Integration Modules
 
 ```
 bd-engine/
-├── bd_engine/                           # Core Engine Package
-│   ├── __init__.py                      # Package initialization & auto-env loading
-│   ├── config.py                        # Taxonomies, seniority weights, & scoring rules
-│   ├── bd_scorer.py                     # Master 0-100 Propensity Scoring Engine
-│   └── collectors/                      # Multi-Signal Data Collectors
-│       ├── __init__.py
-│       ├── growjo_collector.py          # YoY Headcount Growth %, Revenue, Funding, Valuation
-│       ├── owler_collector.py           # Revenue Bands, Acquisitions, Competitor Tracking
-│       ├── crunchbase_collector.py      # Verified Funding Rounds, Amounts, Dates, Lead Investors
-│       ├── career_traffic_collector.py  # Career Page & ATS Discovery, Open Roles, Traffic Index
-│       ├── web_traffic_collector.py     # Monthly Web Visits, Signed 90-Day % Growth (Increments & Declines)
-│       ├── apify_collector.py           # LinkedIn Headcount & Follower Snapshots
-│       ├── serper_collector.py          # 6-Month Trade Press, Expansions, M&A, Exec Hires
-│       └── openfda_collector.py         # Official FDA Recalls & Compliance Risk
+├── apollo/                                    # Apollo.io Intelligence Subsystem
+│   ├── apollo_openapi.json                    # Full official Apollo OpenAPI v2 specification
+│   ├── apollo_endpoints_catalog.json          # Cataloged 75 endpoints & 81 operations
+│   ├── run_apollo_20co_rich.py                # 20-company live enrichment & executive discovery
+│   ├── find_apollo_role_changes.py            # Deep leadership join & departure tracking
+│   ├── apollo_20co_companies_enriched.csv     # Master firmographics & technology stack
+│   ├── apollo_20co_decision_makers.csv        # Key senior recruitment decision-makers
+│   ├── apollo_20co_role_changes.csv           # 101 tracked career events (joins, departures)
+│   └── README.md                              # Comprehensive Apollo API & endpoint reference
 │
-├── app.py                               # FastAPI REST Server
-├── run_pipeline.py                      # Unified 360-degree BD Scanner CLI
-├── generate_bd_report.py                # Batch Intelligence Generator with Consolidated Primary Columns
-├── nutraceutical_kb.json                # Knowledge Base (1,022 Verified Nutra Companies)
-├── requirements.txt                     # Dependencies
-└── .env.example                         # Environment Variables Template
+├── run_signalbase_20co.py                     # SignalBase runner for 20 nutraceutical companies
+├── generate_demo_csv.py                       # SignalBase core signal enrichment & formatting
+├── update_demo_csv.py                         # SignalBase signal updater
+├── signalbase_demo_enriched.csv               # Enriched SignalBase dataset
+├── signalbase_20co_enriched.csv               # 20-company SignalBase run dataset
+│
+├── run_pdl_demo.py                            # People Data Labs (PDL) demo enrichment
+├── run_pdl_full.py                            # PDL full dataset enrichment pipeline
+├── export_pdl_results.py                      # PDL output exporter
+├── build_full_results.py                      # Multi-source intelligence consolidator
+│
+├── Demo List - Sheet1.csv                     # Primary nutraceutical input targets
+├── .env.example                               # Environment template
+└── LICENSE                                    # License
 ```
 
 ---
 
-## Setup and Quick Start
+## Data Providers & Signal Pipelines
 
-### 1. Prerequisites
-- Python 3.10+
-- Git
+### 1. Apollo.io Intelligence Engine (`apollo/`)
+* **Endpoint Catalog:** Fully mapped and parsed 75 REST routes.
+* **Firmographics & Stack:** Organization enrichment, annual revenues, employee ranges, tech stacks, and active job openings count.
+* **Executive Decision-Makers:** Identification of VP, Director, and C-Suite contacts.
+* **Role Change & Departure Detection:** Automated parsing of `employment_history[]` arrays tracking recent leadership joins and departures across candidate pools.
 
-### 2. Installation
+### 2. SignalBase Signals (`run_signalbase_20co.py`, `generate_demo_csv.py`)
+* Connects to `https://www.trysignalbase.com/api/v2`.
+* Tracks hiring surges, executive job changes, funding events, and corporate acquisitions.
 
-```bash
-git clone https://github.com/heuristic-solver/nutra-bd-engine.git
-cd nutra-bd-engine
-pip install -r requirements.txt
-```
+### 3. People Data Labs (PDL) (`run_pdl_demo.py`, `run_pdl_full.py`)
+* Company firmographics and person roster enrichment.
+* Historical career transitions and leadership departure analytics.
 
-### 3. Environment Setup
+---
 
-Copy `.env.example` to `.env` and fill in your API credentials:
+## Setup & Execution
 
+### 1. Environment Setup
 ```bash
 cp .env.example .env
 ```
+Fill in the respective API keys (`APOLLO_API_KEY`, `SIGNALBASE_API_KEY`, `PDL_API_KEY`).
 
-```env
-SERPER_API_KEY=your_serper_api_key
-APIFY_API_TOKEN=your_apify_token
-OPENFDA_API_KEY=your_openfda_key_optional
-```
-
-### 4. Running a 360-Degree BD Intelligence Scan
-
-Scan any target company via CLI:
-
+### 2. Running Apollo Enrichment
 ```bash
-python run_pipeline.py --company "Thorne Research" --domain "thorne.com"
-python run_pipeline.py --company "Nordic Naturals" --domain "nordicnaturals.com"
+python apollo/run_apollo_20co_rich.py
+python apollo/find_apollo_role_changes.py
 ```
 
-### 5. Running Batch Intelligence Reports
-
-Run batch scanning across target companies to produce consolidated CSV reports:
-
+### 3. Running SignalBase Pipeline
 ```bash
-python generate_bd_report.py
+python run_signalbase_20co.py
 ```
 
-### 6. Starting the FastAPI REST Server
-
+### 4. Running PDL Pipeline
 ```bash
-python app.py
+python run_pdl_demo.py
 ```
-The server will start on `http://127.0.0.1:8000`:
-- **Propensity Scorecard**: `GET http://127.0.0.1:8000/api/v1/bd/score?company_name=Thorne+Research`
-- **Summary Badge**: `GET http://127.0.0.1:8000/api/v1/bd/summary?company_name=Thorne+Research`
-- **Full Dossier**: `GET http://127.0.0.1:8000/api/v1/bd/company?company_name=Thorne+Research`
-- **Interactive Swagger Docs**: `http://127.0.0.1:8000/docs`
-
----
-
-## Signal Dimensions & Propensity Weights
-
-$$\text{Propensity Score} = \text{Growth (30)} + \text{Expansion (25)} + \text{Turnover (20)} + \text{Compliance (15)} + \text{Fit (10)}$$
-
-| Dimension | Data Collectors | Max Points | What It Measures |
-| :--- | :--- | :---: | :--- |
-| **Headcount Growth & Hiring Velocity** | Growjo, Career Traffic, Apify | **30 pts** | Hyper-growth (+15% YoY), active hiring velocity, 30-day open roles, or staffing deficit |
-| **Facility Expansions, M&A & Web Surges** | Serper (6-Month), Owler, Web Traffic | **25 pts** | New plant openings, M&A acquisitions, capital rounds, web traffic surges (+15%) |
-| **Executive Leadership Moves** | Serper (6-Month) | **20 pts** | C-Suite/VP leadership appointments and department restructuring |
-| **Compliance Pressure** | openFDA | **15 pts** | Class I/II product recalls and active FDA inspection audits |
-| **Domain & Segment Alignment** | Knowledge Base | **10 pts** | Vertical alignment (CDMO, Finished Brand, Raw Ingredient Supplier) |
-

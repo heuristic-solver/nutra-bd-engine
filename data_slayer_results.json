@@ -1,0 +1,2056 @@
+{
+  "by_company": {
+    "API Co., Ltd.": [],
+    "Apis Flora": [
+      {
+        "changed_at": "2026-05-01T00:00:00Z",
+        "detected_at": "2026-06-18T06:43:36.081921Z",
+        "detection_lag_days": 48,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/apisflora",
+          "name": "Apis Flora Industrial e Comercial Ltda.",
+          "organization_id": "dm_org_3a2ul357t3737pi",
+          "slug": "apisflora"
+        },
+        "person": {
+          "first_name": "H\u00e9riton F\u00c1BIO",
+          "full_name": "H\u00e9riton F\u00c1BIO dos Santos",
+          "handle": "heritonfabio",
+          "headline": "Farmac\u00eautico",
+          "last_name": "dos Santos",
+          "linkedin_url": "https://linkedin.com/in/heritonfabio",
+          "profile_id": "dm_prsn_7wqxhqtjoxd2u4s4zdakyv7yeqhaqp77vv6eyka"
+        },
+        "title": {
+          "current": "Consultor",
+          "previous": null
+        },
+        "person_full_name": "H\u00e9riton F\u00c1BIO dos Santos",
+        "person_headline": "Farmac\u00eautico",
+        "person_linkedin_url": "https://linkedin.com/in/heritonfabio",
+        "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "title_current": "Consultor",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:14:55Z"
+      },
+      {
+        "changed_at": "2026-04-01T00:00:00Z",
+        "detected_at": "2026-07-21T18:55:07.193436Z",
+        "detection_lag_days": 111,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/apisflora",
+          "name": "Apis Flora Industrial e Comercial Ltda.",
+          "organization_id": "dm_org_3a2ul357t3737pi",
+          "slug": "apisflora"
+        },
+        "person": {
+          "first_name": "Osmar",
+          "full_name": "Osmar Reis",
+          "handle": "osmar-reis-191803332",
+          "headline": "--",
+          "last_name": "Reis",
+          "linkedin_url": "https://linkedin.com/in/osmar-reis-191803332",
+          "profile_id": "dm_prsn_p3vrajwznzerlx6f2ubu6qni2il3f76ch3p2yfi"
+        },
+        "title": {
+          "current": "Assistente de produ\u00e7\u00e3o",
+          "previous": null
+        },
+        "person_full_name": "Osmar Reis",
+        "person_headline": "--",
+        "person_linkedin_url": "https://linkedin.com/in/osmar-reis-191803332",
+        "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "title_current": "Assistente de produ\u00e7\u00e3o",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:14:55Z"
+      },
+      {
+        "changed_at": "2025-10-01T00:00:00Z",
+        "detected_at": "2026-09-04T04:18:09.696274Z",
+        "detection_lag_days": 338,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/apisflora",
+          "name": "Apis Flora Industrial e Comercial Ltda.",
+          "organization_id": "dm_org_3a2ul357t3737pi",
+          "slug": "apisflora"
+        },
+        "person": {
+          "first_name": "Ana Julia",
+          "full_name": "Ana Julia Soares Pereira",
+          "handle": "ana-julia-soares-pereira-3b151a247",
+          "headline": "\ud83c\udf93 Psicologia | \ud83d\udcbc Gest\u00e3o de Pessoas | \ud83c\udf31 Desenvolvimento Humano e Organizacional",
+          "last_name": "Soares Pereira",
+          "linkedin_url": "https://linkedin.com/in/ana-julia-soares-pereira-3b151a247",
+          "profile_id": "dm_prsn_ykn35f66ygkdojo233xctluzqc4hlp5s3npqgii"
+        },
+        "title": {
+          "current": "Estagi\u00e1ria de recursos humanos",
+          "previous": null
+        },
+        "person_full_name": "Ana Julia Soares Pereira",
+        "person_headline": "\ud83c\udf93 Psicologia | \ud83d\udcbc Gest\u00e3o de Pessoas | \ud83c\udf31 Desenvolvimento Humano e Organizacional",
+        "person_linkedin_url": "https://linkedin.com/in/ana-julia-soares-pereira-3b151a247",
+        "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "title_current": "Estagi\u00e1ria de recursos humanos",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:14:55Z"
+      },
+      {
+        "changed_at": "2025-03-01T00:00:00Z",
+        "detected_at": "2026-05-22T21:29:30.168704Z",
+        "detection_lag_days": 447,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/apisflora",
+          "name": "Apis Flora Industrial e Comercial Ltda.",
+          "organization_id": "dm_org_3a2ul357t3737pi",
+          "slug": "apisflora"
+        },
+        "person": {
+          "first_name": "Samuel",
+          "full_name": "Samuel Marigheti",
+          "handle": "samuel-marigheti-6045611a8",
+          "headline": "\ud83c\udfaf Support Analyst | Proxmox | Linux | GLPI | Zabbix | Grafana | Fortinet 80F/40F | Networks | Systems Analysis and Development Student.",
+          "last_name": "Marigheti",
+          "linkedin_url": "https://linkedin.com/in/samuel-marigheti-6045611a8",
+          "profile_id": "dm_prsn_tgoeb3bcanauvdkdwbjl5onex6ndoyj7pdosuuy"
+        },
+        "title": {
+          "current": "Analista de Suporte Jr",
+          "previous": null
+        },
+        "person_full_name": "Samuel Marigheti",
+        "person_headline": "\ud83c\udfaf Support Analyst | Proxmox | Linux | GLPI | Zabbix | Grafana | Fortinet 80F/40F | Networks | Systems Analysis and Development Student.",
+        "person_linkedin_url": "https://linkedin.com/in/samuel-marigheti-6045611a8",
+        "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "title_current": "Analista de Suporte Jr",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:14:55Z"
+      },
+      {
+        "changed_at": "2014-04-01T00:00:00Z",
+        "detected_at": "2026-08-26T18:57:52.975558Z",
+        "detection_lag_days": 4530,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/apisflora",
+          "name": "Apis Flora Industrial e Comercial Ltda.",
+          "organization_id": "dm_org_3a2ul357t3737pi",
+          "slug": "apisflora"
+        },
+        "person": {
+          "first_name": "Marcelo",
+          "full_name": "Marcelo Gobara",
+          "handle": "marcelo-gobara-6a44a063",
+          "headline": "Chief Revenue Officer (CRO)",
+          "last_name": "Gobara",
+          "linkedin_url": "https://linkedin.com/in/marcelo-gobara-6a44a063",
+          "profile_id": "dm_prsn_xdjvklczjlu5eorp5hcakztwqmbyvdahgp2tvvy"
+        },
+        "title": {
+          "current": "Chief Revenue Officer (CRO)",
+          "previous": null
+        },
+        "person_full_name": "Marcelo Gobara",
+        "person_headline": "Chief Revenue Officer (CRO)",
+        "person_linkedin_url": "https://linkedin.com/in/marcelo-gobara-6a44a063",
+        "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "title_current": "Chief Revenue Officer (CRO)",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:14:55Z"
+      }
+    ],
+    "Cmbio": [
+      {
+        "changed_at": "2026-04-01T00:00:00Z",
+        "detected_at": "2026-05-08T09:57:27.944203Z",
+        "detection_lag_days": 37,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Sean",
+          "full_name": "Sean Amisano",
+          "handle": "sean-amisano-620964239",
+          "headline": "NextGen Seq Team Lead | Data Science Graduate Student | Physics + Maths Graduate",
+          "last_name": "Amisano",
+          "linkedin_url": "https://linkedin.com/in/sean-amisano-620964239",
+          "profile_id": "dm_prsn_hj7jmyo6av3s366fxojftinlglzusrpqigfohfy"
+        },
+        "title": {
+          "current": "Technical Team Lead",
+          "previous": null
+        },
+        "person_full_name": "Sean Amisano",
+        "person_headline": "NextGen Seq Team Lead | Data Science Graduate Student | Physics + Maths Graduate",
+        "person_linkedin_url": "https://linkedin.com/in/sean-amisano-620964239",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Technical Team Lead",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2026-03-01T00:00:00Z",
+        "detected_at": "2026-05-21T20:44:35.903542Z",
+        "detection_lag_days": 81,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Natalia ",
+          "full_name": "Natalia  Quintana Prieto",
+          "handle": "natalia-quintana-prieto-4250471b7",
+          "headline": "Bioinformatics analyst",
+          "last_name": "Quintana Prieto",
+          "linkedin_url": "https://linkedin.com/in/natalia-quintana-prieto-4250471b7",
+          "profile_id": "dm_prsn_5exjzos6ogwe3kd7afaebvbyubf6giipbkt3v3q"
+        },
+        "title": {
+          "current": "Bioinformatics Analyst",
+          "previous": null
+        },
+        "person_full_name": "Natalia  Quintana Prieto",
+        "person_headline": "Bioinformatics analyst",
+        "person_linkedin_url": "https://linkedin.com/in/natalia-quintana-prieto-4250471b7",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Bioinformatics Analyst",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2026-04-01T00:00:00Z",
+        "detected_at": "2026-07-27T18:02:09.899754Z",
+        "detection_lag_days": 117,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Ken",
+          "full_name": "Ken McGrath",
+          "handle": "drkenmcgrath",
+          "headline": "Business Innovation |  Microbiome Meta-\u2019omics | Science Communication",
+          "last_name": "McGrath",
+          "linkedin_url": "https://linkedin.com/in/drkenmcgrath",
+          "profile_id": "dm_prsn_hnf6np23fkfiayymrj37jsdjdmd2mwh2f3wfdvy"
+        },
+        "title": {
+          "current": "BD Innovation Manager (APAC)",
+          "previous": null
+        },
+        "person_full_name": "Ken McGrath",
+        "person_headline": "Business Innovation |  Microbiome Meta-\u2019omics | Science Communication",
+        "person_linkedin_url": "https://linkedin.com/in/drkenmcgrath",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "BD Innovation Manager (APAC)",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2026-03-01T00:00:00Z",
+        "detected_at": "2026-07-28T08:52:09.556693Z",
+        "detection_lag_days": 149,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Kelly",
+          "full_name": "Kelly Moffat",
+          "handle": "kelly-moffat-98b38723",
+          "headline": "COO",
+          "last_name": "Moffat",
+          "linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+          "profile_id": "dm_prsn_mmqtj2b7425i4kfctmgxvmkq7zefj7tuujgvmma"
+        },
+        "title": {
+          "current": "Chief Operating Officer",
+          "previous": null
+        },
+        "person_full_name": "Kelly Moffat",
+        "person_headline": "COO",
+        "person_linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Chief Operating Officer",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2026-03-01T00:00:00Z",
+        "detected_at": "2026-08-25T00:05:33.273811Z",
+        "detection_lag_days": 177,
+        "event_type": "left",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Cecelia",
+          "full_name": "Cecelia Garcia",
+          "handle": "cecelia-a-garcia-z100",
+          "headline": "Professional Education & Scientific Projects Manager | Educating professionals on Sj\u00f6gren\u2019s Disease",
+          "last_name": "Garcia",
+          "linkedin_url": "https://linkedin.com/in/cecelia-a-garcia-z100",
+          "profile_id": "dm_prsn_qe2ifnttaq2rioexqzwevmk6uib44tplzztmbcq"
+        },
+        "title": {
+          "current": "Scientific Project Coordinator",
+          "previous": null
+        },
+        "person_full_name": "Cecelia Garcia",
+        "person_headline": "Professional Education & Scientific Projects Manager | Educating professionals on Sj\u00f6gren\u2019s Disease",
+        "person_linkedin_url": "https://linkedin.com/in/cecelia-a-garcia-z100",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Scientific Project Coordinator",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2025-10-01T00:00:00Z",
+        "detected_at": "2026-06-04T22:31:36.303454Z",
+        "detection_lag_days": 246,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Jesus",
+          "full_name": "Jesus Durand Calle",
+          "handle": "jesus-durand",
+          "headline": "Microbial Engineer | MSc. Student in Biotechnology",
+          "last_name": "Durand Calle",
+          "linkedin_url": "https://linkedin.com/in/jesus-durand",
+          "profile_id": "dm_prsn_heefxqomqwlurvzlulex4xwfbjaxsyf4lk2hxdi"
+        },
+        "title": {
+          "current": "Bioinformatics Student Assistant ",
+          "previous": null
+        },
+        "person_full_name": "Jesus Durand Calle",
+        "person_headline": "Microbial Engineer | MSc. Student in Biotechnology",
+        "person_linkedin_url": "https://linkedin.com/in/jesus-durand",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Bioinformatics Student Assistant ",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2025-10-01T00:00:00Z",
+        "detected_at": "2026-07-28T08:48:59.733813Z",
+        "detection_lag_days": 300,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "\u00c1ngela",
+          "full_name": "\u00c1ngela Garcinu\u00f1o Feliciano",
+          "handle": "\u00e1ngela-garcinu\u00f1o-feliciano-babb5a235",
+          "headline": "MSc Bioinformatics Student at DTU | \u00c9cole Polytechnique Graduate | Strong Math & CS Background | Interested in Computational Biology, Genomics and Systems Biology",
+          "last_name": "Garcinu\u00f1o Feliciano",
+          "linkedin_url": "https://linkedin.com/in/\u00e1ngela-garcinu\u00f1o-feliciano-babb5a235",
+          "profile_id": "dm_prsn_qt3fv5fqzvnjqjxhdkcso7r3rhtg5yzh6tvt57q"
+        },
+        "title": {
+          "current": "Bioinformatics Student Assistant",
+          "previous": null
+        },
+        "person_full_name": "\u00c1ngela Garcinu\u00f1o Feliciano",
+        "person_headline": "MSc Bioinformatics Student at DTU | \u00c9cole Polytechnique Graduate | Strong Math & CS Background | Interested in Computational Biology, Genomics and Systems Biology",
+        "person_linkedin_url": "https://linkedin.com/in/\u00e1ngela-garcinu\u00f1o-feliciano-babb5a235",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Bioinformatics Student Assistant",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2025-05-01T00:00:00Z",
+        "detected_at": "2026-05-08T20:06:56.967554Z",
+        "detection_lag_days": 372,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Stefanie",
+          "full_name": "Stefanie Soto",
+          "handle": "stefanie-soto",
+          "headline": "Integrated Marketing Communications  I  Brand Strategist  I  Campaign Manager  I  Digital Content Specialist  I Creative Thinker \ud83d\udda4",
+          "last_name": "Soto",
+          "linkedin_url": "https://linkedin.com/in/stefanie-soto",
+          "profile_id": "dm_prsn_nxssfd7ofs4qmj7f5dtwiogobwczttocu2mrlua"
+        },
+        "title": {
+          "current": "Global Marketing Manager",
+          "previous": null
+        },
+        "person_full_name": "Stefanie Soto",
+        "person_headline": "Integrated Marketing Communications  I  Brand Strategist  I  Campaign Manager  I  Digital Content Specialist  I Creative Thinker \ud83d\udda4",
+        "person_linkedin_url": "https://linkedin.com/in/stefanie-soto",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Global Marketing Manager",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2025-06-01T00:00:00Z",
+        "detected_at": "2026-09-22T00:40:47.888995Z",
+        "detection_lag_days": 478,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Matthew",
+          "full_name": "Matthew Coates",
+          "handle": "matthewcoates925",
+          "headline": "Lab Technician - Next-Gen Sequencing",
+          "last_name": "Coates",
+          "linkedin_url": "https://linkedin.com/in/matthewcoates925",
+          "profile_id": "dm_prsn_3ixl3yq7flru2ovu4hpokktpssauewlqpdtry4i"
+        },
+        "title": {
+          "current": "Laboratory Technician",
+          "previous": null
+        },
+        "person_full_name": "Matthew Coates",
+        "person_headline": "Lab Technician - Next-Gen Sequencing",
+        "person_linkedin_url": "https://linkedin.com/in/matthewcoates925",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Laboratory Technician",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2025-02-01T00:00:00Z",
+        "detected_at": "2026-07-28T08:51:42.920829Z",
+        "detection_lag_days": 542,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Brendan",
+          "full_name": "Brendan Connolly",
+          "handle": "brendan-connolly-1b04913b8",
+          "headline": "Associate Bioinformatics Analyst at cmbio",
+          "last_name": "Connolly",
+          "linkedin_url": "https://linkedin.com/in/brendan-connolly-1b04913b8",
+          "profile_id": "dm_prsn_mf5k2dh7e5n6rrjg3qg7ql574iqummxzotzcwmi"
+        },
+        "title": {
+          "current": "Associate Bioinformatics Analyst",
+          "previous": null
+        },
+        "person_full_name": "Brendan Connolly",
+        "person_headline": "Associate Bioinformatics Analyst at cmbio",
+        "person_linkedin_url": "https://linkedin.com/in/brendan-connolly-1b04913b8",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Associate Bioinformatics Analyst",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:13Z"
+      },
+      {
+        "changed_at": "2024-12-01T00:00:00Z",
+        "detected_at": "2026-05-30T03:56:00.056054Z",
+        "detection_lag_days": 545,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Huai",
+          "full_name": "Huai Li",
+          "handle": "huai-li-242b441",
+          "headline": "VP of Engineering at Cmbio",
+          "last_name": "Li",
+          "linkedin_url": "https://linkedin.com/in/huai-li-242b441",
+          "profile_id": "dm_prsn_liwvw2n3e5k665nksaj3uzwypefrex5npxactdy"
+        },
+        "title": {
+          "current": "VP of Engineering",
+          "previous": null
+        },
+        "person_full_name": "Huai Li",
+        "person_headline": "VP of Engineering at Cmbio",
+        "person_linkedin_url": "https://linkedin.com/in/huai-li-242b441",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "VP of Engineering",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2024-11-01T00:00:00Z",
+        "detected_at": "2026-05-04T11:25:55.018853Z",
+        "detection_lag_days": 549,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Mahadi",
+          "full_name": "Mahadi Hassan",
+          "handle": "itsmahadi007",
+          "headline": "Lead Software Engineer | AI automation that works 24/7 \ud83d\ude80\ud83e\udd16\u2728",
+          "last_name": "Hassan",
+          "linkedin_url": "https://linkedin.com/in/itsmahadi007",
+          "profile_id": "dm_prsn_snq3jjwucxughngi7wywjgpjswkcnklcaphshja"
+        },
+        "title": {
+          "current": "Senior Backend Engineer ",
+          "previous": null
+        },
+        "person_full_name": "Mahadi Hassan",
+        "person_headline": "Lead Software Engineer | AI automation that works 24/7 \ud83d\ude80\ud83e\udd16\u2728",
+        "person_linkedin_url": "https://linkedin.com/in/itsmahadi007",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Senior Backend Engineer ",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2025-01-01T00:00:00Z",
+        "detected_at": "2026-07-28T08:52:09.556693Z",
+        "detection_lag_days": 573,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Kelly",
+          "full_name": "Kelly Moffat",
+          "handle": "kelly-moffat-98b38723",
+          "headline": "COO",
+          "last_name": "Moffat",
+          "linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+          "profile_id": "dm_prsn_mmqtj2b7425i4kfctmgxvmkq7zefj7tuujgvmma"
+        },
+        "title": {
+          "current": "Senior Vice President, NGS Operations",
+          "previous": null
+        },
+        "person_full_name": "Kelly Moffat",
+        "person_headline": "COO",
+        "person_linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Senior Vice President, NGS Operations",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2025-01-01T00:00:00Z",
+        "detected_at": "2026-08-08T18:51:06.557673Z",
+        "detection_lag_days": 584,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Anders Mohr",
+          "full_name": "Anders Mohr Christensen",
+          "handle": "anders-mohr-christensen-97b217",
+          "headline": "Group CFO at Cmbio",
+          "last_name": "Christensen",
+          "linkedin_url": "https://linkedin.com/in/anders-mohr-christensen-97b217",
+          "profile_id": "dm_prsn_odgt2q2wdjfbgphzey2c5hzw7vsjxy77hiythkq"
+        },
+        "title": {
+          "current": "Chief Financial Officer",
+          "previous": null
+        },
+        "person_full_name": "Anders Mohr Christensen",
+        "person_headline": "Group CFO at Cmbio",
+        "person_linkedin_url": "https://linkedin.com/in/anders-mohr-christensen-97b217",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Chief Financial Officer",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2023-10-01T00:00:00Z",
+        "detected_at": "2026-05-15T21:38:26.510264Z",
+        "detection_lag_days": 957,
+        "event_type": "title_change",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Manoj",
+          "full_name": "Manoj Dadlani",
+          "handle": "manojdadlani",
+          "headline": "Improving Health by Unlocking the Microbiome",
+          "last_name": "Dadlani",
+          "linkedin_url": "https://linkedin.com/in/manojdadlani",
+          "profile_id": "dm_prsn_lhy44xvf5jbub3v4bjlirmvyh5jmishsiv7unnq"
+        },
+        "title": {
+          "current": "Chief Commercial Officer",
+          "previous": "Executive Chairman"
+        },
+        "person_full_name": "Manoj Dadlani",
+        "person_headline": "Improving Health by Unlocking the Microbiome",
+        "person_linkedin_url": "https://linkedin.com/in/manojdadlani",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Chief Commercial Officer",
+        "title_previous": "Executive Chairman",
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2024-01-01T00:00:00Z",
+        "detected_at": "2026-09-22T00:17:38.370126Z",
+        "detection_lag_days": 995,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Jacob Bak",
+          "full_name": "Jacob Bak Holm, PhD",
+          "handle": "jacob-bak-holm",
+          "headline": "VP, Discovery & AI at Cmbio | From startup to a 100+ person global CRO | I lead AI and build it into a life-science business: governance, agents, data context layers, discovery and IP",
+          "last_name": "Holm, PhD",
+          "linkedin_url": "https://linkedin.com/in/jacob-bak-holm",
+          "profile_id": "dm_prsn_v6fuib6aobq4evr3yrfzzllg7fl5iscnvfbnori"
+        },
+        "title": {
+          "current": "VP & BU Leader - Product Development, Discovery, and AI",
+          "previous": null
+        },
+        "person_full_name": "Jacob Bak Holm, PhD",
+        "person_headline": "VP, Discovery & AI at Cmbio | From startup to a 100+ person global CRO | I lead AI and build it into a life-science business: governance, agents, data context layers, discovery and IP",
+        "person_linkedin_url": "https://linkedin.com/in/jacob-bak-holm",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "VP & BU Leader - Product Development, Discovery, and AI",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2022-07-01T00:00:00Z",
+        "detected_at": "2026-04-23T13:31:13.06671Z",
+        "detection_lag_days": 1392,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Marianne",
+          "full_name": "Marianne Koliana",
+          "handle": "mariannekoliana",
+          "headline": "VP, Business Development at Cmbio",
+          "last_name": "Koliana",
+          "linkedin_url": "https://linkedin.com/in/mariannekoliana",
+          "profile_id": "dm_prsn_dryylz5rjcarop3dfk4i7yjkxolradbqow7jzwi"
+        },
+        "title": {
+          "current": "VP, Business Development",
+          "previous": null
+        },
+        "person_full_name": "Marianne Koliana",
+        "person_headline": "VP, Business Development at Cmbio",
+        "person_linkedin_url": "https://linkedin.com/in/mariannekoliana",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "VP, Business Development",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2021-08-01T00:00:00Z",
+        "detected_at": "2026-04-23T13:10:16.814515Z",
+        "detection_lag_days": 1726,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Dana",
+          "full_name": "Dana Walsh",
+          "handle": "danamariewalsh",
+          "headline": "Senior Microbiome Scientist @ Cmbio | PhD, Microbiome Analysis",
+          "last_name": "Walsh",
+          "linkedin_url": "https://linkedin.com/in/danamariewalsh",
+          "profile_id": "dm_prsn_qmwjtw2czmxjx3rcqqyuluavix5tbvbtaw6aygq"
+        },
+        "title": {
+          "current": "Senior Microbiome Scientist",
+          "previous": null
+        },
+        "person_full_name": "Dana Walsh",
+        "person_headline": "Senior Microbiome Scientist @ Cmbio | PhD, Microbiome Analysis",
+        "person_linkedin_url": "https://linkedin.com/in/danamariewalsh",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Senior Microbiome Scientist",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2021-06-01T00:00:00Z",
+        "detected_at": "2026-04-28T15:03:10.671113Z",
+        "detection_lag_days": 1792,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Aron",
+          "full_name": "Aron Eklund",
+          "handle": "aron-eklund-94a13980",
+          "headline": "VP of Technology at Cmbio",
+          "last_name": "Eklund",
+          "linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+          "profile_id": "dm_prsn_riw2gkd7izkgw34wnko3frkdepv7tvpdvtzsvlq"
+        },
+        "title": {
+          "current": "VP of Technology",
+          "previous": null
+        },
+        "person_full_name": "Aron Eklund",
+        "person_headline": "VP of Technology at Cmbio",
+        "person_linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "VP of Technology",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2017-08-01T00:00:00Z",
+        "detected_at": "2026-04-28T15:03:10.671113Z",
+        "detection_lag_days": 3192,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Aron",
+          "full_name": "Aron Eklund",
+          "handle": "aron-eklund-94a13980",
+          "headline": "VP of Technology at Cmbio",
+          "last_name": "Eklund",
+          "linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+          "profile_id": "dm_prsn_riw2gkd7izkgw34wnko3frkdepv7tvpdvtzsvlq"
+        },
+        "title": {
+          "current": "Director of Bioinformatics",
+          "previous": null
+        },
+        "person_full_name": "Aron Eklund",
+        "person_headline": "VP of Technology at Cmbio",
+        "person_linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Director of Bioinformatics",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2015-12-01T00:00:00Z",
+        "detected_at": "2026-04-12T11:46:11.720338Z",
+        "detection_lag_days": 3785,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Morten O. A.",
+          "full_name": "Morten O. A. Sommer",
+          "handle": "morten-o-a-sommer-6064144",
+          "headline": "Researcher and Entrepreneur - delivering biotech & AI for human and planetary health",
+          "last_name": "Sommer",
+          "linkedin_url": "https://linkedin.com/in/morten-o-a-sommer-6064144",
+          "profile_id": "dm_prsn_nudgxkknajejrg7octrszyfhg4s6en3pbi6pjpy"
+        },
+        "title": {
+          "current": "Co-Founder and Board member",
+          "previous": null
+        },
+        "person_full_name": "Morten O. A. Sommer",
+        "person_headline": "Researcher and Entrepreneur - delivering biotech & AI for human and planetary health",
+        "person_linkedin_url": "https://linkedin.com/in/morten-o-a-sommer-6064144",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Co-Founder and Board member",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2015-12-01T00:00:00Z",
+        "detected_at": "2026-04-12T11:46:14.500111Z",
+        "detection_lag_days": 3785,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Rasmus",
+          "full_name": "Rasmus Vendler Toft-Kehler",
+          "handle": "rasmus-vendler-toft-kehler-419157",
+          "headline": "Entrepreneur, Company Builder & Board Member",
+          "last_name": "Vendler Toft-Kehler",
+          "linkedin_url": "https://linkedin.com/in/rasmus-vendler-toft-kehler-419157",
+          "profile_id": "dm_prsn_i5ardsj6m2fv77ylmyzjk7h242h4orstamyek7i"
+        },
+        "title": {
+          "current": "Co-Founder and Board Observer",
+          "previous": null
+        },
+        "person_full_name": "Rasmus Vendler Toft-Kehler",
+        "person_headline": "Entrepreneur, Company Builder & Board Member",
+        "person_linkedin_url": "https://linkedin.com/in/rasmus-vendler-toft-kehler-419157",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "Co-Founder and Board Observer",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      },
+      {
+        "changed_at": "2012-09-01T00:00:00Z",
+        "detected_at": "2026-07-28T08:52:09.556693Z",
+        "detection_lag_days": 5078,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/cmbio",
+          "name": "cmbio",
+          "organization_id": "dm_org_vkcdz2snkhhq3gq",
+          "slug": "cmbio"
+        },
+        "person": {
+          "first_name": "Kelly",
+          "full_name": "Kelly Moffat",
+          "handle": "kelly-moffat-98b38723",
+          "headline": "COO",
+          "last_name": "Moffat",
+          "linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+          "profile_id": "dm_prsn_mmqtj2b7425i4kfctmgxvmkq7zefj7tuujgvmma"
+        },
+        "title": {
+          "current": "US Operations & Global NGS",
+          "previous": null
+        },
+        "person_full_name": "Kelly Moffat",
+        "person_headline": "COO",
+        "person_linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+        "organization_name": "cmbio",
+        "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "title_current": "US Operations & Global NGS",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:15:14Z"
+      }
+    ],
+    "Caltron Clays & Chemicals": [],
+    "Greenspace Herbs": [],
+    "Wisesorbent Technology": [],
+    "PRONTO": [
+      {
+        "changed_at": "2026-06-01T00:00:00Z",
+        "detected_at": "2026-07-31T23:25:12.657662Z",
+        "detection_lag_days": 60,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/prontous",
+          "name": "PRONTO Manufacturing & Fulfillment",
+          "organization_id": "dm_org_sr44vbmgu3prlhq",
+          "slug": "prontous"
+        },
+        "person": {
+          "first_name": "Justina",
+          "full_name": "Justina Z.",
+          "handle": "justinazdan",
+          "headline": "Head of Talent Acquisition @ IMPACT BRANDS | Scaling International Teams | Unicorn Hunter \ud83e\udd84",
+          "last_name": "Z.",
+          "linkedin_url": "https://linkedin.com/in/justinazdan",
+          "profile_id": "dm_prsn_5ccmcqf7zylvnbc4s3gsqa2emnvxulrbdvpvr3y"
+        },
+        "title": {
+          "current": "Talent Acquisition Partner",
+          "previous": null
+        },
+        "person_full_name": "Justina Z.",
+        "person_headline": "Head of Talent Acquisition @ IMPACT BRANDS | Scaling International Teams | Unicorn Hunter \ud83e\udd84",
+        "person_linkedin_url": "https://linkedin.com/in/justinazdan",
+        "organization_name": "PRONTO Manufacturing & Fulfillment",
+        "organization_linkedin_url": "https://www.linkedin.com/company/prontous",
+        "title_current": "Talent Acquisition Partner",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:17:35Z"
+      },
+      {
+        "changed_at": "2025-03-01T00:00:00Z",
+        "detected_at": "2026-04-24T11:07:02.676521Z",
+        "detection_lag_days": 419,
+        "event_type": "joined",
+        "organization": {
+          "linkedin_url": "https://www.linkedin.com/company/prontous",
+          "name": "PRONTO Manufacturing & Fulfillment",
+          "organization_id": "dm_org_sr44vbmgu3prlhq",
+          "slug": "prontous"
+        },
+        "person": {
+          "first_name": "K\u0119stutis Gabrielius",
+          "full_name": "K\u0119stutis Gabrielius \u0160aulys",
+          "handle": "kestutis-gabrielius-saulys",
+          "headline": "Senior R&D Specialist",
+          "last_name": "\u0160aulys",
+          "linkedin_url": "https://linkedin.com/in/kestutis-gabrielius-saulys",
+          "profile_id": "dm_prsn_tb5c2bcdaxxfadlhtm33a35fvyu2shmohlg7oya"
+        },
+        "title": {
+          "current": "Senior Research and Development Specialist",
+          "previous": null
+        },
+        "person_full_name": "K\u0119stutis Gabrielius \u0160aulys",
+        "person_headline": "Senior R&D Specialist",
+        "person_linkedin_url": "https://linkedin.com/in/kestutis-gabrielius-saulys",
+        "organization_name": "PRONTO Manufacturing & Fulfillment",
+        "organization_linkedin_url": "https://www.linkedin.com/company/prontous",
+        "title_current": "Senior Research and Development Specialist",
+        "title_previous": null,
+        "input_page": 1,
+        "fetched_at": "2026-09-28T11:17:35Z"
+      }
+    ]
+  },
+  "all_events": [
+    {
+      "changed_at": "2026-05-01T00:00:00Z",
+      "detected_at": "2026-06-18T06:43:36.081921Z",
+      "detection_lag_days": 48,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_id": "dm_org_3a2ul357t3737pi",
+        "slug": "apisflora"
+      },
+      "person": {
+        "first_name": "H\u00e9riton F\u00c1BIO",
+        "full_name": "H\u00e9riton F\u00c1BIO dos Santos",
+        "handle": "heritonfabio",
+        "headline": "Farmac\u00eautico",
+        "last_name": "dos Santos",
+        "linkedin_url": "https://linkedin.com/in/heritonfabio",
+        "profile_id": "dm_prsn_7wqxhqtjoxd2u4s4zdakyv7yeqhaqp77vv6eyka"
+      },
+      "title": {
+        "current": "Consultor",
+        "previous": null
+      },
+      "person_full_name": "H\u00e9riton F\u00c1BIO dos Santos",
+      "person_headline": "Farmac\u00eautico",
+      "person_linkedin_url": "https://linkedin.com/in/heritonfabio",
+      "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+      "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+      "title_current": "Consultor",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:14:55Z"
+    },
+    {
+      "changed_at": "2026-04-01T00:00:00Z",
+      "detected_at": "2026-07-21T18:55:07.193436Z",
+      "detection_lag_days": 111,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_id": "dm_org_3a2ul357t3737pi",
+        "slug": "apisflora"
+      },
+      "person": {
+        "first_name": "Osmar",
+        "full_name": "Osmar Reis",
+        "handle": "osmar-reis-191803332",
+        "headline": "--",
+        "last_name": "Reis",
+        "linkedin_url": "https://linkedin.com/in/osmar-reis-191803332",
+        "profile_id": "dm_prsn_p3vrajwznzerlx6f2ubu6qni2il3f76ch3p2yfi"
+      },
+      "title": {
+        "current": "Assistente de produ\u00e7\u00e3o",
+        "previous": null
+      },
+      "person_full_name": "Osmar Reis",
+      "person_headline": "--",
+      "person_linkedin_url": "https://linkedin.com/in/osmar-reis-191803332",
+      "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+      "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+      "title_current": "Assistente de produ\u00e7\u00e3o",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:14:55Z"
+    },
+    {
+      "changed_at": "2025-10-01T00:00:00Z",
+      "detected_at": "2026-09-04T04:18:09.696274Z",
+      "detection_lag_days": 338,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_id": "dm_org_3a2ul357t3737pi",
+        "slug": "apisflora"
+      },
+      "person": {
+        "first_name": "Ana Julia",
+        "full_name": "Ana Julia Soares Pereira",
+        "handle": "ana-julia-soares-pereira-3b151a247",
+        "headline": "\ud83c\udf93 Psicologia | \ud83d\udcbc Gest\u00e3o de Pessoas | \ud83c\udf31 Desenvolvimento Humano e Organizacional",
+        "last_name": "Soares Pereira",
+        "linkedin_url": "https://linkedin.com/in/ana-julia-soares-pereira-3b151a247",
+        "profile_id": "dm_prsn_ykn35f66ygkdojo233xctluzqc4hlp5s3npqgii"
+      },
+      "title": {
+        "current": "Estagi\u00e1ria de recursos humanos",
+        "previous": null
+      },
+      "person_full_name": "Ana Julia Soares Pereira",
+      "person_headline": "\ud83c\udf93 Psicologia | \ud83d\udcbc Gest\u00e3o de Pessoas | \ud83c\udf31 Desenvolvimento Humano e Organizacional",
+      "person_linkedin_url": "https://linkedin.com/in/ana-julia-soares-pereira-3b151a247",
+      "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+      "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+      "title_current": "Estagi\u00e1ria de recursos humanos",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:14:55Z"
+    },
+    {
+      "changed_at": "2025-03-01T00:00:00Z",
+      "detected_at": "2026-05-22T21:29:30.168704Z",
+      "detection_lag_days": 447,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_id": "dm_org_3a2ul357t3737pi",
+        "slug": "apisflora"
+      },
+      "person": {
+        "first_name": "Samuel",
+        "full_name": "Samuel Marigheti",
+        "handle": "samuel-marigheti-6045611a8",
+        "headline": "\ud83c\udfaf Support Analyst | Proxmox | Linux | GLPI | Zabbix | Grafana | Fortinet 80F/40F | Networks | Systems Analysis and Development Student.",
+        "last_name": "Marigheti",
+        "linkedin_url": "https://linkedin.com/in/samuel-marigheti-6045611a8",
+        "profile_id": "dm_prsn_tgoeb3bcanauvdkdwbjl5onex6ndoyj7pdosuuy"
+      },
+      "title": {
+        "current": "Analista de Suporte Jr",
+        "previous": null
+      },
+      "person_full_name": "Samuel Marigheti",
+      "person_headline": "\ud83c\udfaf Support Analyst | Proxmox | Linux | GLPI | Zabbix | Grafana | Fortinet 80F/40F | Networks | Systems Analysis and Development Student.",
+      "person_linkedin_url": "https://linkedin.com/in/samuel-marigheti-6045611a8",
+      "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+      "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+      "title_current": "Analista de Suporte Jr",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:14:55Z"
+    },
+    {
+      "changed_at": "2014-04-01T00:00:00Z",
+      "detected_at": "2026-08-26T18:57:52.975558Z",
+      "detection_lag_days": 4530,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/apisflora",
+        "name": "Apis Flora Industrial e Comercial Ltda.",
+        "organization_id": "dm_org_3a2ul357t3737pi",
+        "slug": "apisflora"
+      },
+      "person": {
+        "first_name": "Marcelo",
+        "full_name": "Marcelo Gobara",
+        "handle": "marcelo-gobara-6a44a063",
+        "headline": "Chief Revenue Officer (CRO)",
+        "last_name": "Gobara",
+        "linkedin_url": "https://linkedin.com/in/marcelo-gobara-6a44a063",
+        "profile_id": "dm_prsn_xdjvklczjlu5eorp5hcakztwqmbyvdahgp2tvvy"
+      },
+      "title": {
+        "current": "Chief Revenue Officer (CRO)",
+        "previous": null
+      },
+      "person_full_name": "Marcelo Gobara",
+      "person_headline": "Chief Revenue Officer (CRO)",
+      "person_linkedin_url": "https://linkedin.com/in/marcelo-gobara-6a44a063",
+      "organization_name": "Apis Flora Industrial e Comercial Ltda.",
+      "organization_linkedin_url": "https://www.linkedin.com/company/apisflora",
+      "title_current": "Chief Revenue Officer (CRO)",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:14:55Z"
+    },
+    {
+      "changed_at": "2026-04-01T00:00:00Z",
+      "detected_at": "2026-05-08T09:57:27.944203Z",
+      "detection_lag_days": 37,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Sean",
+        "full_name": "Sean Amisano",
+        "handle": "sean-amisano-620964239",
+        "headline": "NextGen Seq Team Lead | Data Science Graduate Student | Physics + Maths Graduate",
+        "last_name": "Amisano",
+        "linkedin_url": "https://linkedin.com/in/sean-amisano-620964239",
+        "profile_id": "dm_prsn_hj7jmyo6av3s366fxojftinlglzusrpqigfohfy"
+      },
+      "title": {
+        "current": "Technical Team Lead",
+        "previous": null
+      },
+      "person_full_name": "Sean Amisano",
+      "person_headline": "NextGen Seq Team Lead | Data Science Graduate Student | Physics + Maths Graduate",
+      "person_linkedin_url": "https://linkedin.com/in/sean-amisano-620964239",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Technical Team Lead",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2026-03-01T00:00:00Z",
+      "detected_at": "2026-05-21T20:44:35.903542Z",
+      "detection_lag_days": 81,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Natalia ",
+        "full_name": "Natalia  Quintana Prieto",
+        "handle": "natalia-quintana-prieto-4250471b7",
+        "headline": "Bioinformatics analyst",
+        "last_name": "Quintana Prieto",
+        "linkedin_url": "https://linkedin.com/in/natalia-quintana-prieto-4250471b7",
+        "profile_id": "dm_prsn_5exjzos6ogwe3kd7afaebvbyubf6giipbkt3v3q"
+      },
+      "title": {
+        "current": "Bioinformatics Analyst",
+        "previous": null
+      },
+      "person_full_name": "Natalia  Quintana Prieto",
+      "person_headline": "Bioinformatics analyst",
+      "person_linkedin_url": "https://linkedin.com/in/natalia-quintana-prieto-4250471b7",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Bioinformatics Analyst",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2026-04-01T00:00:00Z",
+      "detected_at": "2026-07-27T18:02:09.899754Z",
+      "detection_lag_days": 117,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Ken",
+        "full_name": "Ken McGrath",
+        "handle": "drkenmcgrath",
+        "headline": "Business Innovation |  Microbiome Meta-\u2019omics | Science Communication",
+        "last_name": "McGrath",
+        "linkedin_url": "https://linkedin.com/in/drkenmcgrath",
+        "profile_id": "dm_prsn_hnf6np23fkfiayymrj37jsdjdmd2mwh2f3wfdvy"
+      },
+      "title": {
+        "current": "BD Innovation Manager (APAC)",
+        "previous": null
+      },
+      "person_full_name": "Ken McGrath",
+      "person_headline": "Business Innovation |  Microbiome Meta-\u2019omics | Science Communication",
+      "person_linkedin_url": "https://linkedin.com/in/drkenmcgrath",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "BD Innovation Manager (APAC)",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2026-03-01T00:00:00Z",
+      "detected_at": "2026-07-28T08:52:09.556693Z",
+      "detection_lag_days": 149,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Kelly",
+        "full_name": "Kelly Moffat",
+        "handle": "kelly-moffat-98b38723",
+        "headline": "COO",
+        "last_name": "Moffat",
+        "linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+        "profile_id": "dm_prsn_mmqtj2b7425i4kfctmgxvmkq7zefj7tuujgvmma"
+      },
+      "title": {
+        "current": "Chief Operating Officer",
+        "previous": null
+      },
+      "person_full_name": "Kelly Moffat",
+      "person_headline": "COO",
+      "person_linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Chief Operating Officer",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2026-03-01T00:00:00Z",
+      "detected_at": "2026-08-25T00:05:33.273811Z",
+      "detection_lag_days": 177,
+      "event_type": "left",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Cecelia",
+        "full_name": "Cecelia Garcia",
+        "handle": "cecelia-a-garcia-z100",
+        "headline": "Professional Education & Scientific Projects Manager | Educating professionals on Sj\u00f6gren\u2019s Disease",
+        "last_name": "Garcia",
+        "linkedin_url": "https://linkedin.com/in/cecelia-a-garcia-z100",
+        "profile_id": "dm_prsn_qe2ifnttaq2rioexqzwevmk6uib44tplzztmbcq"
+      },
+      "title": {
+        "current": "Scientific Project Coordinator",
+        "previous": null
+      },
+      "person_full_name": "Cecelia Garcia",
+      "person_headline": "Professional Education & Scientific Projects Manager | Educating professionals on Sj\u00f6gren\u2019s Disease",
+      "person_linkedin_url": "https://linkedin.com/in/cecelia-a-garcia-z100",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Scientific Project Coordinator",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2025-10-01T00:00:00Z",
+      "detected_at": "2026-06-04T22:31:36.303454Z",
+      "detection_lag_days": 246,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Jesus",
+        "full_name": "Jesus Durand Calle",
+        "handle": "jesus-durand",
+        "headline": "Microbial Engineer | MSc. Student in Biotechnology",
+        "last_name": "Durand Calle",
+        "linkedin_url": "https://linkedin.com/in/jesus-durand",
+        "profile_id": "dm_prsn_heefxqomqwlurvzlulex4xwfbjaxsyf4lk2hxdi"
+      },
+      "title": {
+        "current": "Bioinformatics Student Assistant ",
+        "previous": null
+      },
+      "person_full_name": "Jesus Durand Calle",
+      "person_headline": "Microbial Engineer | MSc. Student in Biotechnology",
+      "person_linkedin_url": "https://linkedin.com/in/jesus-durand",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Bioinformatics Student Assistant ",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2025-10-01T00:00:00Z",
+      "detected_at": "2026-07-28T08:48:59.733813Z",
+      "detection_lag_days": 300,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "\u00c1ngela",
+        "full_name": "\u00c1ngela Garcinu\u00f1o Feliciano",
+        "handle": "\u00e1ngela-garcinu\u00f1o-feliciano-babb5a235",
+        "headline": "MSc Bioinformatics Student at DTU | \u00c9cole Polytechnique Graduate | Strong Math & CS Background | Interested in Computational Biology, Genomics and Systems Biology",
+        "last_name": "Garcinu\u00f1o Feliciano",
+        "linkedin_url": "https://linkedin.com/in/\u00e1ngela-garcinu\u00f1o-feliciano-babb5a235",
+        "profile_id": "dm_prsn_qt3fv5fqzvnjqjxhdkcso7r3rhtg5yzh6tvt57q"
+      },
+      "title": {
+        "current": "Bioinformatics Student Assistant",
+        "previous": null
+      },
+      "person_full_name": "\u00c1ngela Garcinu\u00f1o Feliciano",
+      "person_headline": "MSc Bioinformatics Student at DTU | \u00c9cole Polytechnique Graduate | Strong Math & CS Background | Interested in Computational Biology, Genomics and Systems Biology",
+      "person_linkedin_url": "https://linkedin.com/in/\u00e1ngela-garcinu\u00f1o-feliciano-babb5a235",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Bioinformatics Student Assistant",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2025-05-01T00:00:00Z",
+      "detected_at": "2026-05-08T20:06:56.967554Z",
+      "detection_lag_days": 372,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Stefanie",
+        "full_name": "Stefanie Soto",
+        "handle": "stefanie-soto",
+        "headline": "Integrated Marketing Communications  I  Brand Strategist  I  Campaign Manager  I  Digital Content Specialist  I Creative Thinker \ud83d\udda4",
+        "last_name": "Soto",
+        "linkedin_url": "https://linkedin.com/in/stefanie-soto",
+        "profile_id": "dm_prsn_nxssfd7ofs4qmj7f5dtwiogobwczttocu2mrlua"
+      },
+      "title": {
+        "current": "Global Marketing Manager",
+        "previous": null
+      },
+      "person_full_name": "Stefanie Soto",
+      "person_headline": "Integrated Marketing Communications  I  Brand Strategist  I  Campaign Manager  I  Digital Content Specialist  I Creative Thinker \ud83d\udda4",
+      "person_linkedin_url": "https://linkedin.com/in/stefanie-soto",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Global Marketing Manager",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2025-06-01T00:00:00Z",
+      "detected_at": "2026-09-22T00:40:47.888995Z",
+      "detection_lag_days": 478,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Matthew",
+        "full_name": "Matthew Coates",
+        "handle": "matthewcoates925",
+        "headline": "Lab Technician - Next-Gen Sequencing",
+        "last_name": "Coates",
+        "linkedin_url": "https://linkedin.com/in/matthewcoates925",
+        "profile_id": "dm_prsn_3ixl3yq7flru2ovu4hpokktpssauewlqpdtry4i"
+      },
+      "title": {
+        "current": "Laboratory Technician",
+        "previous": null
+      },
+      "person_full_name": "Matthew Coates",
+      "person_headline": "Lab Technician - Next-Gen Sequencing",
+      "person_linkedin_url": "https://linkedin.com/in/matthewcoates925",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Laboratory Technician",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2025-02-01T00:00:00Z",
+      "detected_at": "2026-07-28T08:51:42.920829Z",
+      "detection_lag_days": 542,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Brendan",
+        "full_name": "Brendan Connolly",
+        "handle": "brendan-connolly-1b04913b8",
+        "headline": "Associate Bioinformatics Analyst at cmbio",
+        "last_name": "Connolly",
+        "linkedin_url": "https://linkedin.com/in/brendan-connolly-1b04913b8",
+        "profile_id": "dm_prsn_mf5k2dh7e5n6rrjg3qg7ql574iqummxzotzcwmi"
+      },
+      "title": {
+        "current": "Associate Bioinformatics Analyst",
+        "previous": null
+      },
+      "person_full_name": "Brendan Connolly",
+      "person_headline": "Associate Bioinformatics Analyst at cmbio",
+      "person_linkedin_url": "https://linkedin.com/in/brendan-connolly-1b04913b8",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Associate Bioinformatics Analyst",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:13Z"
+    },
+    {
+      "changed_at": "2024-12-01T00:00:00Z",
+      "detected_at": "2026-05-30T03:56:00.056054Z",
+      "detection_lag_days": 545,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Huai",
+        "full_name": "Huai Li",
+        "handle": "huai-li-242b441",
+        "headline": "VP of Engineering at Cmbio",
+        "last_name": "Li",
+        "linkedin_url": "https://linkedin.com/in/huai-li-242b441",
+        "profile_id": "dm_prsn_liwvw2n3e5k665nksaj3uzwypefrex5npxactdy"
+      },
+      "title": {
+        "current": "VP of Engineering",
+        "previous": null
+      },
+      "person_full_name": "Huai Li",
+      "person_headline": "VP of Engineering at Cmbio",
+      "person_linkedin_url": "https://linkedin.com/in/huai-li-242b441",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "VP of Engineering",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2024-11-01T00:00:00Z",
+      "detected_at": "2026-05-04T11:25:55.018853Z",
+      "detection_lag_days": 549,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Mahadi",
+        "full_name": "Mahadi Hassan",
+        "handle": "itsmahadi007",
+        "headline": "Lead Software Engineer | AI automation that works 24/7 \ud83d\ude80\ud83e\udd16\u2728",
+        "last_name": "Hassan",
+        "linkedin_url": "https://linkedin.com/in/itsmahadi007",
+        "profile_id": "dm_prsn_snq3jjwucxughngi7wywjgpjswkcnklcaphshja"
+      },
+      "title": {
+        "current": "Senior Backend Engineer ",
+        "previous": null
+      },
+      "person_full_name": "Mahadi Hassan",
+      "person_headline": "Lead Software Engineer | AI automation that works 24/7 \ud83d\ude80\ud83e\udd16\u2728",
+      "person_linkedin_url": "https://linkedin.com/in/itsmahadi007",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Senior Backend Engineer ",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2025-01-01T00:00:00Z",
+      "detected_at": "2026-07-28T08:52:09.556693Z",
+      "detection_lag_days": 573,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Kelly",
+        "full_name": "Kelly Moffat",
+        "handle": "kelly-moffat-98b38723",
+        "headline": "COO",
+        "last_name": "Moffat",
+        "linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+        "profile_id": "dm_prsn_mmqtj2b7425i4kfctmgxvmkq7zefj7tuujgvmma"
+      },
+      "title": {
+        "current": "Senior Vice President, NGS Operations",
+        "previous": null
+      },
+      "person_full_name": "Kelly Moffat",
+      "person_headline": "COO",
+      "person_linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Senior Vice President, NGS Operations",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2025-01-01T00:00:00Z",
+      "detected_at": "2026-08-08T18:51:06.557673Z",
+      "detection_lag_days": 584,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Anders Mohr",
+        "full_name": "Anders Mohr Christensen",
+        "handle": "anders-mohr-christensen-97b217",
+        "headline": "Group CFO at Cmbio",
+        "last_name": "Christensen",
+        "linkedin_url": "https://linkedin.com/in/anders-mohr-christensen-97b217",
+        "profile_id": "dm_prsn_odgt2q2wdjfbgphzey2c5hzw7vsjxy77hiythkq"
+      },
+      "title": {
+        "current": "Chief Financial Officer",
+        "previous": null
+      },
+      "person_full_name": "Anders Mohr Christensen",
+      "person_headline": "Group CFO at Cmbio",
+      "person_linkedin_url": "https://linkedin.com/in/anders-mohr-christensen-97b217",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Chief Financial Officer",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2023-10-01T00:00:00Z",
+      "detected_at": "2026-05-15T21:38:26.510264Z",
+      "detection_lag_days": 957,
+      "event_type": "title_change",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Manoj",
+        "full_name": "Manoj Dadlani",
+        "handle": "manojdadlani",
+        "headline": "Improving Health by Unlocking the Microbiome",
+        "last_name": "Dadlani",
+        "linkedin_url": "https://linkedin.com/in/manojdadlani",
+        "profile_id": "dm_prsn_lhy44xvf5jbub3v4bjlirmvyh5jmishsiv7unnq"
+      },
+      "title": {
+        "current": "Chief Commercial Officer",
+        "previous": "Executive Chairman"
+      },
+      "person_full_name": "Manoj Dadlani",
+      "person_headline": "Improving Health by Unlocking the Microbiome",
+      "person_linkedin_url": "https://linkedin.com/in/manojdadlani",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Chief Commercial Officer",
+      "title_previous": "Executive Chairman",
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2024-01-01T00:00:00Z",
+      "detected_at": "2026-09-22T00:17:38.370126Z",
+      "detection_lag_days": 995,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Jacob Bak",
+        "full_name": "Jacob Bak Holm, PhD",
+        "handle": "jacob-bak-holm",
+        "headline": "VP, Discovery & AI at Cmbio | From startup to a 100+ person global CRO | I lead AI and build it into a life-science business: governance, agents, data context layers, discovery and IP",
+        "last_name": "Holm, PhD",
+        "linkedin_url": "https://linkedin.com/in/jacob-bak-holm",
+        "profile_id": "dm_prsn_v6fuib6aobq4evr3yrfzzllg7fl5iscnvfbnori"
+      },
+      "title": {
+        "current": "VP & BU Leader - Product Development, Discovery, and AI",
+        "previous": null
+      },
+      "person_full_name": "Jacob Bak Holm, PhD",
+      "person_headline": "VP, Discovery & AI at Cmbio | From startup to a 100+ person global CRO | I lead AI and build it into a life-science business: governance, agents, data context layers, discovery and IP",
+      "person_linkedin_url": "https://linkedin.com/in/jacob-bak-holm",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "VP & BU Leader - Product Development, Discovery, and AI",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2022-07-01T00:00:00Z",
+      "detected_at": "2026-04-23T13:31:13.06671Z",
+      "detection_lag_days": 1392,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Marianne",
+        "full_name": "Marianne Koliana",
+        "handle": "mariannekoliana",
+        "headline": "VP, Business Development at Cmbio",
+        "last_name": "Koliana",
+        "linkedin_url": "https://linkedin.com/in/mariannekoliana",
+        "profile_id": "dm_prsn_dryylz5rjcarop3dfk4i7yjkxolradbqow7jzwi"
+      },
+      "title": {
+        "current": "VP, Business Development",
+        "previous": null
+      },
+      "person_full_name": "Marianne Koliana",
+      "person_headline": "VP, Business Development at Cmbio",
+      "person_linkedin_url": "https://linkedin.com/in/mariannekoliana",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "VP, Business Development",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2021-08-01T00:00:00Z",
+      "detected_at": "2026-04-23T13:10:16.814515Z",
+      "detection_lag_days": 1726,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Dana",
+        "full_name": "Dana Walsh",
+        "handle": "danamariewalsh",
+        "headline": "Senior Microbiome Scientist @ Cmbio | PhD, Microbiome Analysis",
+        "last_name": "Walsh",
+        "linkedin_url": "https://linkedin.com/in/danamariewalsh",
+        "profile_id": "dm_prsn_qmwjtw2czmxjx3rcqqyuluavix5tbvbtaw6aygq"
+      },
+      "title": {
+        "current": "Senior Microbiome Scientist",
+        "previous": null
+      },
+      "person_full_name": "Dana Walsh",
+      "person_headline": "Senior Microbiome Scientist @ Cmbio | PhD, Microbiome Analysis",
+      "person_linkedin_url": "https://linkedin.com/in/danamariewalsh",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Senior Microbiome Scientist",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2021-06-01T00:00:00Z",
+      "detected_at": "2026-04-28T15:03:10.671113Z",
+      "detection_lag_days": 1792,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Aron",
+        "full_name": "Aron Eklund",
+        "handle": "aron-eklund-94a13980",
+        "headline": "VP of Technology at Cmbio",
+        "last_name": "Eklund",
+        "linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+        "profile_id": "dm_prsn_riw2gkd7izkgw34wnko3frkdepv7tvpdvtzsvlq"
+      },
+      "title": {
+        "current": "VP of Technology",
+        "previous": null
+      },
+      "person_full_name": "Aron Eklund",
+      "person_headline": "VP of Technology at Cmbio",
+      "person_linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "VP of Technology",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2017-08-01T00:00:00Z",
+      "detected_at": "2026-04-28T15:03:10.671113Z",
+      "detection_lag_days": 3192,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Aron",
+        "full_name": "Aron Eklund",
+        "handle": "aron-eklund-94a13980",
+        "headline": "VP of Technology at Cmbio",
+        "last_name": "Eklund",
+        "linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+        "profile_id": "dm_prsn_riw2gkd7izkgw34wnko3frkdepv7tvpdvtzsvlq"
+      },
+      "title": {
+        "current": "Director of Bioinformatics",
+        "previous": null
+      },
+      "person_full_name": "Aron Eklund",
+      "person_headline": "VP of Technology at Cmbio",
+      "person_linkedin_url": "https://linkedin.com/in/aron-eklund-94a13980",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Director of Bioinformatics",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2015-12-01T00:00:00Z",
+      "detected_at": "2026-04-12T11:46:11.720338Z",
+      "detection_lag_days": 3785,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Morten O. A.",
+        "full_name": "Morten O. A. Sommer",
+        "handle": "morten-o-a-sommer-6064144",
+        "headline": "Researcher and Entrepreneur - delivering biotech & AI for human and planetary health",
+        "last_name": "Sommer",
+        "linkedin_url": "https://linkedin.com/in/morten-o-a-sommer-6064144",
+        "profile_id": "dm_prsn_nudgxkknajejrg7octrszyfhg4s6en3pbi6pjpy"
+      },
+      "title": {
+        "current": "Co-Founder and Board member",
+        "previous": null
+      },
+      "person_full_name": "Morten O. A. Sommer",
+      "person_headline": "Researcher and Entrepreneur - delivering biotech & AI for human and planetary health",
+      "person_linkedin_url": "https://linkedin.com/in/morten-o-a-sommer-6064144",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Co-Founder and Board member",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2015-12-01T00:00:00Z",
+      "detected_at": "2026-04-12T11:46:14.500111Z",
+      "detection_lag_days": 3785,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Rasmus",
+        "full_name": "Rasmus Vendler Toft-Kehler",
+        "handle": "rasmus-vendler-toft-kehler-419157",
+        "headline": "Entrepreneur, Company Builder & Board Member",
+        "last_name": "Vendler Toft-Kehler",
+        "linkedin_url": "https://linkedin.com/in/rasmus-vendler-toft-kehler-419157",
+        "profile_id": "dm_prsn_i5ardsj6m2fv77ylmyzjk7h242h4orstamyek7i"
+      },
+      "title": {
+        "current": "Co-Founder and Board Observer",
+        "previous": null
+      },
+      "person_full_name": "Rasmus Vendler Toft-Kehler",
+      "person_headline": "Entrepreneur, Company Builder & Board Member",
+      "person_linkedin_url": "https://linkedin.com/in/rasmus-vendler-toft-kehler-419157",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "Co-Founder and Board Observer",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2012-09-01T00:00:00Z",
+      "detected_at": "2026-07-28T08:52:09.556693Z",
+      "detection_lag_days": 5078,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/cmbio",
+        "name": "cmbio",
+        "organization_id": "dm_org_vkcdz2snkhhq3gq",
+        "slug": "cmbio"
+      },
+      "person": {
+        "first_name": "Kelly",
+        "full_name": "Kelly Moffat",
+        "handle": "kelly-moffat-98b38723",
+        "headline": "COO",
+        "last_name": "Moffat",
+        "linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+        "profile_id": "dm_prsn_mmqtj2b7425i4kfctmgxvmkq7zefj7tuujgvmma"
+      },
+      "title": {
+        "current": "US Operations & Global NGS",
+        "previous": null
+      },
+      "person_full_name": "Kelly Moffat",
+      "person_headline": "COO",
+      "person_linkedin_url": "https://linkedin.com/in/kelly-moffat-98b38723",
+      "organization_name": "cmbio",
+      "organization_linkedin_url": "https://www.linkedin.com/company/cmbio",
+      "title_current": "US Operations & Global NGS",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:15:14Z"
+    },
+    {
+      "changed_at": "2026-06-01T00:00:00Z",
+      "detected_at": "2026-07-31T23:25:12.657662Z",
+      "detection_lag_days": 60,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/prontous",
+        "name": "PRONTO Manufacturing & Fulfillment",
+        "organization_id": "dm_org_sr44vbmgu3prlhq",
+        "slug": "prontous"
+      },
+      "person": {
+        "first_name": "Justina",
+        "full_name": "Justina Z.",
+        "handle": "justinazdan",
+        "headline": "Head of Talent Acquisition @ IMPACT BRANDS | Scaling International Teams | Unicorn Hunter \ud83e\udd84",
+        "last_name": "Z.",
+        "linkedin_url": "https://linkedin.com/in/justinazdan",
+        "profile_id": "dm_prsn_5ccmcqf7zylvnbc4s3gsqa2emnvxulrbdvpvr3y"
+      },
+      "title": {
+        "current": "Talent Acquisition Partner",
+        "previous": null
+      },
+      "person_full_name": "Justina Z.",
+      "person_headline": "Head of Talent Acquisition @ IMPACT BRANDS | Scaling International Teams | Unicorn Hunter \ud83e\udd84",
+      "person_linkedin_url": "https://linkedin.com/in/justinazdan",
+      "organization_name": "PRONTO Manufacturing & Fulfillment",
+      "organization_linkedin_url": "https://www.linkedin.com/company/prontous",
+      "title_current": "Talent Acquisition Partner",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:17:35Z"
+    },
+    {
+      "changed_at": "2025-03-01T00:00:00Z",
+      "detected_at": "2026-04-24T11:07:02.676521Z",
+      "detection_lag_days": 419,
+      "event_type": "joined",
+      "organization": {
+        "linkedin_url": "https://www.linkedin.com/company/prontous",
+        "name": "PRONTO Manufacturing & Fulfillment",
+        "organization_id": "dm_org_sr44vbmgu3prlhq",
+        "slug": "prontous"
+      },
+      "person": {
+        "first_name": "K\u0119stutis Gabrielius",
+        "full_name": "K\u0119stutis Gabrielius \u0160aulys",
+        "handle": "kestutis-gabrielius-saulys",
+        "headline": "Senior R&D Specialist",
+        "last_name": "\u0160aulys",
+        "linkedin_url": "https://linkedin.com/in/kestutis-gabrielius-saulys",
+        "profile_id": "dm_prsn_tb5c2bcdaxxfadlhtm33a35fvyu2shmohlg7oya"
+      },
+      "title": {
+        "current": "Senior Research and Development Specialist",
+        "previous": null
+      },
+      "person_full_name": "K\u0119stutis Gabrielius \u0160aulys",
+      "person_headline": "Senior R&D Specialist",
+      "person_linkedin_url": "https://linkedin.com/in/kestutis-gabrielius-saulys",
+      "organization_name": "PRONTO Manufacturing & Fulfillment",
+      "organization_linkedin_url": "https://www.linkedin.com/company/prontous",
+      "title_current": "Senior Research and Development Specialist",
+      "title_previous": null,
+      "input_page": 1,
+      "fetched_at": "2026-09-28T11:17:35Z"
+    }
+  ]
+}
