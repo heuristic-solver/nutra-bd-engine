@@ -693,7 +693,8 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Nutraceutical Business Development (BD) Engine")
-    parser.add_argument("--csv", default=r"c:\Users\joela\OneDrive\Documents\Python\bd-engine\scrape_163d8bdaf5.csv", help="Path to input scrape CSV")
+    default_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "scrape_sample.csv")
+    parser.add_argument("--csv", default=default_csv, help="Path to input scrape CSV")
     parser.add_argument("--date", default="2026-10-14", help="Evaluation baseline date (YYYY-MM-DD)")
     args = parser.parse_args()
 
