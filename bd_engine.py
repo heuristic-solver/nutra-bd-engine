@@ -138,6 +138,84 @@ def clean_legal_name(company_name):
 # 2. MULTI-SOURCE COMPANY INTELLIGENCE LAYER (THEIRSTACK + APOLLO)
 # ==============================================================================
 
+def fetch_stale_jobs_theirstack(min_age_days=45, limit=20, output_path=None):
+    """Query TheirStack API for live, unfilled jobs that have been open for at least min_age_days."""
+    if not THEIRSTACK_API_KEY:
+        print("[ERROR] TheirStack API key missing.")
+        return None
+
+    print(f"\n📡 Querying TheirStack for Live Stale Requisitions (≥ {min_age_days} Days Open)...")
+    payload = {
+        "job_title_or": [
+            "Quality Assurance Manager", "Formulation Chemist", "Plant Manager",
+            "Director of Operations", "Quality Control Supervisor", "Packaging Manager",
+            "R&D Chemist", "Regulatory Affairs Specialist", "Manufacturing Supervisor"
+        ],
+        "industry_or": [
+            "Pharmaceutical Manufacturing", "Biotechnology Research", "Food and Beverage Services"
+        ],
+        "job_country_code_or": ["US"],
+        "posted_at_max_age_days": 180,
+        "discovered_at_min_age_days": min_age_days,
+        "is_closed": False,
+        "limit": limit
+    }
+
+    try:
+        r = requests.post(
+            "https://api.theirstack.com/v1/jobs/search",
+            headers=THEIRSTACK_HEADERS,
+            json=payload,
+            timeout=20
+        )
+        if not r.ok:
+            print(f"[ERROR] Failed to fetch stale jobs from TheirStack: {r.status_code} {r.text[:200]}")
+            return None
+
+        data = r.json().get("data", [])
+        print(f"✓ Retrieved {len(data)} live stale postings from TheirStack.")
+
+        stale_jobs = []
+        seen_companies = set()
+
+        for j in data:
+            co_obj = j.get("company_object") or {}
+            co_name = co_obj.get("name") or j.get("company")
+            if not co_name:
+                continue
+            # Drop third-party recruiting agencies
+            if co_obj.get("is_recruiting_agency"):
+                continue
+
+            seen_companies.add(co_name)
+            stale_jobs.append({
+                "Platform": "TheirStack Live (Stale Job Sourced)",
+                "Job Title": j.get("job_title", ""),
+                "Company": co_name,
+                "Location": j.get("short_location") or j.get("location") or "United States",
+                "Date Posted": str(j.get("date_posted") or "")[:10],
+                "Salary": j.get("salary_string") or (f"${j.get('avg_annual_salary_usd'):,.0f}" if j.get("avg_annual_salary_usd") else "N/A"),
+                "Job Link": j.get("final_url") or j.get("url") or "",
+                "Job Description": (j.get("description") or "")[:800]
+            })
+
+        out_csv = output_path or os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "stale_jobs_live.csv")
+        os.makedirs(os.path.dirname(out_csv), exist_ok=True)
+
+        with open(out_csv, "w", encoding="utf-8-sig", newline="") as f:
+            if stale_jobs:
+                writer = csv.DictWriter(f, fieldnames=list(stale_jobs[0].keys()))
+                writer.writeheader()
+                writer.writerows(stale_jobs)
+
+        print(f"✓ Filtered {len(stale_jobs)} unique direct-employer stale jobs saved to: {out_csv}\n")
+        return out_csv
+
+    except Exception as e:
+        print(f"[ERROR] Failed during stale job fetch: {e}")
+        return None
+
+
 def fetch_theirstack_company_data(company_name):
     """Query TheirStack Company Search to extract domain, apollo_id, and hiring velocity."""
     if not THEIRSTACK_API_KEY:
@@ -377,20 +455,29 @@ def analyze_department(title, jd):
 
 
 def calculate_propensity_score(job_item, company_item, open_jobs_at_company=1):
-    """Calculate multi-dimensional lead priority score (0-100)."""
-    # 1. Requisition Urgency & Stagnation (Max 30)
+    """Calculate multi-dimensional lead priority score (0-100) with deep staleness diagnostics."""
     age = job_item["age_days"]
-    if age >= 60:
+    is_stale = age >= 45
+    days_over_benchmark = max(0, age - 45)  # 45 days is standard nutra/pharma time-to-fill benchmark
+
+    # 1. Requisition Urgency & Stagnation (Max 30)
+    if age >= 90:
         stagnation_pts = 30
-        stagnation_status = "CRITICAL_STAGNATION (>60 Days Open)"
+        stagnation_status = "CHRONIC_VACANCY (>90 Days Open)"
+    elif age >= 60:
+        stagnation_pts = 28
+        stagnation_status = "CRITICAL_STALE (60-89 Days Open)"
+    elif age >= 45:
+        stagnation_pts = 22
+        stagnation_status = "AGING_REQUISITION (45-59 Days Open)"
     elif age >= 30:
-        stagnation_pts = 20
-        stagnation_status = "AGING_REQUISITION (30-59 Days Open)"
+        stagnation_pts = 16
+        stagnation_status = "MODERATE_SEARCH (30-44 Days Open)"
     elif age >= 14:
-        stagnation_pts = 12
+        stagnation_pts = 10
         stagnation_status = "ACTIVE_SEARCH (14-29 Days Open)"
     else:
-        stagnation_pts = 6
+        stagnation_pts = 5
         stagnation_status = "FRESH_POSTING (<14 Days Open)"
 
     # Urgency keyword boost
@@ -398,6 +485,15 @@ def calculate_propensity_score(job_item, company_item, open_jobs_at_company=1):
     title_lower = job_item["title"].lower()
     if any(k in jd_lower or k in title_lower for k in ["all shifts", "immediate", "urgent", "hiring immediately", "asap"]):
         stagnation_pts = min(30, stagnation_pts + 5)
+
+    # Vacancy Drag & Financial Disruption Risk
+    sen_label = job_item["seniority"]
+    if age >= 60 and any(k in sen_label for k in ["Director", "VP", "Manager", "Lead"]):
+        drag_risk = "CRITICAL_OPERATIONAL_RISK ($25k-$50k Est. Overtime / Release Delay)"
+    elif age >= 45:
+        drag_risk = "ELEVATED_CAPACITY_PRESSURE (Bottleneck in Production/QA)"
+    else:
+        drag_risk = "NORMAL_RECRUITMENT_TIMELINE"
 
     # 2. Executive Seniority & Placement Fee Value (Max 25)
     seniority_pts = job_item["seniority_pts"]
@@ -437,14 +533,14 @@ def calculate_propensity_score(job_item, company_item, open_jobs_at_company=1):
     else:
         tier = "TIER_3_MONITOR_VOLUME"
 
-    return total_score, tier, stagnation_status
+    return total_score, tier, stagnation_status, is_stale, days_over_benchmark, drag_risk
 
 
 # ==============================================================================
 # 4. LOCAL GEMMA REASONING (OLLAMA ZERO-COST INFERENCE)
 # ==============================================================================
 
-def run_gemma_reasoning(job_item, company_item):
+def run_gemma_reasoning(job_item, company_item, stale_info=None):
     """Execute local Gemma reasoning to produce strategic recruiter diagnostic thesis."""
     t_name = company_item.get("top_contact_name") or "Hiring Authority"
     t_title = company_item.get("top_contact_title") or "Operations Leadership"
@@ -453,6 +549,13 @@ def run_gemma_reasoning(job_item, company_item):
     loc = job_item.get("location")
     age = job_item.get("age_days")
     emp = company_item.get("employees") or "mid-market"
+
+    stale_text = ""
+    if stale_info:
+        stale_status, is_stale, days_over, drag_risk = stale_info
+        stale_text = f"""
+Staleness Assessment: {stale_status} ({age} days open | {days_over} days past industry 45-day benchmark)
+Operational Drag Risk: {drag_risk}"""
 
     prompt = f"""You are an elite executive recruiter and business development strategist in the nutraceutical, dietary supplement, and pharmaceutical contract manufacturing (CDMO) industry.
 Analyze this job posting lead and generate a concrete diagnostic thesis for our business development team.
@@ -464,14 +567,14 @@ Job Title: {j_title}
 Department: {job_item.get('department')}
 Location: {loc}
 Days Open on Job Board: {age} days
-Target Hiring Authority: {t_name} ({t_title})
+Target Hiring Authority: {t_name} ({t_title}){stale_text}
 
 Brief JD Context:
 {job_item.get('jd')[:350]}
 
 Generate a valid JSON object with EXACTLY this single key:
 {{
-  "recruiter_thesis": "A concise 3-4 sentence strategic diagnostic explaining why keeping this role open for {age} days creates acute operational drag in {loc}, the candidate scarcity in this specific technical domain, why their internal recruitment has stalled, and the specific strategic angle our agency should leverage to pitch our search services."
+  "recruiter_thesis": "A concise 3-4 sentence strategic diagnostic explaining why keeping this role open for {age} days creates acute operational drag in {loc}, the candidate scarcity in this specific technical domain, why their internal recruitment has stalled past the 45-day benchmark, and the specific strategic angle our agency should leverage to pitch our search services."
 }}
 
 Format your response as valid JSON only. Do not include markdown or explanations outside the JSON."""
@@ -503,7 +606,7 @@ Format your response as valid JSON only. Do not include markdown or explanations
 
     # High-quality deterministic fallback if LLM is offline or times out
     thesis = (
-        f"{c_name} has had the {j_title} requisition open for {age} days in {loc}. "
+        f"{c_name} has had the {j_title} requisition open for {age} days in {loc} (past the 45-day industry time-to-fill benchmark). "
         f"For a {emp}-employee operation with ongoing hiring velocity, keeping this critical seat vacant creates immediate operational drag and overtime expenses. "
         f"In-house talent acquisition is clearly struggling with local candidate availability, making this a prime agency placement opportunity."
     )
@@ -604,14 +707,17 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
         co_prof = company_profiles.get(co_raw, {})
         co_job_count = company_job_counts.get(co_raw, 1)
 
-        # Calculate Propensity Score
-        score, tier, stagnation_status = calculate_propensity_score(j, co_prof, open_jobs_at_company=co_job_count)
+        # Calculate Propensity Score & Stale Analytics
+        score, tier, stagnation_status, is_stale, days_over_benchmark, drag_risk = calculate_propensity_score(
+            j, co_prof, open_jobs_at_company=co_job_count
+        )
 
+        stale_label = f"STALE (+{days_over_benchmark}d over benchmark)" if is_stale else "NORMAL"
         print(f"[{idx:2}/{len(jobs)}] {co_prof.get('company_name', co_raw)} | {j['title']}")
-        print(f"     Score: {score}/100 ({tier}) | Open: {j['age_days']} days | Level: {j['seniority']}")
+        print(f"     Score: {score}/100 ({tier}) | Open: {j['age_days']} days ({stale_label}) | Level: {j['seniority']}")
 
-        # Execute Gemma Reasoning
-        thesis = run_gemma_reasoning(j, co_prof)
+        # Execute Gemma Reasoning with Stale Diagnostics
+        thesis = run_gemma_reasoning(j, co_prof, stale_info=(stagnation_status, is_stale, days_over_benchmark, drag_risk))
 
         scored_leads.append({
             "lead_rank": 0,
@@ -625,7 +731,10 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
             "fee_potential": j["fee_estimate"],
             "date_posted": j["date_posted"],
             "days_open": j["age_days"],
+            "is_stale": "YES (High Urgency)" if is_stale else "NO",
+            "days_over_benchmark": days_over_benchmark,
             "requisition_status": stagnation_status,
+            "vacancy_drag_risk": drag_risk,
             "job_location": j["location"],
             "company_domain": co_prof.get("domain", "N/A"),
             "company_employees": co_prof.get("employees", "N/A"),
@@ -653,10 +762,10 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
     csv_fields = [
         "lead_rank", "propensity_score", "priority_tier", "company_name",
         "job_title", "department", "seniority_level", "fee_potential",
-        "days_open", "requisition_status", "date_posted", "job_location",
-        "company_domain", "company_employees", "company_revenue", "hiring_velocity_30d", "company_hq",
-        "target_contact_name", "target_contact_title", "target_contact_linkedin",
-        "recruiter_thesis", "job_link"
+        "days_open", "is_stale", "days_over_benchmark", "requisition_status", "vacancy_drag_risk",
+        "date_posted", "job_location", "company_domain", "company_employees", "company_revenue",
+        "hiring_velocity_30d", "company_hq", "target_contact_name", "target_contact_title",
+        "target_contact_linkedin", "recruiter_thesis", "job_link"
     ]
 
     with open(csv_out_path, "w", encoding="utf-8-sig", newline="") as f:
@@ -688,7 +797,17 @@ if __name__ == "__main__":
     default_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "scrape_sample.csv")
     parser.add_argument("--csv", default=default_csv, help="Path to input scrape CSV")
     parser.add_argument("--date", default="2026-10-14", help="Evaluation baseline date (YYYY-MM-DD)")
+    parser.add_argument("--fetch-stale", action="store_true", help="Fetch live stale jobs from TheirStack (≥ 45 days open)")
+    parser.add_argument("--min-age", type=int, default=45, help="Minimum days open for stale job fetch (default: 45)")
+    parser.add_argument("--limit", type=int, default=20, help="Number of stale jobs to fetch (default: 20)")
     args = parser.parse_args()
 
     eval_d = parse_date_flexible(args.date) or date(2026, 10, 14)
-    run_bd_engine(args.csv, eval_date=eval_d)
+
+    target_csv = args.csv
+    if args.fetch_stale:
+        fetched_csv = fetch_stale_jobs_theirstack(min_age_days=args.min_age, limit=args.limit)
+        if fetched_csv:
+            target_csv = fetched_csv
+
+    run_bd_engine(target_csv, eval_date=eval_d)
