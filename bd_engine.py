@@ -445,7 +445,7 @@ def calculate_propensity_score(job_item, company_item, open_jobs_at_company=1):
 # ==============================================================================
 
 def run_gemma_reasoning(job_item, company_item):
-    """Execute local Gemma reasoning to produce strategic diagnostic and personalized pitch."""
+    """Execute local Gemma reasoning to produce strategic recruiter diagnostic thesis."""
     t_name = company_item.get("top_contact_name") or "Hiring Authority"
     t_title = company_item.get("top_contact_title") or "Operations Leadership"
     c_name = company_item.get("company_name")
@@ -455,7 +455,7 @@ def run_gemma_reasoning(job_item, company_item):
     emp = company_item.get("employees") or "mid-market"
 
     prompt = f"""You are an elite executive recruiter and business development strategist in the nutraceutical, dietary supplement, and pharmaceutical contract manufacturing (CDMO) industry.
-Analyze this job posting lead and generate a concrete diagnostic for our business development team.
+Analyze this job posting lead and generate a concrete diagnostic thesis for our business development team.
 
 Target Company: {c_name}
 Website: {company_item.get('domain')}
@@ -464,14 +464,15 @@ Job Title: {j_title}
 Department: {job_item.get('department')}
 Location: {loc}
 Days Open on Job Board: {age} days
-Target Hiring Authority / Executive: {t_name} ({t_title})
+Target Hiring Authority: {t_name} ({t_title})
 
 Brief JD Context:
 {job_item.get('jd')[:350]}
 
-Generate a valid JSON object with EXACTLY these two keys:
-1. "recruiter_thesis": A concise 2-3 sentence diagnostic explaining why keeping this role open for {age} days creates acute operational drag in {loc}, and why our recruitment agency can fill this vacancy faster than their internal team.
-2. "personalized_outreach_pitch": A concise 3-4 sentence cold outreach email/LinkedIn message directed to {t_name} acknowledging their search for a {j_title} in {loc}, noting the technical talent scarcity in dietary supplement manufacturing, and proposing 2 pre-screened candidates for an introductory conversation.
+Generate a valid JSON object with EXACTLY this single key:
+{{
+  "recruiter_thesis": "A concise 3-4 sentence strategic diagnostic explaining why keeping this role open for {age} days creates acute operational drag in {loc}, the candidate scarcity in this specific technical domain, why their internal recruitment has stalled, and the specific strategic angle our agency should leverage to pitch our search services."
+}}
 
 Format your response as valid JSON only. Do not include markdown or explanations outside the JSON."""
 
@@ -483,7 +484,7 @@ Format your response as valid JSON only. Do not include markdown or explanations
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "num_predict": 500,
+                    "num_predict": 400,
                     "temperature": 0.2
                 }
             },
@@ -495,9 +496,8 @@ Format your response as valid JSON only. Do not include markdown or explanations
             if match:
                 res_json = json.loads(match.group(0))
                 thesis = res_json.get("recruiter_thesis", "").strip()
-                pitch = res_json.get("personalized_outreach_pitch", "").strip()
-                if thesis and pitch:
-                    return thesis, pitch
+                if thesis:
+                    return thesis
     except Exception as e:
         pass
 
@@ -507,14 +507,7 @@ Format your response as valid JSON only. Do not include markdown or explanations
         f"For a {emp}-employee operation with ongoing hiring velocity, keeping this critical seat vacant creates immediate operational drag and overtime expenses. "
         f"In-house talent acquisition is clearly struggling with local candidate availability, making this a prime agency placement opportunity."
     )
-    first_name = t_name.split()[0] if t_name else "there"
-    pitch = (
-        f"Hi {first_name}, I noticed {c_name} has been actively searching for a {j_title} in {loc}. "
-        f"Given the stringent cGMP and technical requirements in dietary supplement manufacturing, these roles are notoriously difficult to source locally. "
-        f"Our team specializes exclusively in nutraceutical talent acquisition, and we currently have 2 pre-screened candidates with direct industry experience ready for interviews. "
-        f"Would you be open to a brief 10-minute sync this week to review their credentials?"
-    )
-    return thesis, pitch
+    return thesis
 
 
 # ==============================================================================
@@ -618,7 +611,7 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
         print(f"     Score: {score}/100 ({tier}) | Open: {j['age_days']} days | Level: {j['seniority']}")
 
         # Execute Gemma Reasoning
-        thesis, pitch = run_gemma_reasoning(j, co_prof)
+        thesis = run_gemma_reasoning(j, co_prof)
 
         scored_leads.append({
             "lead_rank": 0,
@@ -643,7 +636,6 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
             "target_contact_title": co_prof.get("top_contact_title", "N/A"),
             "target_contact_linkedin": co_prof.get("top_contact_linkedin", "N/A"),
             "recruiter_thesis": thesis,
-            "outreach_pitch_hook": pitch,
             "job_link": j["job_link"],
             "platform": j["platform"]
         })
@@ -664,7 +656,7 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None):
         "days_open", "requisition_status", "date_posted", "job_location",
         "company_domain", "company_employees", "company_revenue", "hiring_velocity_30d", "company_hq",
         "target_contact_name", "target_contact_title", "target_contact_linkedin",
-        "recruiter_thesis", "outreach_pitch_hook", "job_link"
+        "recruiter_thesis", "job_link"
     ]
 
     with open(csv_out_path, "w", encoding="utf-8-sig", newline="") as f:

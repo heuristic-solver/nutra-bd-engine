@@ -4,3 +4,6 @@ __pycache__/
 *$py.class
 venv/
 .venv/
+
+# Generated run outputs
+job_bd_leads_*
