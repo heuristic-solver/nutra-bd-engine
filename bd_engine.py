@@ -7,11 +7,18 @@ import shutil
 import argparse
 from datetime import datetime, date
 import requests
+import socket
 from dotenv import load_dotenv
+import urllib3.util.connection as urllib3_cn
 
-# Set UTF-8 encoding for Windows terminals
+# Force IPv4 connection to prevent Windows IPv6 DNS SYN timeouts on external APIs
+urllib3_cn.allowed_gai_family = lambda: socket.AF_INET
+
+# Set UTF-8 encoding and unbuffered line output for Windows terminals and background tasks
 if sys.stdout and hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", line_buffering=True)
 
 # Load environment variables
 load_dotenv(r"c:\Users\joela\OneDrive\Documents\Python\bd-engine\.env")
