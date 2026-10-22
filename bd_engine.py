@@ -19,7 +19,8 @@ load_dotenv(r"c:\Users\joela\OneDrive\Documents\Python\bd-engine\.env")
 APOLLO_API_KEY = os.getenv("APOLLO_API_KEY")
 THEIRSTACK_API_KEY = os.getenv("THEIRSTACK_API_KEY")
 APIFY_TOKEN = os.getenv("APIFY_TOKEN")
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434/api/generate")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-5")
 
 try:
     from apify.client import ApifyWrapper
@@ -45,6 +46,12 @@ APOLLO_HEADERS = {
 THEIRSTACK_HEADERS = {
     "Authorization": f"Bearer {THEIRSTACK_API_KEY or ''}",
     "Content-Type": "application/json"
+}
+
+ANTHROPIC_HEADERS = {
+    "x-api-key": ANTHROPIC_API_KEY or "",
+    "anthropic-version": "2023-06-01",
+    "content-type": "application/json"
 }
 
 # Pre-known domain overrides for common edge cases
@@ -655,35 +662,12 @@ def calculate_propensity_score(job_item, company_item, open_jobs_at_company=1):
 
 
 # ==============================================================================
-# 4. LOCAL GEMMA REASONING (OLLAMA ZERO-COST INFERENCE)
+# 4. CLAUDE REASONING (ANTHROPIC MULTI-SIGNAL STRATEGIC SYNTHESIS)
 # ==============================================================================
 
-def prewarm_ollama(model="gemma3:latest"):
-    """Pre-warm local Ollama model with 4096 context to ensure 100% GPU offload and sub-second inference."""
-    try:
-        r = requests.post(
-            OLLAMA_URL,
-            json={
-                "model": model,
-                "prompt": "ping",
-                "stream": False,
-                "options": {
-                    "num_ctx": 4096
-                }
-            },
-            timeout=30
-        )
-        if r.ok:
-            print(f"✓ Local Ollama '{model}' pre-warmed and running on 100% GPU (4k context).\n")
-            return True
-    except Exception as e:
-        print(f"⚠️ Ollama pre-warm note: {e} (Engine will use deterministic reasoning if local LLM is offline)\n")
-    return False
-
-
-def run_gemma_reasoning(job_item, company_item, stale_info=None, co_occurring_openings=None):
+def run_claude_reasoning(job_item, company_item, stale_info=None, co_occurring_openings=None):
     """
-    Execute local Gemma multi-signal reasoning:
+    Execute Claude multi-signal reasoning:
     Cross-correlates leadership transitions, facility expansion clusters, tech stack,
     and compliance pressure to identify non-obvious patterns and strategic pitch wedges.
     """
@@ -704,10 +688,7 @@ def run_gemma_reasoning(job_item, company_item, stale_info=None, co_occurring_op
     moves_text = "\n".join([f"- {m}" for m in moves[:4]]) if moves else "No recent executive transitions recorded in past 12 months."
     openings_text = ", ".join(co_occurring_openings[:5]) if co_occurring_openings else j_title
 
-    prompt = f"""You are an elite executive recruiter and business development strategist in the nutraceutical, dietary supplement, and pharmaceutical contract manufacturing (CDMO) industry.
-Perform multi-source signal fusion and cross-correlate hidden relations to formulate a high-converting recruiter diagnostic thesis.
-
-Target Company: {c_name}
+    prompt = f"""Target Company: {c_name}
 Domain: {company_item.get('domain')} | Scale: {emp} employees | 30d Hiring Velocity: {velocity} jobs
 Job Title: {j_title}
 Department: {job_item.get('department')}
@@ -735,36 +716,38 @@ Return a valid JSON object with EXACTLY these keys:
 }}
 Format your response as valid JSON only."""
 
-    try:
-        resp = requests.post(
-            OLLAMA_URL,
-            json={
-                "model": "gemma3:latest",
-                "prompt": prompt,
-                "stream": False,
-                "format": "json",
-                "options": {
-                    "num_ctx": 4096,
-                    "num_predict": 500,
-                    "temperature": 0.2
-                }
-            },
-            timeout=60
-        )
-        if resp.ok:
-            txt = resp.json().get("response", "")
-            match = re.search(r"\{.*\}", txt, re.DOTALL)
-            if match:
-                res_json = json.loads(match.group(0))
-                return {
-                    "detected_patterns": res_json.get("detected_patterns") or ["REQUISITION_STAGNATION"],
-                    "hidden_relations": res_json.get("hidden_relations", "").strip(),
-                    "operational_drag_cost_est": res_json.get("operational_drag_cost_est", "").strip(),
-                    "strategic_pitch_wedge": res_json.get("strategic_pitch_wedge", "").strip(),
-                    "recruiter_thesis": res_json.get("recruiter_thesis", "").strip()
-                }
-    except Exception:
-        pass
+    if ANTHROPIC_API_KEY:
+        try:
+            payload = {
+                "model": ANTHROPIC_MODEL,
+                "max_tokens": 2000,
+                "system": "You are an elite executive recruiter and business development strategist in the nutraceutical, dietary supplement, and pharmaceutical contract manufacturing (CDMO) industry. Perform multi-source signal fusion and cross-correlate hidden relations to formulate a high-converting recruiter diagnostic thesis. Always respond strictly in valid JSON.",
+                "messages": [
+                    {"role": "user", "content": prompt}
+                ]
+            }
+            resp = requests.post(
+                "https://api.anthropic.com/v1/messages",
+                json=payload,
+                headers=ANTHROPIC_HEADERS,
+                timeout=45
+            )
+            if resp.ok:
+                data = resp.json()
+                content_blocks = data.get("content", [])
+                txt = "".join([b.get("text", "") for b in content_blocks if b.get("type") == "text"])
+                match = re.search(r"\{.*\}", txt, re.DOTALL)
+                if match:
+                    res_json = json.loads(match.group(0))
+                    return {
+                        "detected_patterns": res_json.get("detected_patterns") or ["REQUISITION_STAGNATION"],
+                        "hidden_relations": str(res_json.get("hidden_relations", "")).strip(),
+                        "operational_drag_cost_est": str(res_json.get("operational_drag_cost_est", "")).strip(),
+                        "strategic_pitch_wedge": str(res_json.get("strategic_pitch_wedge", "")).strip(),
+                        "recruiter_thesis": str(res_json.get("recruiter_thesis", "")).strip()
+                    }
+        except Exception:
+            pass
 
     # Intelligent deterministic fallback synthesizing the available signals
     patterns = []
@@ -777,14 +760,6 @@ Format your response as valid JSON only."""
         patterns.append("NEW_LEADERSHIP_MANDATE")
     elif moves:
         patterns.append("NEW_LEADERSHIP_MANDATE")
-    if len(co_occurring_openings or []) >= 2:
-        patterns.append("CAPACITY_EXPANSION_CLUSTER")
-    if is_stale:
-        patterns.append("REQUISITION_STAGNATION")
-    if "Active FDA" in fda:
-        patterns.append("COMPLIANCE_FIRE_DRILL")
-    if not patterns:
-        patterns.append("TALENT_SCARCITY")
     if len(co_occurring_openings or []) >= 2:
         patterns.append("CAPACITY_EXPANSION_CLUSTER")
     if is_stale:
@@ -836,11 +811,9 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None, enable_social_radar
     print("🚀 NUTRACEUTICAL BUSINESS DEVELOPMENT (BD) ENGINE")
     print(f"📅 Evaluation Date: {eval_date.strftime('%B %d, %Y')}")
     print(f"📥 Input File: {csv_path}")
+    print(f"🧠 Reasoning Engine: Claude ({ANTHROPIC_MODEL})")
     print(f"📡 0-Day Social Radar: {'ENABLED (Apify HarvestAPI)' if enable_social_radar else 'DISABLED'}")
     print("=" * 80 + "\n")
-
-    # Step 0: Pre-warm Local Reasoning LLM
-    prewarm_ollama()
 
     # Step 1: Ingest CSV
     jobs = []
@@ -932,8 +905,8 @@ def run_bd_engine(csv_path, eval_date=None, output_dir=None, enable_social_radar
         print(f"[{idx:2}/{len(jobs)}] {co_prof.get('company_name', co_raw)} | {j['title']}")
         print(f"     Score: {score}/100 ({tier}) | Open: {j['age_days']} days ({stale_label}) | Level: {j['seniority']}")
 
-        # Execute Multi-Signal Gemma Reasoning
-        reasoning_res = run_gemma_reasoning(
+        # Execute Multi-Signal Claude Reasoning
+        reasoning_res = run_claude_reasoning(
             j,
             co_prof,
             stale_info=(stagnation_status, is_stale, days_over_benchmark, drag_risk),

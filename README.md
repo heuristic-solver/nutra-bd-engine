@@ -58,11 +58,11 @@ bd-engine/
 * **0-Day Post Search (`harvestapi/linkedin-post-search`):** Captures individual posts announcing departures (*"my last day..."*, *"new chapter..."*) and joins without requiring personal LinkedIn cookies or accounts.
 * **Company Feed Monitor (`harvestapi/linkedin-company-posts`):** Scrapes official company posts for welcome announcements, promotions, and facility expansions.
 
-### 5. Local AI Reasoning Engine (Gemma 3 via Ollama)
-* **Local GPU Inference:** Runs `gemma3:latest` locally with 100% GPU offload (free, private, 4k context window).
+### 5. Multi-Signal Reasoning Engine (Claude)
+* **Anthropic Claude Integration:** Powered by Anthropic's Claude API (`claude-sonnet-5` / `claude-haiku-5-5`) for high-order executive diagnostic thesis generation.
 * **Structural Pattern Discovery:** Uncovers non-obvious operational relations (`COMMERCIAL_PLANT_IMBALANCE`, `UNANNOUNCED_DEPARTURE`, `COMPLIANCE_FIRE_DRILL`, `TECH_STACK_BOTTLENECK`).
 * **Financial Drag Modeling:** Estimates monthly operational drag ($35,000–$60,000/month in overtime burn, lot holds, and batch release delays).
-* **Deterministic Fallback:** Robust heuristic backup ensures the pipeline completes successfully even if local Ollama is offline.
+* **Deterministic Fallback:** Robust heuristic backup ensures the pipeline completes successfully even if network or API limits occur.
 
 ---
 
@@ -77,7 +77,8 @@ Fill in your active API keys in `.env`:
 * `THEIRSTACK_API_KEY`: TheirStack API key
 * `APIFY_TOKEN`: Apify API token (optional, for 0-day LinkedIn post scraping)
 * `PDL_API_KEY`: People Data Labs API key (optional)
-* `OLLAMA_URL`: Local Ollama instance (default: `http://127.0.0.1:11434/api/generate`)
+* `ANTHROPIC_API_KEY`: Anthropic API key for Claude reasoning
+* `ANTHROPIC_MODEL`: Claude model to use (default: `claude-sonnet-5`)
 
 ### 2. Install Dependencies
 ```bash
