@@ -1,6 +1,8 @@
 # Nutraceutical Business Development (BD) Engine
 
-A multi-source talent acquisition and business development intelligence engine built specifically for Nutraceutical, Functional Food, Dietary Supplement, and Natural Health Products recruitment.
+An automated intelligence and reasoning pipeline built specifically for executive recruiting, talent acquisition, and business development in the **Nutraceutical, Dietary Supplement, Functional Food, and Pharmaceutical Contract Manufacturing (CDMO)** sectors.
+
+The engine replaces generic cold pitching with factual, multi-source operational diagnostics by fusing job staleness, corporate hiring velocity, verified leadership transitions, industrial automation stacks, and regulatory compliance records.
 
 ---
 
@@ -8,72 +10,105 @@ A multi-source talent acquisition and business development intelligence engine b
 
 ```
 bd-engine/
+├── bd_engine.py                               # Master BD Engine (Sourcing, Enrichment, Scoring & Reasoning)
+│
 ├── apollo/                                    # Apollo.io Intelligence Subsystem
-│   ├── apollo_openapi.json                    # Full official Apollo OpenAPI v2 specification
+│   ├── apollo_openapi.json                    # Official Apollo OpenAPI v2 specification
 │   ├── apollo_endpoints_catalog.json          # Cataloged 75 endpoints & 81 operations
-│   ├── run_apollo_20co_rich.py                # 20-company live enrichment & executive discovery
-│   ├── find_apollo_role_changes.py            # Deep leadership join & departure tracking
-│   ├── apollo_20co_companies_enriched.csv     # Master firmographics & technology stack
-│   ├── apollo_20co_decision_makers.csv        # Key senior recruitment decision-makers
-│   ├── apollo_20co_role_changes.csv           # 101 tracked career events (joins, departures)
 │   └── README.md                              # Comprehensive Apollo API & endpoint reference
 │
-├── run_signalbase_20co.py                     # SignalBase runner for 20 nutraceutical companies
-├── generate_demo_csv.py                       # SignalBase core signal enrichment & formatting
-├── update_demo_csv.py                         # SignalBase signal updater
-├── signalbase_demo_enriched.csv               # Enriched SignalBase dataset
-├── signalbase_20co_enriched.csv               # 20-company SignalBase run dataset
+├── theirstack/                                # TheirStack Job Telemetry & Account Discovery
+│   ├── theirstack_openapi.json                # Complete OpenAPI 3.0 specification (49 endpoints)
+│   └── README.md                              # Job search filters & credit optimization reference
 │
-├── run_pdl_demo.py                            # People Data Labs (PDL) demo enrichment
-├── run_pdl_full.py                            # PDL full dataset enrichment pipeline
-├── export_pdl_results.py                      # PDL output exporter
-├── build_full_results.py                      # Multi-source intelligence consolidator
+├── apify/                                     # Apify Cloud Scraper Subsystem (Cookie-Free)
+│   ├── client.py                              # Safe wrapper with rate limit & quota protections
+│   ├── actors.py                              # 0-Day LinkedIn post radar & company feed scrapers
+│   └── runner.py                              # Verification & test runner
 │
-├── Demo List - Sheet1.csv                     # Primary nutraceutical input targets
+├── data/                                      # Data Store & Benchmark Cohorts
+│   ├── scrape_sample.csv                      # Sample 10-job benchmark cohort
+│   ├── stale_jobs_live.csv                    # Live stale requisitions (>= 45 days open)
+│   └── random_10_companies.csv                # Account test cohort
+│
 ├── .env.example                               # Environment template
+├── requirements.txt                           # Python dependencies
 └── LICENSE                                    # License
 ```
 
 ---
 
-## Data Providers & Signal Pipelines
+## Data Providers & Multi-Source Signal Layers
 
-### 1. Apollo.io Intelligence Engine (`apollo/`)
-* **Endpoint Catalog:** Fully mapped and parsed 75 REST routes.
-* **Firmographics & Stack:** Organization enrichment, annual revenues, employee ranges, tech stacks, and active job openings count.
-* **Executive Decision-Makers:** Identification of VP, Director, and C-Suite contacts.
-* **Role Change & Departure Detection:** Automated parsing of `employment_history[]` arrays tracking recent leadership joins and departures across candidate pools.
+### 1. TheirStack Telemetry & Job Sourcing (`theirstack/`)
+* **Autonomous Stale Job Hunting (`/v1/jobs/search`):** Sources live US manufacturing and QA jobs that have been open for $\ge 45$ days across hundreds of ATS platforms, automatically stripping out third-party recruiting agencies.
+* **Hiring Velocity Metric (`num_jobs_last_30_days`):** Measures 30-day corporate hiring momentum to detect expansion crunches versus hiring freezes.
+* **Credit Optimized:** Company queries locked to `"limit": 1` to strictly consume 3 credits flat.
 
-### 2. SignalBase Signals (`run_signalbase_20co.py`, `generate_demo_csv.py`)
-* Connects to `https://www.trysignalbase.com/api/v2`.
-* Tracks hiring surges, executive job changes, funding events, and corporate acquisitions.
+### 2. Apollo.io Intelligence Engine (`apollo/`)
+* **Organization Firmographics:** Verified employee headcounts, estimated revenues, and installed technology stacks (ERP, QMS, SCADA/PLC).
+* **Executive Decision-Makers:** Identification and contact unmasking of VPs, Directors, and C-Suite hiring authorities.
+* **Verified Mobility Tracking:** Automated parsing of `employment_history[]` arrays tracking internal promotions and external hires strictly for 2025–2026.
 
-### 3. People Data Labs (PDL) (`run_pdl_demo.py`, `run_pdl_full.py`)
-* Company firmographics and person roster enrichment.
-* Historical career transitions and leadership departure analytics.
+### 3. openFDA Compliance Scanner
+* **Regulatory Radar:** Real-time query of the FDA drug and dietary supplement enforcement database.
+* **Audit Exposure:** Detects active warning letters, Class I/II/III recalls, and CGMP deviations (e.g. raw material excipient contaminations).
+
+### 4. Apify LinkedIn Social Radar (`apify/`)
+* **0-Day Post Search (`harvestapi/linkedin-post-search`):** Captures individual posts announcing departures (*"my last day..."*, *"new chapter..."*) and joins without requiring personal LinkedIn cookies or accounts.
+* **Company Feed Monitor (`harvestapi/linkedin-company-posts`):** Scrapes official company posts for welcome announcements, promotions, and facility expansions.
+
+### 5. Local AI Reasoning Engine (Gemma 3 via Ollama)
+* **Local GPU Inference:** Runs `gemma3:latest` locally with 100% GPU offload (free, private, 4k context window).
+* **Structural Pattern Discovery:** Uncovers non-obvious operational relations (`COMMERCIAL_PLANT_IMBALANCE`, `UNANNOUNCED_DEPARTURE`, `COMPLIANCE_FIRE_DRILL`, `TECH_STACK_BOTTLENECK`).
+* **Financial Drag Modeling:** Estimates monthly operational drag ($35,000–$60,000/month in overtime burn, lot holds, and batch release delays).
+* **Deterministic Fallback:** Robust heuristic backup ensures the pipeline completes successfully even if local Ollama is offline.
 
 ---
 
 ## Setup & Execution
 
-### 1. Environment Setup
+### 1. Environment Configuration
 ```bash
 cp .env.example .env
 ```
-Fill in the respective API keys (`APOLLO_API_KEY`, `SIGNALBASE_API_KEY`, `PDL_API_KEY`).
+Fill in your active API keys in `.env`:
+* `APOLLO_API_KEY`: Apollo.io API key
+* `THEIRSTACK_API_KEY`: TheirStack API key
+* `APIFY_TOKEN`: Apify API token (optional, for 0-day LinkedIn post scraping)
+* `PDL_API_KEY`: People Data Labs API key (optional)
+* `OLLAMA_URL`: Local Ollama instance (default: `http://127.0.0.1:11434/api/generate`)
 
-### 2. Running Apollo Enrichment
+### 2. Install Dependencies
 ```bash
-python apollo/run_apollo_20co_rich.py
-python apollo/find_apollo_role_changes.py
+pip install -r requirements.txt
 ```
 
-### 3. Running SignalBase Pipeline
+### 3. Running the Engine
+
+#### Run on a custom input CSV:
 ```bash
-python run_signalbase_20co.py
+python bd_engine.py --csv data/scrape_sample.csv
 ```
 
-### 4. Running PDL Pipeline
+#### Run autonomous stale job hunt (fetch live jobs >= 45 days open from TheirStack):
 ```bash
-python run_pdl_demo.py
+python bd_engine.py --fetch-stale --min-age 45 --limit 20
 ```
+
+#### Run in database-only mode (bypassing Apify post queries):
+```bash
+python bd_engine.py --csv data/scrape_sample.csv --no-social
+```
+
+#### Backtest evaluation date against a specific historical baseline:
+```bash
+python bd_engine.py --csv data/scrape_sample.csv --date 2026-10-01
+```
+
+---
+
+## Output Files
+* `job_bd_leads_scored.csv`: Complete ranked and scored spreadsheet. Automatically copied to your local `Downloads` folder upon run completion.
+* `job_bd_leads_full.json`: Full JSON output containing all qualitative reasoning, hidden relations, and operational drag models.
+

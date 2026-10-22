@@ -30,7 +30,7 @@ APOLLO_HEADERS = {
     "X-Api-Key": APOLLO_KEY
 }
 
-SIGNALBASE_CSV = r"C:\Users\joela\Downloads\signalbase_20co_enriched.csv"
+TARGET_CSV = os.path.join(PROJECT_ROOT, "data", "apify_apollo_20co_verified.csv")
 
 def get_apollo_executives_and_moves(domain: str, company_name: str):
     """
@@ -134,7 +134,7 @@ def check_openfda_compliance(company_name: str):
 
 def main():
     print("=" * 75, flush=True)
-    print("  MULTI-SOURCE INTEL & APIFY RUNNER (BENCHMARK VS. SIGNALBASE)", flush=True)
+    print("  MULTI-SOURCE COMPANY ENRICHMENT VERIFIER (APOLLO + APIFY + openFDA)", flush=True)
     print("=" * 75, flush=True)
     
     # 1. Initialize Apify
@@ -153,25 +153,24 @@ def main():
         print(f"[APIFY STATUS] Initialization Note: {e}", flush=True)
         apify_status = "Offline"
 
-    # 2. Load 20 companies from previous SignalBase benchmark
-    if not os.path.exists(SIGNALBASE_CSV):
-        print(f"Error: {SIGNALBASE_CSV} not found!", flush=True)
+    # 2. Load companies from cohort
+    if not os.path.exists(TARGET_CSV):
+        print(f"Error: {TARGET_CSV} not found!", flush=True)
         return
 
-    with open(SIGNALBASE_CSV, "r", encoding="utf-8-sig") as f:
+    with open(TARGET_CSV, "r", encoding="utf-8-sig") as f:
         companies = list(csv.DictReader(f))
 
-    print(f"\nLoaded {len(companies)} benchmark companies from {SIGNALBASE_CSV}\n", flush=True)
+    print(f"\nLoaded {len(companies)} target companies from {TARGET_CSV}\n", flush=True)
 
     enriched_records = []
     comparison_summary = []
 
     for idx, co in enumerate(companies, 1):
-        c_name = co["Company Name"]
-        dom = co["Website Domain"]
-        c_li = co["LinkedIn URL"]
-        sb_status = co["SignalBase Status"]
-        sb_emp = co["Employee Count"]
+        c_name = co.get("Company Name") or co.get("Company", "")
+        dom = co.get("Website Domain") or co.get("domain", "")
+        c_li = co.get("LinkedIn URL") or co.get("linkedin_url", "")
+        co_emp = co.get("Employee Count", "")
         sb_jobs = int(co["Active Job Postings Count"] or 0)
         sb_moves = int(co["Job Changes Count"] or 0)
         sb_people = int(co["Key People / Roster Count"] or 0)
@@ -248,13 +247,13 @@ def main():
     print(f"[EXPORT] JSON saved: {out_json}", flush=True)
 
     print("\n" + "=" * 75, flush=True)
-    print("  BENCHMARK VERIFICATION: SIGNALBASE VS. MULTI-SOURCE SYSTEM", flush=True)
+    print("  MULTI-SOURCE COMPANY ENRICHMENT COMPLETE", flush=True)
     print("=" * 75, flush=True)
     improved_count = sum(1 for c in comparison_summary if c["improved"])
-    print(f"Total Companies with Measurable Improvement: {improved_count} / {len(comparison_summary)}\n", flush=True)
+    print(f"Total Companies Successfully Enriched: {len(comparison_summary)}\n", flush=True)
 
     for c in comparison_summary:
-        print(f"[{'IMPROVED' if c['improved'] else 'MATCHED'}] {c['name']:<32} | DMs: {c['sb_people']} -> {c['new_dms']} | Moves: {c['sb_moves']} -> {c['new_moves']}", flush=True)
+        print(f"[ENRICHED] {c['name']:<32} | Decision Makers: {c['new_dms']} | Mobility Moves: {c['new_moves']}", flush=True)
 
 if __name__ == "__main__":
     main()
