@@ -171,11 +171,7 @@ def main():
         dom = co.get("Website Domain") or co.get("domain", "")
         c_li = co.get("LinkedIn URL") or co.get("linkedin_url", "")
         co_emp = co.get("Employee Count", "")
-        sb_jobs = int(co["Active Job Postings Count"] or 0)
-        sb_moves = int(co["Job Changes Count"] or 0)
-        sb_people = int(co["Key People / Roster Count"] or 0)
-
-        print(f"[{idx:2}/20] Running Multi-Source Intel on: {c_name} ({dom})...", flush=True)
+        print(f"[{idx:2}/{len(companies)}] Running Multi-Source Intel on: {c_name} ({dom})...", flush=True)
 
         # A. Try Apify Growjo for YoY growth and revenue
         growth_pct = None
@@ -211,21 +207,15 @@ def main():
         new_record["FDA Compliance Status"] = fda_status
         enriched_records.append(new_record)
 
-        # Delta analysis
-        improved = (len(dms) > sb_people) or (len(role_changes) > sb_moves) or (fda_status != "Clean Compliance Record (No openFDA Enforcements)")
         comparison_summary.append({
             "name": c_name,
             "domain": dom,
-            "sb_status": sb_status,
-            "sb_people": sb_people,
-            "sb_moves": sb_moves,
             "new_dms": len(dms),
             "new_moves": len(role_changes),
             "fda": fda_status,
-            "improved": improved
         })
 
-        print(f"      -> DMs: {len(dms)} (vs SB: {sb_people}) | Moves: {len(role_changes)} (vs SB: {sb_moves}) | FDA: {fda_status[:35]}...", flush=True)
+        print(f"      -> Decision Makers: {len(dms)} | Mobility Moves: {len(role_changes)} | FDA: {fda_status[:35]}...", flush=True)
         time.sleep(0.3)
 
     # Export to Downloads
@@ -249,7 +239,6 @@ def main():
     print("\n" + "=" * 75, flush=True)
     print("  MULTI-SOURCE COMPANY ENRICHMENT COMPLETE", flush=True)
     print("=" * 75, flush=True)
-    improved_count = sum(1 for c in comparison_summary if c["improved"])
     print(f"Total Companies Successfully Enriched: {len(comparison_summary)}\n", flush=True)
 
     for c in comparison_summary:
